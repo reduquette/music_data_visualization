@@ -3,6 +3,7 @@ import {} from "./recordPieChart.js"
 import {} from "./soundwave.js"
 import {} from "./dancers.js"
 
+
 var csvdata;
 //load data
 var data = d3.csv('comboSongs.csv', d3.autoType).then(data => {
