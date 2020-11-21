@@ -10,7 +10,29 @@ var svg = d3.select("#mainlines")
   .append("g")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
+ 
+  //tooltip
+  .on('mouseenter', (event, d) => {
+    const pos = d3.pointer(event, window)
+    d3.selectAll('.tooltip')
+        .style('display','block')
+        .style('position','fixed')
+        .style('color', 'black')
+        .style('text-align', 'center')
+        .style('background-color', 'lightgrey')
+        .style('top', pos[1]+'px')
+        .style('left', pos[0]+'px')
+        .html(
+            d.title + d.artist_name + d.release_yr 
+        )
+    })
 
+  .on('mouseleave', (event, d) => {
+    d3.selectAll('.tooltip')
+        .style('display','none')
+  })
+
+  
 //Read the data
 d3.csv("comboSongs.csv", d3.autoType).then(data =>  {
 
@@ -238,5 +260,10 @@ d3.csv("comboSongs.csv", d3.autoType).then(data =>  {
           .text(function(d) { return d.name; })
           .style("fill", function(d){ return myColor(d.name) })
           .style("font-size", 15)
+
+
+
+
+
 
 })
