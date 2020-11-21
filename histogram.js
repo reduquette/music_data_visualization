@@ -1,7 +1,7 @@
 export function histogram(container){
 
-var margin = {top: 10, right: 30, bottom: 30, left: 40},
-    width = 600 - margin.left - margin.right,
+var margin = {top: 10, right: 40, bottom: 30, left: 40},
+    width = 610 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
 var svg = d3.select("#histogram")
@@ -121,6 +121,19 @@ function updateBins(nBin){
     //     .attr("width", function(d) { return x(d.x1) - x(d.x0); })
     //     .attr("height", function(d) { return height - y(d.length); })
     //     .style("fill", "#69b3a2")
+    svg.append("text")
+		.attr('x', 0)
+		.attr('y', -5)
+    .text("Count of Songs")
+    .attr('font-size',13)
+    .attr("transform", "rotate(90)");
+
+  svg.append("text")
+      .attr('x', 532)
+        .attr('y', 368)
+            .text("Years")
+            .attr('font-size',13)
+
 
 }
 updateBins(20)
