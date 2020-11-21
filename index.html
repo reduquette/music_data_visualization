@@ -29,16 +29,10 @@
         What makes a good song? How has that changed over time?
     </subheading>
     <div>
-        <label for="group-by">Bin Size: </label>
-        <select id="group-by">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="5">5</option>
-        <option value="10">10</option>
-        <option value="20">20</option>
-        <option value="30">30</option>
-        <option value="61">61</option>
-    </select>
+        <p>
+            <label># bins</label>
+            <input type="number" min="0" max="61" step="5" value="20" id="nBin">
+          </p>
         <div id="histogram"></div>
     </div>
     <div>
