@@ -15,7 +15,6 @@
     </style>
     <script type="text/javascript" src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://unpkg.com/topojson@3"></script>
-    <script defer src="histogram.js"></script>
 
     <!-- <script type="text/javascript" src="../d3.js"></script> -->
 </head>
@@ -31,14 +30,14 @@
     </subheading>
     <div>
         <label for="group-by">Bin Size: </label>
-        <select id="group-by" onchange="">
-        <option value="0">10</option>
-        <option value="1">2</option>
-        <option value="1">5</option>
-        <option value="1">10</option>
-        <option value="1">20</option>
-        <option value="1">30</option>
-        <option value="1">61</option>
+        <select id="group-by">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="61">61</option>
     </select>
         <div id="histogram"></div>
     </div>
@@ -48,7 +47,9 @@
     <div>
 
     </div>
+
     <script type="module" src="main.js" ></script>
+
   
 </body>
 </html>
