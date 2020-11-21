@@ -1,101 +1,98 @@
-// set the dimensions and margins of the graph
-var margin = {top: 30, right: 50, bottom: 10, left: 50},
-  width = 460 - margin.left - margin.right,
-  height = 400 - margin.top - margin.bottom;
+
+var margin = {top: 10, right: 100, bottom: 30, left: 30},
+    width = 800 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#mainlines")
-.append("svg")
-  .attr("width", width + margin.left + margin.right)
-  .attr("height", height + margin.top + margin.bottom)
-.append("g")
-  .attr("transform",
-        "translate(" + margin.left + "," + margin.top + ")");
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
 
-// Parse the Data
-d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/iris.csv", d3.autoType).then(data => {
+//Read the data
+d3.csv("comboSongs.csv", d3.autoType).then(data =>  {
 
-  // Color scale: give me a specie name, I return a color
-  let color = d3.scaleOrdinal()
-    .domain(["setosa", "versicolor", "virginica" ])
-    .range([ "#440154ff", "#21908dff", "#fde725ff"])
+    // List of groups (here I have one group per column)
+    var allGroup = ["acousticness", "energy", "danceability"]
 
-  // Here I set the list of dimension manually to control the order of axis:
-  let dimensions = ["Petal_Length", "Petal_Width", "Sepal_Length", "Sepal_Width"]
+    // Reformat the data: we need an array of arrays of {x, y} tuples
+    var dataReady = allGroup.map( function(grpName) { // .map allows to do something for each element of the list
+      return {
+        name: grpName,
+        values: data.map(function(d) {
+          return {time: d.release_yr, value: +d[grpName]};
+        })
+      };
+    });
+    // I strongly advise to have a look to dataReady with
+    // console.log(dataReady)
 
-  // For each dimension, I build a linear scale. I store all in a y object
-  let y = {}
-  for (let i in dimensions) {
-    name = dimensions[i]
-    y[name] = d3.scaleLinear()
-      .domain( [0,8] ) // --> Same axis range for each group
-      // --> different axis range for each group --> .domain( [d3.extent(data, function(d) { return +d[name]; })] )
-      .range([height, 0])
-  }
+    // A color scale: one color for each group
+    var myColor = d3.scaleOrdinal()
+      .domain(allGroup)
+      .range(d3.schemeSet2);
 
-  // Build the X scale -> it find the best position for each Y axis
-  let x = d3.scalePoint()
-    .range([0, width])
-    .domain(dimensions);
+    // Add X axis --> it is a date format
+    var x = d3.scaleLinear()
+      .domain([1948, d3.max(data, function(d) { return +d.release_yr })])
+      .range([ 0, width ]);
+    svg.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
 
-  // Highlight the specie that is hovered
-  let highlight = function(d){
-    let selected_specie = d.Species
-    // first every group turns grey
-    // d3.selectAll(".line")
-    //   .transition().duration(200)
-    //   .style("stroke", "lightgrey")
-    //   .style("opacity", "0.2")
-    // Second the hovered specie takes its color
-    d3.selectAll("." + selected_specie)
-      .transition().duration(200)
-      .style("stroke", color(selected_specie))
-      .style("opacity", "1")
-  }
+    // Add Y axis
+    var y = d3.scaleLinear()
+      .domain( [0,1])
+      .range([ height, 0 ]);
+    svg.append("g")
+      .call(d3.axisLeft(y));
 
-  // Unhighlight
-  var doNotHighlight = function(d){
-    d3.selectAll(".line")
-      .transition().duration(200).delay(1000)
-      .style("stroke", function(d){ return( color(d.Species))} )
-      .style("opacity", "1")
-  }
+    // Add the lines
+    var line = d3.line()
+      .x(function(d) { return x(+d.time) })
+      .y(function(d) { return y(+d.value) })
+    svg.selectAll("myLines")
+      .data(dataReady)
+      .enter()
+      .append("path")
+        .attr("d", function(d){ return line(d.values) } )
+        .attr("stroke", function(d){ return myColor(d.name) })
+        .style("stroke-width", 1)
+        .style("fill", "none")
 
-  // The path function take a row of the csv as input, and return x and y coordinates of the line to draw for this raw.
-  function path(d) {
-      return d3.line()(dimensions.map(function(p) { return [x(p), y[p](d[p])]; }));
-  }
+    // Add the points
+    svg
+      // First we need to enter in a group
+      .selectAll("myDots")
+      .data(dataReady)
+      .enter()
+        .append('g')
+        .style("fill", function(d){ return myColor(d.name) })
+      // Second we need to enter in the 'values' part of this group
+      .selectAll("myPoints")
+      .data(function(d){ return d.values })
+      .enter()
+      .append("circle")
+        .attr("cx", function(d) { return x(d.time) } )
+        .attr("cy", function(d) { return y(d.value) } )
+        .attr("r", 5)
+        .attr("stroke", "white")
 
-  // Draw the lines
-  svg
-    .selectAll("myPath")
-    .data(data)
-    .enter()
-    .append("path")
-      .attr("class", function (d) { return "line " + d.Species } ) // 2 class for each line: 'line' and the group name
-      .attr("d",  path)
-      .style("fill", "none" )
-      .style("stroke", function(d){ return( color(d.Species))} )
-      .style("opacity", 0.5)
-      .on("mouseover", highlight)
-      .on("mouseleave", doNotHighlight )
-
-  // Draw the axis:
-  svg.selectAll("myAxis")
-    // For each dimension of the dataset I add a 'g' element:
-    .data(dimensions).enter()
-    .append("g")
-    .attr("class", "axis")
-    // I translate this element to its right position on the x axis
-    .attr("transform", function(d) { return "translate(" + x(d) + ")"; })
-    // And I build the axis with the call function
-    .each(function(d) { d3.select(this).call(d3.axisLeft().ticks(5).scale(y[d])); })
-    // Add axis title
-    .append("text")
-      .style("text-anchor", "middle")
-      .attr("y", -9)
-      .text(function(d) { return d; })
-      .style("fill", "black")
+    // Add a legend at the end of each line
+    svg
+      .selectAll("myLabels")
+      .data(dataReady)
+      .enter()
+        .append('g')
+        .append("text")
+          .datum(function(d) { return {name: d.name, value: d.values[d.values.length - 1]}; }) // keep only the last value of each time series
+          .attr("transform", function(d) { return "translate(" + x(d.value.time) + "," + y(d.value.value) + ")"; }) // Put the text at the position of the last point
+          .attr("x", 12) // shift the text a bit more right
+          .text(function(d) { return d.name; })
+          .style("fill", function(d){ return myColor(d.name) })
+          .style("font-size", 15)
 
 })
-
