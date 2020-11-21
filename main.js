@@ -9,24 +9,20 @@ var data = d3.csv('comboSongs.csv', d3.autoType).then(data => {
     console.log("reached data loading")
     csvdata = data;
     console.log(data);
+    //make intro histogram
     var Hist = histogram('.histogram');
     Hist.update(data);
-    // document.getElementById("group-by").onchange = Hist.update(data)
     d3.select("#group-by")
         .on('change', (event,d)=>{
             Hist.update(data)
         })
+    //make record pie chart
+
+    //make soundwave chart 
+
+    //make dancers chart
 });
 
-function update(){
-    console.log(document.getElementById("group-by").value)
-}
 
 
-//make intro histogram
 
-//make record pie chart
-
-//make soundwave chart 
-
-//make dancers chart
