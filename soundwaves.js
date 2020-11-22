@@ -3,7 +3,7 @@ var margin = {top: 50, right: 100, bottom: 30, left: 30},
     height = 400 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-var svg = d3.select("#mainlines")
+var svg = d3.select("#soundwaves")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -26,8 +26,6 @@ d3.csv("averages.csv",d3.autoType).then(data => {
       };
     });
 
-    // I strongly advise to have a look to dataReady with
-    // console.log(dataReady)
 
     // A color scale: one color for each group
     var myColor = d3.scaleOrdinal()

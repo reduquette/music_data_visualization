@@ -1,6 +1,5 @@
 import {histogram} from "./histogram.js"
 import {} from "./recordPieChart.js"
-import {} from "./soundwave.js"
 import {} from "./dancers.js"
 
 
