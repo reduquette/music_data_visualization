@@ -59,6 +59,8 @@ d3.csv("averages.csv",d3.autoType).then(data => {
     var line = d3.line()
       .x(function(d) { return x(+d.decade) })
       .y(function(d) { return y(+d.value) })
+      .curve(d3.curveMonotoneX)
+
 
     //Container for the gradients
     var defs = svg.append("defs");
