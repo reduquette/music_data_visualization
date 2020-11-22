@@ -11,8 +11,6 @@ var svg = d3.select("#mainlines")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")")
 
-
-
 d3.csv("averages.csv",d3.autoType).then(data => {
 
     // List of groups (here I have one group per column)
@@ -34,7 +32,7 @@ d3.csv("averages.csv",d3.autoType).then(data => {
     // A color scale: one color for each group
     var myColor = d3.scaleOrdinal()
       .domain(allGroup)
-      .range(["#8593ED", "#E805F6", "#4AE7E3"]);
+      .range(["#E4E808", "#E805F6", "#4AE7E3"]);
 
     // Add X axis --> it is a date format
     var x = d3.scaleLinear()
