@@ -28,7 +28,7 @@ stroke: white;
 }  
 
 .songs {
-    background-color: blue;
+    background-color: #E805F6;
     white-space: normal;
     border: solid;
     border-width: 2px;
@@ -38,4 +38,6 @@ stroke: white;
     pointer-events: none;
     color: white;
     float: left;
+    box-shadow: 0px 0px 5px #E805F6;
+    margin: 15px;
 }

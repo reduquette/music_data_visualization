@@ -15,6 +15,7 @@ var svg = d3.select("#histogram")
 var tooltip = d3.select("#histogramText")
   .append("div")
   .attr("class", "songs")
+  .style("filter", "url(#glow)")
 
 function update(_data){
     
@@ -66,7 +67,7 @@ function updateBins(nBin){
         .data(bins)
 
         var myColor = d3.scaleLinear().domain([0,200])
-  .range(["white", "blue"])
+  .range(["white", "#8593ED"])
 
         // console.log(myColor(10), myColor(50))
 
@@ -108,6 +109,7 @@ function updateBins(nBin){
           .attr("width", function(d) { return x(d.x1) - x(d.x0) ; })
           .attr("height", function(d) { return height - y(d.length); })
           .attr("fill", function(d){ console.log("Y",height - y(d.length)); return myColor(height - y(d.length)) })
+          .style("box-shadow", "0px 0px 5px #fff")
           
           
 
