@@ -34,7 +34,7 @@ d3.csv("averages.csv",d3.autoType).then(data => {
     // A color scale: one color for each group
     var myColor = d3.scaleOrdinal()
       .domain(allGroup)
-      .range(["#101CF7", "#4AE7E3", "#E805F6"]);
+      .range(["#8593ED", "#E805F6", "#4AE7E3"]);
 
     // Add X axis --> it is a date format
     var x = d3.scaleLinear()
@@ -107,7 +107,7 @@ d3.csv("averages.csv",d3.autoType).then(data => {
         })
         .attr("stroke", function(d){ return myColor(d.name) })
         .style("filter", "url(#glow)")
-        .style("stroke-width", 2)
+        .style("stroke-width", 4)
         .style("fill", "blue")
         .style("opacity", "0.4")
     
