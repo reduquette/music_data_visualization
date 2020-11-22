@@ -69,13 +69,32 @@ d3.csv("averages.csv",d3.autoType).then(data => {
     var filter = defs.append("filter")
         .attr("id","glow");
     filter.append("feGaussianBlur")
-        .attr("stdDeviation","2")
+        .attr("stdDeviation","4")
         .attr("result","coloredBlur");
     var feMerge = filter.append("feMerge");
     feMerge.append("feMergeNode")
         .attr("in","coloredBlur");
     feMerge.append("feMergeNode")
         .attr("in","SourceGraphic");
+
+
+   //make defs and add the linear gradient
+    var lg = svg.append("defs").append("linearGradient")
+    .attr("id", "mygrad")//id of the gradient
+    .attr("x1", "0%")
+    .attr("x2", "0%")
+    .attr("y1", "0%")
+    .attr("y2", "100%")//since its a vertical linear gradient 
+    ;
+    lg.append("stop")
+    .attr("offset", "0%")
+    .style("stop-color", "red")//end in red
+    .style("stop-opacity", 1)
+
+    lg.append("stop")
+    .attr("offset", "100%")
+    .style("stop-color", "blue")//start in blue
+    .style("stop-opacity", 1)
 
 
      svg.selectAll("myLines")
@@ -89,7 +108,8 @@ d3.csv("averages.csv",d3.autoType).then(data => {
         .attr("stroke", function(d){ return myColor(d.name) })
         .style("filter", "url(#glow)")
         .style("stroke-width", 2)
-        .style("fill", "none")
+        .style("fill", "blue")
+        .style("opacity", "0.4")
     
     // Add the points
     svg
@@ -161,29 +181,13 @@ d3.csv("averages.csv",d3.autoType).then(data => {
     .attr('font-size',13)
 
 
-    //make defs and add the linear gradient
-    var lg = svg.append("defs").append("linearGradient")
-    .attr("id", "mygrad")//id of the gradient
-    .attr("x1", "0%")
-    .attr("x2", "0%")
-    .attr("y1", "0%")
-    .attr("y2", "100%")//since its a vertical linear gradient 
-    ;
-    lg.append("stop")
-    .attr("offset", "0%")
-    .style("stop-color", "red")//end in red
-    .style("stop-opacity", 1)
 
-    lg.append("stop")
-    .attr("offset", "100%")
-    .style("stop-color", "blue")//start in blue
-    .style("stop-opacity", 1)
 
-    svg.append("path")
-    .datum(data)
-    .attr("class", "area")
-    .attr("d", area)
-      .style("fill", "url(#mygrad)");//id of the gradient for fill
+    // svg.append("path")
+    // .datum(data)
+    // .attr("class", "area")
+    // .attr("d", area)
+    //   .style("fill", "url(#mygrad)");//id of the gradient for fill
 
 })
 
