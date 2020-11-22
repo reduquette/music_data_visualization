@@ -43,6 +43,7 @@ d3.csv("averages.csv",d3.autoType).then(data => {
 
     svg.append("g")
       .attr("transform", "translate(0," + height + ")")
+      .attr("stroke", "white")
       .call(d3.axisBottom(x));
 
     // Add Y axis
@@ -50,6 +51,7 @@ d3.csv("averages.csv",d3.autoType).then(data => {
       .domain( [0,1])
       .range([ height, 0 ]);
     svg.append("g")
+    .attr("stroke", "white")
       .call(d3.axisLeft(y));
 
     // var curve = d3.line().curve(d3.curveCardinal);
@@ -67,13 +69,14 @@ d3.csv("averages.csv",d3.autoType).then(data => {
     var filter = defs.append("filter")
         .attr("id","glow");
     filter.append("feGaussianBlur")
-        .attr("stdDeviation","5")
+        .attr("stdDeviation","2")
         .attr("result","coloredBlur");
     var feMerge = filter.append("feMerge");
     feMerge.append("feMergeNode")
         .attr("in","coloredBlur");
     feMerge.append("feMergeNode")
         .attr("in","SourceGraphic");
+
 
      svg.selectAll("myLines")
       .data(dataReady)
@@ -84,10 +87,9 @@ d3.csv("averages.csv",d3.autoType).then(data => {
             return (line(d.values))
         })
         .attr("stroke", function(d){ return myColor(d.name) })
+        .style("filter", "url(#glow)")
         .style("stroke-width", 2)
         .style("fill", "none")
-        .style("filter", "url(#glow)");
-      
     
     // Add the points
     svg
@@ -147,6 +149,7 @@ d3.csv("averages.csv",d3.autoType).then(data => {
     .attr('x', 0)
     .attr('y', -5)
     .text("Levels")
+    .style("fill", "white")
     .attr('font-size',13)
     .attr("transform", "rotate(90)");
 
@@ -154,6 +157,7 @@ d3.csv("averages.csv",d3.autoType).then(data => {
     .attr('x', 677)
     .attr('y', 367)
     .text("Decades")
+    .style("fill", "white")
     .attr('font-size',13)
 
 
