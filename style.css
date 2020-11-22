@@ -1,0 +1,28 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color: white
+}
+
+subheading {
+    color: white
+}
+
+label{
+    color: white
+}
+
+
+.axisWhite line{
+stroke: white;
+}
+
+.axisWhite path{
+stroke: white;
+}
+
+.axisWhite text{
+    fill: white;
+}  
