@@ -3,7 +3,7 @@ var margin = {top: 50, right: 100, bottom: 30, left: 30},
     height = 400 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-var svg = d3.select("#mainlines")
+var svg = d3.select("#soundwaves")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
