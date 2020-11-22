@@ -97,6 +97,7 @@ function updateBins(nBin){
               .style('display', 'block')
               .html("Songs from " + d.x0 + " - " + d.x1 + ":<br>" + songs(d.x0, d.x1, _data))
               .style('left', 500)
+          d3.select(this).attr("box-shadow", "30px 30px 30px #fff")
       })
       .on("mouseleave", (event, d) => {
           d3.selectAll('.songs')
@@ -105,11 +106,11 @@ function updateBins(nBin){
         .transition() 
         .duration(1000)
           .attr("x", 1)
+          .attr("box-shadow", "30px 30px 30px #fff")
           .attr("transform", function(d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
           .attr("width", function(d) { return x(d.x1) - x(d.x0) ; })
           .attr("height", function(d) { return height - y(d.length); })
           .attr("fill", function(d){ console.log("Y",height - y(d.length)); return myColor(height - y(d.length)) })
-          .style("box-shadow", "0px 0px 5px #fff")
           
           
 
