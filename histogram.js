@@ -1,8 +1,8 @@
 export function histogram(container){
 
 var margin = {top: 10, right: 40, bottom: 30, left: 40},
-    width = 610 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+    width = 710 - margin.left - margin.right,
+    height = 600 - margin.top - margin.bottom;
 
 var svg = d3.select("#histogram")
   .append("svg")
@@ -11,6 +11,14 @@ var svg = d3.select("#histogram")
   .append("g")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
+
+var svgText = d3.select("#histogramText")
+          .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+            .attr("transform",
+                  "translate(" + margin.left + "," + margin.top + ")");
 
 function update(_data){
     // console.log(_data)
@@ -44,15 +52,6 @@ function update(_data){
       .range([height, 0]);
       var yAxis = svg.append("g")
 
-    // svg.append("g")
-    //   .attr("transform", "translate(0," + height + ")")
-    //   .call(d3.axisBottom(x))
-      // .ticks(ticks))
-      // .selectAll("text")
-      //   .attr('font-size', 9)
-      //   .attr('y', -4)
-      //   .attr('x', -18)
-      //   .attr("transform", "rotate(-90)")
 
 function updateBins(nBin){
 
@@ -87,40 +86,65 @@ function updateBins(nBin){
         var myColor = d3.scaleLinear().domain([0,200])
   .range(["white", "blue"])
 
-        console.log(myColor(10), myColor(50))
+        // console.log(myColor(10), myColor(50))
 
+        var tooltip = d3.select("#histogramText")
+        .style('display', 'none')
+        .attr("class", "songs")
+        .style("background-color", "white")
+        .style( "white-space", "normal")
+        .style("border", "solid")
+        .style("border-width", "2px")
+        .style("border-radius", "5px")
+        .style("padding", "5px")
+        .style('pointer-events', 'none');
+
+      function songs(year1, year2, _data){
+        _data = _data.filter(_data => _data.release_yr >= year1 && _data.release_yr <= year2)
+        // console.log("DATA", _data, year1, year2)
+        var songList= ''
+        
+        for (var i = 0; i < _data.length; i++ ){
+          // console.log(_data[i].title, "TITLE")
+          if (i % 2 == 0){
+          songList += "<br>" + "• " + _data[i].title
+          } else {
+            songList += "                 • " + _data[i].title
+          }
+        }
+        console.log(songList)
+        return songList
+      }
 
     u
         .enter()
-        .append("rect") // Add a new rect for each new elements
-        .merge(u) // get the already existing elements as well
-        .transition() // and apply changes to all of them
+        .append("rect") 
+        .merge(u) 
+        .on("mouseenter", (event, d) => {
+          const pos = d3.pointer(event, window)
+          tooltip
+              .style('display', 'block')
+              .html("Songs from " + d.x0 + " - " + d.x1 + ":<br>" + songs(d.x0, d.x1, _data))
+              .style('left', 500)
+      })
+      .on("mouseleave", (event, d) => {
+          d3.selectAll('.songs')
+              .style('display','none')
+      })
+        .transition() 
         .duration(1000)
           .attr("x", 1)
           .attr("transform", function(d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
           .attr("width", function(d) { return x(d.x1) - x(d.x0) ; })
           .attr("height", function(d) { return height - y(d.length); })
           .attr("fill", function(d){ console.log("Y",height - y(d.length)); return myColor(height - y(d.length)) })
+          
+          
 
-
-    // If less bar in the new histogram, I delete the ones not in use anymore
     u
         .exit()
         .remove()
 
-
-    // svg.append("g")
-    //   .call(d3.axisLeft(y));
-
-    // svg.selectAll("rect")
-    //   .data(bins)
-    //   .enter()
-    //   .append("rect")
-    //     .attr("x", 1)
-    //     .attr("transform", function(d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
-    //     .attr("width", function(d) { return x(d.x1) - x(d.x0); })
-    //     .attr("height", function(d) { return height - y(d.length); })
-    //     .style("fill", "#69b3a2")
     svg.append("text")
 		.attr('x', 0)
 		.attr('y', -5)
@@ -129,8 +153,8 @@ function updateBins(nBin){
     .attr("transform", "rotate(90)");
 
   svg.append("text")
-      .attr('x', 532)
-        .attr('y', 368)
+      .attr('x', 632)
+        .attr('y', 556)
             .text("Years")
             .attr('font-size',13)
 
