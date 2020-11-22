@@ -26,3 +26,16 @@ stroke: white;
 .axisWhite text{
     fill: white;
 }  
+
+.songs {
+    background-color: blue;
+    white-space: normal;
+    border: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    padding: 5px;
+    overflow-y: auto;
+    pointer-events: none;
+    color: white;
+    float: left;
+}

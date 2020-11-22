@@ -12,33 +12,11 @@ var svg = d3.select("#histogram")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
 
-var svgText = d3.select("#histogramText")
-          .append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-          .append("g")
-            .attr("transform",
-                  "translate(" + margin.left + "," + margin.top + ")");
+var tooltip = d3.select("#histogramText")
+  .append("div")
+  .attr("class", "songs")
 
 function update(_data){
-    // console.log(_data)
-
-    // svg.selectAll("#histogram")
-    //             .remove()
-    //             .exit()
-    //             .data(_data)
-    // svg.selectAll("rect")
-    //             .remove()
-    //             .exit()
-    //             .data(_data)
-    // svg.selectAll("g")
-    //             .remove()
-    //             .exit()
-    //             .data(_data)
-
-   //var ticks = document.getElementById("group-by").value
-    // var ticks = 6
-    //console.log("TICKS", ticks)
     
     var x = d3.scaleLinear()
       .domain([1948, d3.max(_data, function(d) { return +d.release_yr })])
@@ -92,16 +70,8 @@ function updateBins(nBin){
 
         // console.log(myColor(10), myColor(50))
 
-        var tooltip = d3.select("#histogramText")
+        tooltip = d3.select(".songs")
         .style('display', 'none')
-        .attr("class", "songs")
-        .style("background-color", "white")
-        .style( "white-space", "normal")
-        .style("border", "solid")
-        .style("border-width", "2px")
-        .style("border-radius", "5px")
-        .style("padding", "5px")
-        .style('pointer-events', 'none');
 
       function songs(year1, year2, _data){
         _data = _data.filter(_data => _data.release_yr >= year1 && _data.release_yr <= year2)
@@ -110,11 +80,7 @@ function updateBins(nBin){
         
         for (var i = 0; i < _data.length; i++ ){
           // console.log(_data[i].title, "TITLE")
-          if (i % 2 == 0){
-          songList += "<br>" + "• " + _data[i].title
-          } else {
-            songList += "                 • " + _data[i].title
-          }
+          songList += "<br>" + _data[i].title
         }
         console.log(songList)
         return songList
@@ -133,7 +99,7 @@ function updateBins(nBin){
       })
       .on("mouseleave", (event, d) => {
           d3.selectAll('.songs')
-              .style('display','none')
+              // .style('display','none')
       })
         .transition() 
         .duration(1000)
