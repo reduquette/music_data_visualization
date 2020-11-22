@@ -67,7 +67,7 @@ function updateBins(nBin){
         .data(bins)
 
         var myColor = d3.scaleLinear().domain([0,200])
-  .range(["white", "#8593ED"])
+        .range(["#4AE7E3", "#0F01C8"])
 
         // console.log(myColor(10), myColor(50))
 
