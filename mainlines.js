@@ -1,4 +1,4 @@
-var margin = {top: 10, right: 100, bottom: 30, left: 30},
+var margin = {top: 50, right: 100, bottom: 30, left: 30},
     width = 800 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
@@ -10,26 +10,6 @@ var svg = d3.select("#mainlines")
   .append("g")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")")
-  // //tooltip
-  // .on('mouseenter', (event, d) => {
-  //   const pos = d3.pointer(event, window)
-  //   d3.selectAll('.tooltip')
-  //       .style('display','block')
-  //       .style('position','fixed')
-  //       .style('color', 'black')
-  //       .style('text-align', 'center')
-  //       .style('background-color', 'lightgrey')
-  //       .style('top', pos[1]+'px')
-  //       .style('left', pos[0]+'px')
-  //       .html(
-  //           d.title + d.artist_name + d.release_yr 
-  //       )
-  //   })
-
-  // .on('mouseleave', (event, d) => {
-  //   d3.selectAll('.tooltip')
-  //       .style('display','none')
-  // })
 
 
 
@@ -47,13 +27,14 @@ d3.csv("averages.csv",d3.autoType).then(data => {
         })
       };
     });
+
     // I strongly advise to have a look to dataReady with
     // console.log(dataReady)
 
     // A color scale: one color for each group
     var myColor = d3.scaleOrdinal()
       .domain(allGroup)
-      .range(d3.schemeSet2);
+      .range(["#101CF7", "#4AE7E3", "#E805F6"]);
 
     // Add X axis --> it is a date format
     var x = d3.scaleLinear()
@@ -71,19 +52,43 @@ d3.csv("averages.csv",d3.autoType).then(data => {
     svg.append("g")
       .call(d3.axisLeft(y));
 
+    // var curve = d3.line().curve(d3.curveCardinal);
+    // var pathData = [curve(d.values)]
+
     // Add the lines
     var line = d3.line()
       .x(function(d) { return x(+d.decade) })
       .y(function(d) { return y(+d.value) })
-    svg.selectAll("myLines")
+
+    //Container for the gradients
+    var defs = svg.append("defs");
+
+    //Filter for the outside glow
+    var filter = defs.append("filter")
+        .attr("id","glow");
+    filter.append("feGaussianBlur")
+        .attr("stdDeviation","5")
+        .attr("result","coloredBlur");
+    var feMerge = filter.append("feMerge");
+    feMerge.append("feMergeNode")
+        .attr("in","coloredBlur");
+    feMerge.append("feMergeNode")
+        .attr("in","SourceGraphic");
+
+     svg.selectAll("myLines")
       .data(dataReady)
       .enter()
       .append("path")
-        .attr("d", function(d){ return line(d.values) } )
+        .attr("d", function(d){ 
+            console.log(d.values)
+            return (line(d.values))
+        })
         .attr("stroke", function(d){ return myColor(d.name) })
-        .style("stroke-width", 4)
+        .style("stroke-width", 2)
         .style("fill", "none")
-
+        .style("filter", "url(#glow)");
+      
+    
     // Add the points
     svg
       // First we need to enter in a group
@@ -115,6 +120,66 @@ d3.csv("averages.csv",d3.autoType).then(data => {
           .text(function(d) { return d.name; })
           .style("fill", function(d){ return myColor(d.name) })
           .style("font-size", 15)
+          //tooltip
+
+    .on('mouseenter', (event, d) => {
+      const pos = d3.pointer(event, window)
+      d3.selectAll('.tooltip')
+          .style('display','block')
+          .style('position','fixed')
+          .style('color', 'black')
+          .style('text-align', 'center')
+          .style('background-color', 'lightgrey')
+          .style('top', pos[1]+'px')
+          .style('left', pos[0]+'px')
+          .html(
+              d.decade
+          )
+      })
+
+    .on('mouseleave', (event, d) => {
+      d3.selectAll('.tooltip')
+          .style('display','none')
+    })
+
+
+    svg.append("text")
+    .attr('x', 0)
+    .attr('y', -5)
+    .text("Levels")
+    .attr('font-size',13)
+    .attr("transform", "rotate(90)");
+
+  svg.append("text")
+    .attr('x', 677)
+    .attr('y', 367)
+    .text("Decades")
+    .attr('font-size',13)
+
+
+    //make defs and add the linear gradient
+    var lg = svg.append("defs").append("linearGradient")
+    .attr("id", "mygrad")//id of the gradient
+    .attr("x1", "0%")
+    .attr("x2", "0%")
+    .attr("y1", "0%")
+    .attr("y2", "100%")//since its a vertical linear gradient 
+    ;
+    lg.append("stop")
+    .attr("offset", "0%")
+    .style("stop-color", "red")//end in red
+    .style("stop-opacity", 1)
+
+    lg.append("stop")
+    .attr("offset", "100%")
+    .style("stop-color", "blue")//start in blue
+    .style("stop-opacity", 1)
+
+    svg.append("path")
+    .datum(data)
+    .attr("class", "area")
+    .attr("d", area)
+      .style("fill", "url(#mygrad)");//id of the gradient for fill
 
 })
 
@@ -122,7 +187,7 @@ d3.csv("averages.csv",d3.autoType).then(data => {
 
   
 
-//Read the data
+//Read the data - code to figure out decade averages 
 // d3.csv("comboSongs.csv", d3.autoType).then(data =>  {
 
 //     // List of groups (here I have one group per column)
@@ -270,89 +335,5 @@ d3.csv("averages.csv",d3.autoType).then(data => {
 //     console.log(average80s)
 //     console.log(average90s)
 //     console.log(average2000s)
-
-
-//     // Reformat the data: we need an array of arrays of {x, y} tuples
-//     var dataReady = allGroup.map( function(grpName) { // .map allows to do something for each element of the list
-//       return {
-//         name: grpName,
-//         values: data.map(function(d) {
-//           return {time: d.release_yr, value: +d[grpName]};
-//         })
-//       };
-//     });
-
-//     // I strongly advise to have a look to dataReady with
-//     // console.log(dataReady)
-
-//     // A color scale: one color for each group
-//     var myColor = d3.scaleOrdinal()
-//       .domain(allGroup)
-//       .range(d3.schemeSet2);
-
-//     // Add X axis --> it is a date format
-//     var x = d3.scaleLinear()
-//       .domain([1948, d3.max(data, function(d) { return +d.release_yr })])
-//       .range([ 0, width ]);
-//     svg.append("g")
-//       .attr("transform", "translate(0," + height + ")")
-//       .call(d3.axisBottom(x));
-
-//     // Add Y axis
-//     var y = d3.scaleLinear()
-//       .domain( [0,1])
-//       .range([ height, 0 ]);
-//     svg.append("g")
-//       .call(d3.axisLeft(y));
-
-//     // Add the lines
-//     var line = d3.line()
-//       .x(function(d) { return x(+d.time) })
-//       .y(function(d) { return y(+d.value) })
-//     svg.selectAll("myLines")
-//       .data(dataReady)
-//       .enter()
-//       .append("path")
-//         .attr("d", function(d){ return line(d.values) } )
-//         .attr("stroke", function(d){ return myColor(d.name) })
-//         .style("stroke-width", 1)
-//         .style("fill", "none")
-
-//     // Add the points
-//     svg
-//       // First we need to enter in a group
-//       .selectAll("myDots")
-//       .data(dataReady)
-//       .enter()
-//         .append('g')
-//         .style("fill", function(d){ return myColor(d.name) })
-//       // Second we need to enter in the 'values' part of this group
-//       .selectAll("myPoints")
-//       .data(function(d){ return d.values })
-//       .enter()
-//       .append("circle")
-//         .attr("cx", function(d) { return x(d.time) } )
-//         .attr("cy", function(d) { return y(d.value) } )
-//         .attr("r", 5)
-//         .attr("stroke", "white")
-
-//     // Add a legend at the end of each line
-//     svg
-//       .selectAll("myLabels")
-//       .data(dataReady)
-//       .enter()
-//         .append('g')
-//         .append("text")
-//           .datum(function(d) { return {name: d.name, value: d.values[d.values.length - 1]}; }) // keep only the last value of each time series
-//           .attr("transform", function(d) { return "translate(" + x(d.value.time) + "," + y(d.value.value) + ")"; }) // Put the text at the position of the last point
-//           .attr("x", 12) // shift the text a bit more right
-//           .text(function(d) { return d.name; })
-//           .style("fill", function(d){ return myColor(d.name) })
-//           .style("font-size", 15)
-
-
-
-
-
 
 // })
