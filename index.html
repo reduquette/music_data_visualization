@@ -7,6 +7,7 @@
     <!-- CSS Reset -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" href="style.css">
+    
 
     <meta charset="utf-8">
     <title>Does Modern Music Suck?</title>
@@ -16,6 +17,9 @@
     </style>
     <script type="text/javascript" src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://unpkg.com/topojson@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
 
     <!-- <script type="text/javascript" src="../d3.js"></script> -->
 </head>
@@ -73,9 +77,7 @@
         </div>
 
     </div>
-    <div id="soundwaves"></div>
-
-
+   
     <div id="soundwaves">
         <h3 style="width: 700px; margin-top: 700px; color: white;
         background: #E805F6;
@@ -86,14 +88,21 @@
 
     </div>
 
-    <h2 style="width: 700px">JOLENE FILL THIS IN LOL</h2>
+    <div id="soundwaves"></div>
 
-    <div id="radar"></div>
+    <h2 style="width: 700px">How do characteristics compare with songs with the highest streaks?</h2>
+
+    <div id="radar1"></div>
+    <div id="radar2"></div>
+
+
+
 </center>
 
     <script type="module" src="main.js" ></script>
     <script type="module" src="soundwaves.js" ></script>
-    <script type="module" src="radialchart.js" ></script>
+    <script type="module" src="radarchart1.js" ></script>
+    <script type="module" src="radarchart2.js" ></script>
 
     <script type="module" src = "recordPieChart.js"></script>
 </body>
