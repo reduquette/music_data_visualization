@@ -135,12 +135,12 @@ let vlSpec = {
     {
       "name": "table",
       "values": [
-        {"key": "acousticness", "value": 0.625, "category": "Since U Been Gone"},
-        {"key": "energy", "value": 0.254, "category": "Since U Been Gone"},
-        {"key": "danceability", "value": 0.461, "category": "Since U Been Gone"},
-        {"key": "acousticness", "value": 0.463, "category": "The Twist"},
-        {"key": "energy", "value": 0.972, "category": "The Twist"},
-        {"key": "danceability", "value": 0.644, "category": "The Twist"}
+        {"key": "acousticness", "value": 0.625, "category": 0},
+        {"key": "energy", "value": 0.254, "category": 0},
+        {"key": "danceability", "value": 0.461, "category": 0},
+        {"key": "acousticness", "value": 0.463, "category": 2},
+        {"key": "energy", "value": 0.972, "category": 2},
+        {"key": "danceability", "value": 0.644, "category": 2}
         
       ]
     },
@@ -155,7 +155,7 @@ let vlSpec = {
       ]
     }
   ],
-
+  "mark": {"type": "point", "tooltip": {"content": "data"}}, 
   "scales": [
     {
       "name": "angular",
@@ -207,10 +207,10 @@ let vlSpec = {
               "x": {"signal": "scale('radial', datum.value) * cos(scale('angular', datum.key))"},
               "y": {"signal": "scale('radial', datum.value) * sin(scale('angular', datum.key))"},
               "stroke": {"scale": "color", "field": "category"},
-              "strokeWidth": {"value": 3},
+              "strokeWidth": {"value": 1},
               "fill": {"scale": "color", "field": "category"},
-              "fillOpacity": {"value": 0.25}
-            },
+              "fillOpacity": {"value": 0.1}
+            }
           }
         },
         {
@@ -227,7 +227,7 @@ let vlSpec = {
               "fill": {"value": "white"}
             }
           }
-        },
+        }
       ]
     },
     {
