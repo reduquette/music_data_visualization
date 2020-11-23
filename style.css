@@ -6,6 +6,13 @@ h1 {
     color: white
 }
 
+h2 {
+    color: white;
+    background: #E805F6;
+    box-shadow: 0px 0px 15px #E805F6;
+
+}
+
 subheading {
     color: white 
 }
@@ -41,3 +48,18 @@ stroke: white;
     box-shadow: 0px 0px 5px #E805F6;
     margin: 15px;
 }
+
+  
+  .progress-container {
+    z-index: 15;
+  position: fixed;
+  width: 15px;
+  height: 100%;
+  background:black;
+  transform: translate(-12px, -100px);
+  }
+  
+  .progress-bar {
+    background: #4AE7E3;;
+    height: 8px;
+  }

@@ -22,24 +22,39 @@
 
 <style> body { padding-left: 25px; padding-right: 50px; } </style>
 
-<body>
-    <h1>
+<body> 
+    <center><h1>
         Does modern music suck?
     </h1>
     <subheading>
         What makes a good song? How has that changed over time?
     </subheading>
-    <div>
+    
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>  
+
+    <h2 style="width: 700px">What years are the most songs in the Top 500 from?</h2>
+    
+    <div style="padding-left: 15%; padding-right: 15%;">
+        
+
         <p>
             <label># bins</label>
             <input type="number" min="0" max="61" step="5" value="20" id="nBin">
           </p>
-          <div>
-        <div id="histogram" style="float: left"></div>
-        <div id="histogramText" style="float: left; font-size: 13px; height: 500px; width: 400px; overflow: scroll;"></div>
+        <div>
+            <div id="histogram" style="float: left"></div>
+            <div id="histogramText" style="float: left; font-size: 13px; height: 500px; width: 200px; overflow: scroll; "></div>
+        </div>
+
     </div>
-    </div>
+
+    
+   
+
     <div id="piechart">
+       
         <label for="decade">Decade:</label>
 
         <select name="decade" id="decade">
@@ -50,9 +65,26 @@
             <option value="1990s">1990s</option>
             <option value="2000s">2000s</option>
         </select>
+                <!-- <h2 style="width: 700px">Who produces hit songs?</h2> -->
+
     </div>
     <div id="soundwaves"></div>
+
+
+    <div id="soundwaves">
+        <h3 style="width: 700px; margin-top: 700px; color: white;
+        background: #E805F6;
+        box-shadow: 0px 0px 15px #E805F6; 
+        display: block;
+        font-size: 1.5em;   
+        font-weight: bold;"> How have songs changed in acousticness, danceability, and energy since 1948?</h3>
+
+    </div>
+
+    <h2 style="width: 700px">JOLENE FILL THIS IN LOL</h2>
+
     <div id="radar"></div>
+</center>
 
     <script type="module" src="main.js" ></script>
     <script type="module" src="soundwaves.js" ></script>
