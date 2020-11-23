@@ -85,7 +85,7 @@ let vlSpec = {
                 "x": {"signal": "scale('radial', datum.value) * cos(scale('angular', datum.key))"},
                 "y": {"signal": "scale('radial', datum.value) * sin(scale('angular', datum.key))"},
                 "stroke": {"scale": "color", "field": "category"},
-                "strokeWidth": {"value": 3},
+                "strokeWidth": {"value": 2},
                 "fill": {"scale": "color", "field": "category"},
                 "fillOpacity": {"value": 0.2}
               }
@@ -100,10 +100,14 @@ let vlSpec = {
                 "x": {"signal": "datum.x"},
                 "y": {"signal": "datum.y"},
                 "text": {"signal": "datum.datum.value"},
-                "align": {"value": "center"},
-                "baseline": {"value": "middle"},
+                "align": {"value": "right"},
+                "baseline": {"value": "bottom"},
+                "dx": {"value": -3},
+                "dy": {"value": 1},
+                "fontSize": {"value": 9},
                 "fontWeight": {"value": "bold"},
-                "fill": {"value": "white"}
+                "labelFont": {"value": "Lato"},
+                "fill": {"value": "#"},
               }
             }
           }

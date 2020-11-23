@@ -220,10 +220,13 @@ let vlSpec = {
               "x": {"signal": "datum.x"},
               "y": {"signal": "datum.y"},
               "text": {"signal": "datum.datum.value"},
-              "align": {"value": "center"},
-              "baseline": {"value": "middle"},
+              "align": {"value": "left"},
+              "baseline": {"value": "top"},
+              "dx": {"value": -23},
+              "dy": {"value": -7},
+              "fontSize": {"value": 8},
               "fontWeight": {"value": "bold"},
-              "fill": {"value": "white"}
+              "fill": {"value": "#"}
             }
           }
         }
