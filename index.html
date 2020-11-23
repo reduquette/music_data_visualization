@@ -44,17 +44,20 @@
             <input type="number" min="0" max="61" step="5" value="20" id="nBin">
           </p>
         <div>
-            <div id="histogram" style="float: left"></div>
-            <div id="histogramText" style="float: left; font-size: 13px; height: 500px; width: 200px; overflow: scroll; "></div>
+            <div id="histogram" ></div> 
+            <!-- style="float: left" -->
+            <div id="histogramText" style="font-size: 13px; height: 500px; width: 200px; overflow: scroll; "></div>
+            <!-- float: left; -->
         </div>
 
     </div>
 
     
    
+    <br>
+    <div id="piechart_container">
+        <h2 style="width: 700px">Who produces hit songs?</h2>
 
-    <div id="piechart">
-       
         <label for="decade">Decade:</label>
 
         <select name="decade" id="decade">
@@ -65,7 +68,9 @@
             <option value="1990s">1990s</option>
             <option value="2000s">2000s</option>
         </select>
-                <!-- <h2 style="width: 700px">Who produces hit songs?</h2> -->
+        <div id='piechart'>
+
+        </div>
 
     </div>
     <div id="soundwaves"></div>
