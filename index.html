@@ -7,6 +7,8 @@
     <!-- CSS Reset -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    
 
     <meta charset="utf-8">
     <title>Does Modern Music Suck?</title>
@@ -16,6 +18,10 @@
     </style>
     <script type="text/javascript" src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://unpkg.com/topojson@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+    
 
     <!-- <script type="text/javascript" src="../d3.js"></script> -->
 </head>
@@ -73,32 +79,55 @@
             <option value="1990s">1990s</option>
             <option value="2000s">2000s</option>
         </select>
-        <div id='piechart'>
-
-        </div>
+        <div id='piechart'></div>
 
     </div>
-    <div id="soundwaves"></div>
-
-
+   
     <div id="soundwaves">
         <h3 style="width: 700px; margin-top: 700px; color: white;
         background: #E805F6;
         box-shadow: 0px 0px 15px #E805F6; 
         display: block;
         font-size: 1.5em;   
+        font-family: 'Lato', sans-serif;
+        border-radius: 20px;
+        padding: 5px;
         font-weight: bold;"> How have songs changed in acousticness, danceability, and energy since 1948?</h3>
+
+        
 
     </div>
 
-    <h2 style="width: 700px">JOLENE FILL THIS IN LOL</h2>
+    <div id="soundwaves"></div>
+    
+    <h4>The blue line represents the acoustic ness of songs throughout the decades. The confidence measure from 0 to 1 of whether the track is acoustic. 1 represents high confidence the track is acoustic. The amount of acousticness in songs had a low dip in 1960 and then went to its max in 1970 before dropping to almost zero. </h4>
+    <h4>The green line represents the energy of songs throughout the decades. Energy is measure from 0 to 1 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy. There was a major dip close to zero in 1970 and from there steadily increases with only a small dip in 1990.</h4>
+    <h4>The red line represents the danceability of songs throughout the decades. Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0 Is the least danceable and 1 is the most danceable. The danceability has remained fairly steady with only a dips in 1970 and a peak in 1990.</h4>
 
-    <div id="radar"></div>
+    
+
+    <h2 style="width: 700px">How do characteristics compare with songs with the highest streak on the top charts?</h2>
+
+
+    <h4 class="radar-blue">Since U Been Gone (2004 - 46 weeks)</h4>
+    <h4>vs.</h4>
+    <h4 class="radar-orange">The Twist (1960 - 39 weeks)</h4>
+
+    <div id="radar1"></div>
+    
+    <h4 class="radar-blue">Hey Ya! (2003 - 33 weeks)</h4>
+    <h4>vs.</h4>
+    <h4 class="radar-orange">How Deep is Your Love? (1977 - 33 weeks)</h4>
+
+    <div id="radar2"></div>
+   
+
 </center>
 
     <script type="module" src="main.js" ></script>
     <script type="module" src="soundwaves.js" ></script>
-    <script type="module" src="radialchart.js" ></script>
+    <script type="module" src="radarchart1.js" ></script>
+    <script type="module" src="radarchart2.js" ></script>
 
     <script type="module" src = "recordPieChart.js"></script>
 </body>

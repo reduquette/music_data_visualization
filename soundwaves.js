@@ -169,13 +169,15 @@ d3.csv("averages.csv",d3.autoType).then(data => {
     .text("Levels")
     .style("fill", "white")
     .attr('font-size',13)
+    .attr('font-family','Lato')
     .attr("transform", "rotate(90)");
 
   svg.append("text")
-    .attr('x', 677)
-    .attr('y', 367)
+    .attr('x', 650)
+    .attr('y', 350)
     .text("Decades")
     .style("fill", "white")
+    .attr('font-family','Lato')
     .attr('font-size',13)
 
 

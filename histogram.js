@@ -1,7 +1,7 @@
 export function histogram(container){
 
 var margin = {top: 10, right: 40, bottom: 30, left: 40},
-    width = 710 - margin.left - margin.right,
+    width = 720 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 
 var svg = d3.select("#histogram")
@@ -87,31 +87,35 @@ function updateBins(nBin){
         return songList
       }
 
-    u
-        .enter()
-        .append("rect") 
-        .merge(u) 
-        .on("mouseenter", (event, d) => {
-          const pos = d3.pointer(event, window)
-          tooltip
-              .style('display', 'block')
-              .html("Songs from " + d.x0 + " - " + d.x1 + ":<br>" + songs(d.x0, d.x1, _data))
-              .style('left', 500)
-          d3.select(this).attr("box-shadow", "30px 30px 30px #fff")
-      })
-      .on("mouseleave", (event, d) => {
-          d3.selectAll('.songs')
-              // .style('display','none')
-      })
-        .transition() 
-        .duration(1000)
-          .attr("x", 1)
-          .attr("box-shadow", "30px 30px 30px #fff")
-          .attr("transform", function(d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
-          .attr("width", function(d) { return x(d.x1) - x(d.x0) ; })
-          .attr("height", function(d) { return height - y(d.length); })
-          .attr("fill", function(d){ console.log("Y",height - y(d.length)); return myColor(height - y(d.length)) })
-          
+      u
+      .enter()
+      .append("rect") 
+      .attr("rx", 8)
+      .attr("ry", 8)
+      .merge(u) 
+      .on("mouseenter", (event, d) => {
+        const pos = d3.pointer(event, window)
+        tooltip
+            .style('display', 'block')
+            .html("Songs from " + d.x0 + " - " + d.x1 + ":<br>" + songs(d.x0, d.x1, _data))
+            .style('left', 500)
+        d3.select(this).attr("box-shadow", "30px 30px 30px #fff")
+    })
+    .on("mouseleave", (event, d) => {
+        d3.selectAll('.songs')
+            // .style('display','none')
+    })
+      .transition() 
+      .duration(1000)
+        .attr("x", 1)
+        .attr("box-shadow", "30px 30px 30px #fff")
+        .attr("transform", function(d) { return "translate(" + x(d.x0) + "," + y(d.length) + ")"; })
+        .attr("width", function(d) { return x(d.x1) - x(d.x0) - 3; })
+        .attr("height", function(d) { return height - y(d.length); })
+        .attr("fill", function(d){ console.log("Y",height - y(d.length)); return myColor(height - y(d.length)) })
+        
+        
+
           
 
     u
@@ -123,9 +127,13 @@ function updateBins(nBin){
 		.attr('y', -5)
     .text("Count of Songs")
     .attr('font-size',13)
+    .attr('font-family','Lato')
+    .attr('fill', 'white')
     .attr("transform", "rotate(90)");
 
   svg.append("text")
+      .attr('font-family','Lato')
+      .attr('fill', 'white')
       .attr('x', 632)
         .attr('y', 556)
             .text("Years")

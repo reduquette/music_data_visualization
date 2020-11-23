@@ -3,21 +3,36 @@ body {
 }
 
 h1 {
-    color: white
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
 }
 
 h2 {
     color: white;
+    font-family: 'Lato', sans-serif;
     background: #E805F6;
     box-shadow: 0px 0px 15px #E805F6;
+    border-radius: 20px;
+    padding: 5px;
 
 }
 
+h4 {
+    font-family: 'Lato', sans-serif;
+    color: white
+}
+
+h4.radar-song1 { color:#F834BE ;font-weight:bold;font-family:'Lato';font-size:20 }
+h4.radar-song2 { color: orange ;font-weight:bold;font-family:'Lato';font-size:20 }
+
 subheading {
+    font-family: 'Lato', sans-serif;
     color: white 
 }
 
 label{
+    font-family: 'Lato', sans-serif;
     color: white
 }
 
@@ -36,6 +51,7 @@ stroke: white;
 
 .songs {
     background-color: #E805F6;
+    font-family: 'Lato', sans-serif;
     white-space: normal;
     border: solid;
     border-width: 2px;
