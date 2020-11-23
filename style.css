@@ -3,25 +3,31 @@ body {
 }
 
 h1 {
-    color: white
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
 }
 
 h2 {
     color: white;
+    font-family: 'Lato', sans-serif;
     background: #E805F6;
     box-shadow: 0px 0px 15px #E805F6;
 
 }
 
 h4 {
+    font-family: 'Lato', sans-serif;
     color: white
 }
 
 subheading {
+    font-family: 'Lato', sans-serif;
     color: white 
 }
 
 label{
+    font-family: 'Lato', sans-serif;
     color: white
 }
 
@@ -40,6 +46,7 @@ stroke: white;
 
 .songs {
     background-color: #E805F6;
+    font-family: 'Lato', sans-serif;
     white-space: normal;
     border: solid;
     border-width: 2px;
