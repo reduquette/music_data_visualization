@@ -21,27 +21,42 @@
     <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+
     
 
     <!-- <script type="text/javascript" src="../d3.js"></script> -->
+
+
 </head>
 
 <style> body { padding-left: 25px; padding-right: 50px; } </style>
 
 <body> 
-    <center><h1>
+    
+    
+    <center>
+        
+    <section class = "panel header" style="height: 830px">
+    <h1>
         Does modern music suck?
     </h1>
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>  
     <subheading>
         What makes a good song? How has that changed over time? 
         <br>
         We examine data on the Top 500 songs of all time according to Rolling Stone magazine. 
     </subheading>
     
-    <div class="progress-container">
-        <div class="progress-bar" id="myBar"></div>
-    </div>  
 
+</section>
+    
+    
+
+    <section class = "panel histo" style="height: 830px">
     <h2 style="width: 700px">What years are the most songs in the Top 500 from?</h2>
     
     <div style="padding-left: 5%; padding-right: 5%;">
@@ -54,14 +69,15 @@
         <div>
             <div id="histogram" ></div> 
             <!-- style="float: left" -->
-            <div id="histogramText" style="font-size: 13px; height: 500px; width: 200px; overflow: scroll; float:right; position: absolute; top: 28%; left:75%"></div>
+            <div id="histogramText" style="font-size: 13px; height: 500px; width: 200px; overflow: scroll; float:right; position: absolute; top: 118%; left:75%"></div>
             <!-- float: left; -->
         </div>
 
     </div>
+</section>
 
     
-   
+<dsectioniv class = "panel pie" style="height: 830px">
     <br>
     <div id="piechart_container">
         <h2 style="width: 700px">Who produces hit songs?</h2>
@@ -82,7 +98,8 @@
         <div id='piechart'></div>
 
     </div>
-   
+</section>
+<section class = "panel sound" style="height: 830px">
     <div id="soundwaves">
         <h3 style="width: 700px; margin-top: 100px; color: white;
         background: #E805F6;
@@ -98,14 +115,16 @@
 
     </div>
 
-    <div id="soundwaves"></div>
+    <div id="soundwaves">
     
     <h4>The blue line represents the acoustic ness of songs throughout the decades. The confidence measure from 0 to 1 of whether the track is acoustic. 1 represents high confidence the track is acoustic. The amount of acousticness in songs had a low dip in 1960 and then went to its max in 1970 before dropping to almost zero. </h4>
     <h4>The green line represents the energy of songs throughout the decades. Energy is measure from 0 to 1 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy. There was a major dip close to zero in 1970 and from there steadily increases with only a small dip in 1990.</h4>
     <h4>The red line represents the danceability of songs throughout the decades. Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0 Is the least danceable and 1 is the most danceable. The danceability has remained fairly steady with only a dips in 1970 and a peak in 1990.</h4>
 
     
-
+</div>
+</section>
+<section class = "panel radar"style="height: 830px">
     <h2 style="width: 700px">How do characteristics compare with songs with the highest streak on the top charts?</h2>
 
 
@@ -121,8 +140,10 @@
 
     <div id="radar2"></div>
    
-
+</section>
 </center>
+
+
 
     <script type="module" src="main.js" ></script>
     <script type="module" src="soundwaves.js" ></script>
@@ -130,5 +151,12 @@
     <script type="module" src="radarchart2.js" ></script>
 
     <script type="module" src = "recordPieChart.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-scrollify@1.0.17/jquery.scrollify.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
 </body>
 </html>
