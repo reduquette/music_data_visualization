@@ -224,9 +224,10 @@ let vlSpec = {
               "baseline": {"value": "top"},
               "dx": {"value": -23},
               "dy": {"value": -7},
-              "fontSize": {"value": 8},
+              "fontSize": {"value": 12},
               "fontWeight": {"value": "bold"},
-              "fill": {"value": "#"}
+              "angle": {"value": 30},
+              "fill": {"value": "white"}
             }
           }
         }
