@@ -23,6 +23,9 @@ h4 {
     color: white
 }
 
+h4.radar-blue { color:#1A5D8C ;font-weight:bold;font-family:'Lato';font-size:20 }
+h4.radar-orange { color: orange ;font-weight:bold;font-family:'Lato';font-size:20 }
+
 subheading {
     font-family: 'Lato', sans-serif;
     color: white 

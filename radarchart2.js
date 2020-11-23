@@ -14,12 +14,12 @@ let vlSpec = {
       {
         "name": "table",
         "values": [
-            {"key": "acousticness", "value": 0.0761, "category": 1},
-            {"key": "energy", "value": 0.519, "category": 1},
-            {"key": "danceability", "value": 0.738, "category": 1},
-            {"key": "acousticness", "value": 0.0238, "category": 3},
-            {"key": "danceability", "value": 0.804, "category": 3},
-            {"key": "energy", "value": 0.682, "category": 3}
+            {"key": "acousticness", "value": 0.08, "category": 1},
+            {"key": "danceability", "value": 0.74, "category": 1},
+            {"key": "energy", "value": 0.52, "category": 1},
+            {"key": "acousticness", "value": 0.02, "category": 3},
+            {"key": "danceability", "value": 0.8, "category": 3},
+            {"key": "energy", "value": 0.68, "category": 3},
         ]
       },
       {
