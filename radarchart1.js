@@ -154,7 +154,6 @@ let vlSpec = {
       ]
     }
   ],
-  "mark": {"type": "point", "tooltip": {"content": "data"}}, 
   "scales": [
     {
       "name": "angular",
@@ -186,6 +185,8 @@ let vlSpec = {
       "y": {"signal": "radius"}
     }
   },
+
+  "mark": {"type": "point", "tooltip": {"content": "data"}}, 
 
   "marks": [
     {
