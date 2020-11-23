@@ -63,6 +63,7 @@ var data = d3.json('data_by_decade.json', d3.autoType).then(data => {
         console.log(data_ready);
 
         // map to data
+
         var u = svg.selectAll("path")
           .data(data_ready)
 
@@ -72,10 +73,11 @@ var data = d3.json('data_by_decade.json', d3.autoType).then(data => {
           .append('path')
           .merge(u)
           .transition()
-          .duration(1000)
+          .delay(1000)
+        //   .duration(1000)
           .attr('d', d3.arc()
                 .innerRadius(.33 * radius)
-                .outerRadius(radius)
+                .outerRadius(radius -10)
           )
           .attr('fill', function(d){ return(color(d)) })
           .attr("stroke", "grey")
@@ -85,7 +87,10 @@ var data = d3.json('data_by_decade.json', d3.autoType).then(data => {
         // remove the group that is not present anymore
         u
           .exit()
+          .transition()
+          .delay(1000)
           .remove()
+
 
     }
 
@@ -94,6 +99,24 @@ var data = d3.json('data_by_decade.json', d3.autoType).then(data => {
 
     d3.select('#decade')
         .on('change', (event,d)=>{
+            svg.transition()
+                // .attr("transform",  "translate(" + width / 2 + "," + height / 2 + ") rotate(" + 90 + ")")
+                // .duration(500)
+                // .transition()
+                .attr("transform",  "translate(" + width / 2 + "," + height / 2 + ") rotate(" + 120 + ")")
+                .duration(500)
+                .ease(d3.easeQuadInOut)
+
+                .transition()
+                .attr("transform",  "translate(" + width / 2 + "," + height / 2 + ") rotate(" + 240 + ")")
+                .duration(500)
+                // .transition()
+                // .attr("transform",  "translate(" + width / 2 + "," + height / 2 + ") rotate(" + 300 + ")")
+                // .duration(200)
+                .transition()
+                .attr("transform",  "translate(" + width / 2 + "," + height / 2 + ") rotate(" + 360 + ")")
+                .duration(500);
+
             console.log(event.target.value);
             _data = Object.values(data[event.target.value]);
             console.log(_data);
