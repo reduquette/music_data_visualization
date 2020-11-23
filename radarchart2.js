@@ -103,11 +103,12 @@ let vlSpec = {
                 "align": {"value": "right"},
                 "baseline": {"value": "bottom"},
                 "dx": {"value": -3},
-                "dy": {"value": 1},
-                "fontSize": {"value": 9},
+                "dy": {"value": 4},
+                "fontSize": {"value": 12},
                 "fontWeight": {"value": "bold"},
                 "labelFont": {"value": "Lato"},
-                "fill": {"value": "#"},
+                "angle": {"value": 30},
+                "fill": {"value": "white"},
               }
             }
           }
