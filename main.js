@@ -2,6 +2,17 @@ import {histogram} from "./histogram.js"
 import {} from "./recordPieChart.js"
 import {} from "./dancers.js"
 
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function () {
+    updateScrollProgress()
+  };
+  
+  function updateScrollProgress() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.height = scrolled + "%";
+  }
 
 var csvdata;
 //load data

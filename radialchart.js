@@ -12,7 +12,9 @@ console.log(data);
 
 let svg = d3.select("body").append("svg")
     .attr("width", 600)
-    .attr("height", 600);
+    .attr("height", 600)
+    .style("padding-left", "25%")
+    .style("padding-right", "25%;")
 
 
 let radialScale = d3.scaleLinear()
