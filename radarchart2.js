@@ -85,9 +85,9 @@ let vlSpec = {
                 "x": {"signal": "scale('radial', datum.value) * cos(scale('angular', datum.key))"},
                 "y": {"signal": "scale('radial', datum.value) * sin(scale('angular', datum.key))"},
                 "stroke": {"scale": "color", "field": "category"},
-                "strokeWidth": {"value": 1},
+                "strokeWidth": {"value": 3},
                 "fill": {"scale": "color", "field": "category"},
-                "fillOpacity": {"value": 0.1}
+                "fillOpacity": {"value": 0.2}
               }
             }
           },
