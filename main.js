@@ -17,11 +17,16 @@ var data = d3.csv('comboSongs.csv', d3.autoType).then(data => {
             Hist.update(data)
         })
     //make record pie chart
-
+    // d3.select('#decade')
+    //     .on('change', (event,d)=>{
+    //         console.log(event);
+    //         console.log(event.target.value);
+    //     })
     //make soundwave chart 
 
     //make dancers chart
 });
+
 
 
 
