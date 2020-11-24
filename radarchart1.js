@@ -122,9 +122,9 @@
 let vlSpec = {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "description": "A radar chart example, showing multiple dimensions in a radial layout.",
-  "width": 450,
+  "width": 600,
   "height": 500,
-  "padding": 20,
+  "padding": 100,
   "autosize": {"type": "none", "contains": "padding"},
 
   "signals": [
@@ -186,8 +186,6 @@ let vlSpec = {
     }
   },
 
-  "mark": {"type": "point", "tooltip": {"content": "data"}}, 
-
   "marks": [
     {
       "type": "group",
@@ -222,8 +220,13 @@ let vlSpec = {
               "x": {"signal": "datum.x"},
               "y": {"signal": "datum.y"},
               "text": {"signal": "datum.datum.value"},
-              "align": {"value": "center"},
-              "baseline": {"value": "middle"},
+              "align": {"value": "left"},
+              "baseline": {"value": "top"},
+              "dx": {"value": -23},
+              "dy": {"value": -7},
+              "fontSize": {"value": 12},
+              "fontWeight": {"value": "bold"},
+              "angle": {"value": 30},
               "fill": {"value": "white"}
             }
           }

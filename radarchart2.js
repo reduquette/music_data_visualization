@@ -1,9 +1,9 @@
 let vlSpec = {
     "$schema": "https://vega.github.io/schema/vega/v5.json",
     "description": "A radar chart example, showing multiple dimensions in a radial layout.",
-    "width": 450,
+    "width": 600,
     "height": 500,
-    "padding": 20,
+    "padding": 100,
     "autosize": {"type": "none", "contains": "padding"},
   
     "signals": [
@@ -85,7 +85,7 @@ let vlSpec = {
                 "x": {"signal": "scale('radial', datum.value) * cos(scale('angular', datum.key))"},
                 "y": {"signal": "scale('radial', datum.value) * sin(scale('angular', datum.key))"},
                 "stroke": {"scale": "color", "field": "category"},
-                "strokeWidth": {"value": 3},
+                "strokeWidth": {"value": 2},
                 "fill": {"scale": "color", "field": "category"},
                 "fillOpacity": {"value": 0.2}
               }
@@ -100,9 +100,15 @@ let vlSpec = {
                 "x": {"signal": "datum.x"},
                 "y": {"signal": "datum.y"},
                 "text": {"signal": "datum.datum.value"},
-                "align": {"value": "center"},
-                "baseline": {"value": "middle"},
-                "fill": {"value": "white"}
+                "align": {"value": "right"},
+                "baseline": {"value": "bottom"},
+                "dx": {"value": -3},
+                "dy": {"value": 4},
+                "fontSize": {"value": 12},
+                "fontWeight": {"value": "bold"},
+                "labelFont": {"value": "Lato"},
+                "angle": {"value": 30},
+                "fill": {"value": "white"},
               }
             }
           }

@@ -2,6 +2,23 @@ import {histogram} from "./histogram.js"
 import {} from "./recordPieChart.js"
 import {} from "./dancers.js"
 
+(function() {
+    $.scrollify({
+      section: ".panel",
+      //sectionName:false,
+      scrollSpeed: 1100,
+      after: function(i) {
+        /*
+              if(i===2) {
+                  $.scrollify.setOptions({
+                      easing:"easeOutExpo"
+                  });
+              }*/
+      }
+    });
+})
+  
+
 // When the user scrolls the page, execute myFunction 
 window.onscroll = function () {
     updateScrollProgress()
