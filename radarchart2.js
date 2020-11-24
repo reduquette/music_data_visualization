@@ -102,7 +102,7 @@ let vlSpec = {
                 "text": {"signal": "datum.datum.value"},
                 "align": {"value": "right"},
                 "baseline": {"value": "bottom"},
-                "dx": {"value": -3},
+                "dx": {"value": -4},
                 "dy": {"value": 4},
                 "fontSize": {"value": 12},
                 "fontWeight": {"value": "bold"},
