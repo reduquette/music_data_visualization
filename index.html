@@ -65,9 +65,9 @@
     <br>
     <div id="piechart_container">
         <h2 style="width: 700px">Who produces hit songs?</h2>
-        <subheading>
+        <h4 style="width: 700px">
             The number of producers represented in the top songs has declined over time. The size of the single largest share-- the producer who's listed on the most tracks for that decade-- decreased from the 50s until the 70s, and has varied since then. Select different years below to see.
-        </subheading>
+        </h4>
         <br>
         <label for="decade">Decade:</label>
 
@@ -80,11 +80,16 @@
             <option value="2000s">2000s</option>
         </select>
         <div id='piechart'></div>
+        <div class='tooltip'>
+
+        </div>
 
     </div>
    
     <div id="soundwaves">
-        <h3 style="width: 700px; margin-top: 700px; color: white;
+        <h3 style="width: 700px;
+         /* margin-top: 700px;  */
+         color: white;
         background: #E805F6;
         box-shadow: 0px 0px 15px #E805F6; 
         display: block;
@@ -100,9 +105,9 @@
 
     <div id="soundwaves"></div>
     
-    <h4>The blue line represents the acoustic ness of songs throughout the decades. The confidence measure from 0 to 1 of whether the track is acoustic. 1 represents high confidence the track is acoustic. The amount of acousticness in songs had a low dip in 1960 and then went to its max in 1970 before dropping to almost zero. </h4>
-    <h4>The green line represents the energy of songs throughout the decades. Energy is measure from 0 to 1 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy. There was a major dip close to zero in 1970 and from there steadily increases with only a small dip in 1990.</h4>
-    <h4>The red line represents the danceability of songs throughout the decades. Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0 Is the least danceable and 1 is the most danceable. The danceability has remained fairly steady with only a dips in 1970 and a peak in 1990.</h4>
+    <h4 style="width: 700px">The blue line represents the acoustic ness of songs throughout the decades. The confidence measure from 0 to 1 of whether the track is acoustic. 1 represents high confidence the track is acoustic. The amount of acousticness in songs had a low dip in 1960 and then went to its max in 1970 before dropping to almost zero. </h4>
+    <h4 style="width: 700px">The green line represents the energy of songs throughout the decades. Energy is measure from 0 to 1 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy. There was a major dip close to zero in 1970 and from there steadily increases with only a small dip in 1990.</h4>
+    <h4 style="width: 700px">The red line represents the danceability of songs throughout the decades. Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0 Is the least danceable and 1 is the most danceable. The danceability has remained fairly steady with only a dips in 1970 and a peak in 1990.</h4>
 
     
 
@@ -115,7 +120,7 @@
 
     <div id="radar1"></div>
     
-    <h4 class="radar-blue">Hey Ya! (2003 - 33 weeks)</h4>
+    <h4 class="radar-b lue">Hey Ya! (2003 - 33 weeks)</h4>
     <h4>vs.</h4>
     <h4 class="radar-orange">How Deep is Your Love? (1977 - 33 weeks)</h4>
 

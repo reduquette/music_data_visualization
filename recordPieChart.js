@@ -11,11 +11,10 @@ var svg = d3.select("#piechart")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
     .append("g")
-        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ") rotate(" + 90 + ")");
 
 var decade = "1950s";
-// var color = d3.scaleOrdinal()
-//     .range(d3.schemeDark2);
+
 
 function color(d){
     console.log(d)
@@ -29,18 +28,23 @@ function color(d){
 }
 
 var background = svg.append("image")
-.attr("xlink:href", "./record.png")
-.attr("x", -width/2)
-.attr("y", -height/2)
-.attr("width", radius * 2)
-.attr("height", radius * 2)
-
-var background = svg.append("image")
     .attr("xlink:href", "./record.png")
     .attr("x", -width/2)
     .attr("y", -height/2)
     .attr("width", radius * 2)
     .attr("height", radius * 2)
+
+var tooltip = d3.select("#piechart_container .tooltip")
+    .style('display', 'none')
+    .style('position', 'fixed')
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "2px")
+    .style("border-radius", "5px")
+    .style("padding", "5px")
+    .style('pointer-events', 'none');
+
+console.log(tooltip);
 
 var data = d3.json('data_by_decade.json', d3.autoType).then(data => {
     console.log("reached data loading for producers")
@@ -49,31 +53,44 @@ var data = d3.json('data_by_decade.json', d3.autoType).then(data => {
     //filter data to get decade
     var _data = Object.values(data[decade]);
 
-    // color.domain(Object.values(data[decade]).map(d=>d.producer));
-
     function update(data){
 
         // Compute the position of each group on the pie:
         var pie = d3.pie()
           .value(function(d) {return d.num_hits; });
-          //.sort(function(a, b) { console.log(a) ; return d3.ascending(a.key, b.key);} ) // This make sure that group order remains the same in the pie chart
         var data_ready = pie(data)
             .sort(function(a, b) { console.log(a) ; return d3.ascending(a.index, b.index);} )
         
         console.log(data_ready);
+
 
         // map to data
 
         var u = svg.selectAll("path")
           .data(data_ready)
 
-        // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
+        // Build the pie chart
         u
           .enter()
           .append('path')
+          .on("mouseenter",(event,d)=>{
+            console.log("mouse enter");
+            console.log(event);
+            console.log(d);
+            tooltip
+                .style('display', 'block')
+                .html(d.data.producer)
+                .style('top', event.clientY + "px")
+                .style('left', event.clientX + "px");
+          })
+          .on("mouseout",(event,d)=>{
+            console.log("mouse out");
+            tooltip
+                .style('display', 'none');
+          })
           .merge(u)
           .transition()
-          .delay(1000)
+        //   .delay(1000)
         //   .duration(1000)
           .attr('d', d3.arc()
                 .innerRadius(.33 * radius)
@@ -83,8 +100,10 @@ var data = d3.json('data_by_decade.json', d3.autoType).then(data => {
           .attr("stroke", "grey")
           .style("stroke-width", "1px")
           .style("opacity", .5)
+          
+        
 
-        // remove the group that is not present anymore
+        // remove the exiting group
         u
           .exit()
           .transition()
@@ -100,26 +119,24 @@ var data = d3.json('data_by_decade.json', d3.autoType).then(data => {
     d3.select('#decade')
         .on('change', (event,d)=>{
             svg.transition()
-                // .attr("transform",  "translate(" + width / 2 + "," + height / 2 + ") rotate(" + 90 + ")")
-                // .duration(500)
-                // .transition()
-                .attr("transform",  "translate(" + width / 2 + "," + height / 2 + ") rotate(" + 120 + ")")
+                .attr("transform",  "translate(" + width / 2 + "," + height / 2 + ") rotate(" + 150 + ")")
                 .duration(500)
                 .ease(d3.easeQuadInOut)
 
                 .transition()
-                .attr("transform",  "translate(" + width / 2 + "," + height / 2 + ") rotate(" + 240 + ")")
+                .attr("transform",  "translate(" + width / 2 + "," + height / 2 + ") rotate(" + 310 + ")")
                 .duration(500)
-                // .transition()
-                // .attr("transform",  "translate(" + width / 2 + "," + height / 2 + ") rotate(" + 300 + ")")
-                // .duration(200)
+                .ease(d3.easeQuadInOut)
+
                 .transition()
-                .attr("transform",  "translate(" + width / 2 + "," + height / 2 + ") rotate(" + 360 + ")")
-                .duration(500);
+                .attr("transform",  "translate(" + width / 2 + "," + height / 2 + ") rotate(" + 70 + ")")
+                .duration(500)
+                .ease(d3.easeQuadInOut);
 
             console.log(event.target.value);
             _data = Object.values(data[event.target.value]);
             console.log(_data);
             update(_data);
-        })
+    });
+
 });
