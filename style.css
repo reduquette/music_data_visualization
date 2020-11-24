@@ -20,11 +20,24 @@ h2 {
 
 h4 {
     font-family: 'Lato', sans-serif;
-    color: white
+    color: white;
+    width: 500px;
 }
 
-h4.radar-song1 { color:#F834BE ;font-weight:bold;font-family:'Lato';font-size:20 }
+h4.radar-song1 { 
+    color:#F834BE ;
+    font-weight:bold;
+    font-family:'Lato';
+    font-size:20; 
+}
 h4.radar-song2 { color: orange ;font-weight:bold;font-family:'Lato';font-size:20 }
+
+p{
+    font-family: 'Lato', sans-serif;
+    color: white;
+    width: 700px;
+
+}
 
 subheading {
     font-family: 'Lato', sans-serif;
