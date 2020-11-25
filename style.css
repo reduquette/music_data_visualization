@@ -18,6 +18,17 @@ h2 {
 
 }
 
+div.scroll { 
+    margin:4px, 4px; 
+    padding:4px; 
+    background-color: green; 
+    width: 500px; 
+    height: 110px; 
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    text-align:justify; 
+} 
+
 h4 {
     font-family: 'Lato', sans-serif;
     color: white;
@@ -70,21 +81,23 @@ stroke: white;
     border-width: 2px;
     border-radius: 5px;
     padding: 5px;
-    overflow-y: auto;
+    width: 250px;
+    overflow-y: hidden;
     pointer-events: none;
     color: white;
     float: left;
     box-shadow: 0px 0px 5px #E805F6;
     margin: 15px;
+    overflow-x: hidden;
 }
 
   
   .progress-container {
     z-index: 15;
   position: fixed;
-  width: 15px;
-  height: 110%;
-  background:black;
+  width: 5px;
+  background: black;
+  height: 100%;
   transform: translate(-12px, -80px);
   }
   
@@ -92,3 +105,24 @@ stroke: white;
     background: #4AE7E3;;
     height: 8px;
   }
+
+/* width */
+.hist::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  .hist::-webkit-scrollbar-track {
+    border-radius: 5px;
+  }
+   
+  /* Handle */
+  .hist::-webkit-scrollbar-thumb {
+    background: #E805F6; 
+    border-radius: 5px;
+  }
+
+  .hist::-webkit-scrollbar-corner {
+    background: rgba(0,0,0,0);
+  }
+  
