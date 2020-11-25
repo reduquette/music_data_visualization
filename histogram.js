@@ -2,7 +2,7 @@ export function histogram(container){
 
 var margin = {top: 10, right: 40, bottom: 30, left: 40},
     width = 720 - margin.left - margin.right,
-    height = 600 - margin.top - margin.bottom;
+    height = 520 - margin.top - margin.bottom;
 
 var svg = d3.select("#histogram")
   .append("svg")
@@ -170,14 +170,14 @@ function updateBins(nBin){
   svg.append("text")
       .attr('font-family','Lato')
       .attr('fill', 'white')
-      .attr('x', 632)
+      .attr('x', 639)
         .attr('y', 556)
             .text("Years")
             .attr('font-size',13)
 
 
 }
-updateBins(20)
+updateBins(61)
 
 d3.select("#nBin").on("input", function() {
   updateBins(+this.value);
