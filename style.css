@@ -222,3 +222,52 @@ stroke: white;
   }
   
   
+
+
+circle, line, polygon {
+  stroke: #E3E3E3;
+  stroke-width: 3px;
+  fill:none;
+}
+
+circle.ring,
+polygon.ring {
+  stroke-width: 1px;
+  opacity: .5;
+  fill:none;
+}
+
+circle.axis_circle,
+circle.point {
+  stroke-width: 1px;
+  stroke: #BFEFFF;
+  fill:none;
+}
+
+circle.point {
+  fill:#5890A4;
+}
+
+
+text {
+  font-family: 'Helvetica';
+  font-size:12px;
+  font-weight: bold;
+  stroke: none;
+  fill:#BFEFFF;
+  alignment-baseline: middle;
+}
+
+circle.center {
+  stroke-width: 2px;
+  stroke: #BFEFFF;
+  fill: #145B60;
+}
+
+polygon.area {
+  stroke: #BFEFFF;
+  stroke-width: 2px;
+  fill:none;
+  fill:#4493AA;
+  fill-opacity:.4;
+}
