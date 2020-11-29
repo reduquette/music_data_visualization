@@ -21,6 +21,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
 
 
     
@@ -241,30 +242,103 @@
         font-weight: bold;
         padding: 5px; "> How have songs changed in acousticness, danceability, and energy since 1948?</h3>
 
+    </div>
+
+
+    <div class="container">
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Full-width images with number text -->
+            <div class="mySlides">
+            <div class="numbertext">1 / 5</div>
+            <div id="soundwaves">
+    
+                <h4 style="width: 700px; padding: 5px;">The blue line represents the acousticness of songs throughout the decades. The confidence measure from 0 to 1 of whether the track is acoustic. 1 represents high confidence the track is acoustic. The amount of acousticness in songs had a low dip in 1960 and then went to its max in 1970 before dropping to almost zero. </h4>
+                <h4 style="width: 700px; padding: 5px;">The yellow line represents the energy of songs throughout the decades. Energy is measure from 0 to 1 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy. There was a major dip close to zero in 1970 and from there steadily increases with only a small dip in 1990.</h4>
+                <h4 style="width: 700px; padding: 5px;">The magenta line represents the danceability of songs throughout the decades. Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0 Is the least danceable and 1 is the most danceable. The danceability has remained fairly steady with only a dips in 1970 and a peak in 1990.</h4>
+
+                </div>
+            </div>
+        
+            <div class="mySlides">
+            <div class="numbertext">2 / 5</div>
+                <h3>1960s</h3>
+                <div id="radar1"></div>
+            </div>
+        
+            <div class="mySlides">
+            <div class="numbertext">3 / 5</div>
+                 <h3>1970s</h3>
+                 <div id="radar1"></div>
+            </div>
+
+            <div class="mySlides">
+                <h3>2000s</h3>
+                <div class="numbertext">4 / 5</div>
+                <div id="radar2"></div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 5</div>
+                    <div style="height:400px;">
+                        <h3 style="color: white; width: 700px; background-color: #4AE7E3;
+                         font-family: 'Lato', sans-serif;
+                         border: solid;
+                         padding: 2%;
+                         border-width: 2px;
+                         border-radius: 5px;
+                         box-shadow: 0px 0px 5px #4AE7E3;">
+                        We identified before that the decades with the most hit songs are in the 60s and 70s. These decades also had the highest levels of acousticness on average in their songs and had 2 of the songs with the highest streaks (amount of time on the charts) in these decades. However, while the 2000s may have had less songs in the top 500 charts, this decade contained 2 of the best performing songs on the charts, with Kelly Clarkson's "Since U Been Gone" has the BEST performing song with a whopping 46 week streak on the charts. Songs in the 2000s had some of the highest energy levels compared to other decades, but low acousticness </h3>
+                    </div>
+            </div>
         
 
-    </div>
+        
+            <!-- Image text -->
+            <div class="caption-container">
+            <p id="caption"></p>
+            </div>
+            </div>
+            <script>
+                var slideIndex = 1;
+                    showSlides(slideIndex);
 
-    <div id="soundwaves">
-    
-    <h4 style="width: 700px; padding: 5px;">The blue line represents the acousticness of songs throughout the decades. The confidence measure from 0 to 1 of whether the track is acoustic. 1 represents high confidence the track is acoustic. The amount of acousticness in songs had a low dip in 1960 and then went to its max in 1970 before dropping to almost zero. </h4>
-    <h4 style="width: 700px; padding: 5px;">The yellow line represents the energy of songs throughout the decades. Energy is measure from 0 to 1 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy. There was a major dip close to zero in 1970 and from there steadily increases with only a small dip in 1990.</h4>
-    <h4 style="width: 700px; padding: 5px;">The magenta line represents the danceability of songs throughout the decades. Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0 Is the least danceable and 1 is the most danceable. The danceability has remained fairly steady with only a dips in 1970 and a peak in 1990.</h4>
-    <div style="height:400px;">
-        <h3 style="color: white; width: 700px; background-color: #4AE7E3;
-         font-family: 'Lato', sans-serif;
-         border: solid;
-         padding: 2%;
-         border-width: 2px;
-         border-radius: 5px;
-         box-shadow: 0px 0px 5px #4AE7E3;">
-@Jolene fill in analysis of music sucking        </h3>
-    </div>
+                    // Next/previous controls
+                    function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                    }
+
+                    // Thumbnail image controls
+                    function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                    }
+
+                    function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("demo");
+                    var captionText = document.getElementById("caption");
+                    if (n > slides.length) {slideIndex = 1}
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";
+                    dots[slideIndex-1].className += " active";
+                    captionText.innerHTML = dots[slideIndex-1].alt;
+                    }
+            </script>
     
 </div>
 </section>
 <section class = "panel radar">
     <h2 style="width: 700px; padding: 5px;">How do characteristics compare with songs with the highest streak on the top charts?</h2>
+    <p>Let's Compare the Top Songs</p>
 
     <p>Here we are comparing the characteristics of the songs that topped the charts for the longest amount of time in the dataset. Song title color corresponds to their values on the radar chart.</p>
     <p>We are identifying 1) When did the songs with the highest streaks occur 2) What songs were they? 3) Is there a trend in their characteristics?</p>
@@ -292,8 +366,8 @@
          border-width: 2px;
          border-radius: 5px;
          box-shadow: 0px 0px 5px #4AE7E3;">
-@Jolene fill in analysis of music sucking        </h3>
-    </div>
+         If we compare the best performing songs together side by side based on their decades, we see that most of the time, the best performing songs tend to have very high energy levels. While 'Since U Been Gone' has relatively low to moderate levels in all categories, best performing songs skew towards high energy and danceability. 
+</div>
 
 
 </section>
