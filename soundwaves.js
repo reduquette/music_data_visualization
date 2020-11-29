@@ -58,6 +58,8 @@ d3.csv("averages.csv",d3.autoType).then(data => {
       .x(function(d) { return x(+d.decade) })
       .y(function(d) { return y(+d.value) })
       .curve(d3.curveMonotoneX)
+      
+      
 
 
     //Container for the gradients
@@ -95,20 +97,94 @@ d3.csv("averages.csv",d3.autoType).then(data => {
     .style("stop-opacity", 1)
 
 
-     svg.selectAll("myLines")
-      .data(dataReady)
-      .enter()
-      .append("path")
-        .attr("d", function(d){ 
-            console.log(d.values)
-            return (line(d.values))
-        })
-        .attr("stroke", function(d){ return myColor(d.name) })
-        .style("filter", "url(#glow)")
-        .style("stroke-width", 4)
-        .style("fill", "blue")
-        .style("opacity", "0.4")
+    //  svg.selectAll("myLines")
+    //   .data(dataReady)
+    //   .enter()
+    //   .append("path")
+    //     .attr("d", function(d){ 
+    //         console.log(d.values)
+    //         return (line(d.values))
+    //     })
+    //     .attr("stroke", function(d){ return myColor(d.name) })
+        
+    //     .style("filter", "url(#glow)")
+    //     .style("stroke-width", 4)
+    //     .style("fill", "blue")
+    //     .style("opacity", "0.4")
+
+
+    var path1 = svg.append("path")
+    .datum(dataReady)
+    .attr("fill", "none")
+    .attr("stroke", function(d){ return myColor(d[0].name) })
+    .attr("stroke-width", 1.5)
+    .attr("d", function(d){ 
+              console.log(d[0].values)
+              return (line(d[0].values))
+          })
+          .style("filter", "url(#glow)")
+              .style("stroke-width", 4)
+              .style("fill", "blue")
+              .style("opacity", "0.4")
+
+    var path2 = svg.append("path")
+              .datum(dataReady)
+              .attr("fill", "none")
+              .attr("stroke", function(d){ return myColor(d[1].name) })
+              .attr("stroke-width", 1.5)
+              .attr("d", function(d){ 
+                        console.log(d[1].values)
+                        return (line(d[1].values))
+                    })
+                    .style("filter", "url(#glow)")
+                        .style("stroke-width", 4)
+                        .style("fill", "blue")
+                        .style("opacity", "0.4")
+
+    var path3 = svg.append("path")
+                        .datum(dataReady)
+                        .attr("fill", "none")
+                        .attr("stroke", function(d){ return myColor(d[2].name) })
+                        .attr("stroke-width", 1.5)
+                        .attr("d", function(d){ 
+                                  console.log(d[2].values)
+                                  return (line(d[2].values))
+                              })
+                              .style("filter", "url(#glow)")
+                                  .style("stroke-width", 4)
+                                  .style("fill", "blue")
+                                  .style("opacity", "0.4")
     
+
+var totalLength1 = path1.node().getTotalLength();
+var totalLength2 = path2.node().getTotalLength();
+var totalLength3 = path3.node().getTotalLength();
+
+path1
+    .attr("stroke-dasharray", totalLength1 + " " + totalLength1)
+    .attr("stroke-dashoffset", totalLength1)
+    .transition() 
+    .duration(4000) 
+    .ease(d3.easeLinear) 
+    .attr("stroke-dashoffset", 0); 
+
+    path2
+    .attr("stroke-dasharray", totalLength2 + " " + totalLength2)
+    .attr("stroke-dashoffset", totalLength2)
+    .transition() 
+    .duration(4000) 
+    .ease(d3.easeLinear) 
+    .attr("stroke-dashoffset", 0); 
+
+    path3
+    .attr("stroke-dasharray", totalLength3 + " " + totalLength3)
+    .attr("stroke-dashoffset", totalLength3)
+    .transition() 
+    .duration(4000) 
+    .ease(d3.easeLinear) 
+    .attr("stroke-dashoffset", 0); 
+        
+  
     // Add the points
     svg
       // First we need to enter in a group
@@ -126,6 +202,13 @@ d3.csv("averages.csv",d3.autoType).then(data => {
         .attr("cy", function(d) { return y(d.value) } )
         .attr("r", 5)
         .attr("stroke", "white")
+        .attr('opacity',0)
+
+        svg.selectAll('circle')
+        .transition()
+              .delay(5000)
+        .attr('opacity', 1)
+        
 
     // Add a legend at the end of each line
     svg
