@@ -1,5 +1,10 @@
 body {
-    background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: black;
+  color: white;
 }
 
 h1 {
@@ -126,4 +131,94 @@ stroke: white;
   .hist::-webkit-scrollbar-corner {
     background: rgba(0,0,0,0);
   }
+
+  .muzieknootjes {
+    display: block;
+    margin: auto;
+    position: relative;
+    width: 50%;
+    min-width: 300px;
+    height: 200px;
+    border: 0px solid #000;
+  }
+  
+  .noot-1,
+  .noot-2,
+  .noot-3,
+  .noot-4 {
+    position: absolute;
+    animation: notes 2s infinite linear;
+    font-size: 35px;
+    opacity: 0;
+  }
+  
+  .noot-1 {
+    top: 60px;
+    left: 0;
+    animation-delay: 0.5s;
+  }
+  
+  .noot-2 {
+    top: 30px;
+    left: 30%;
+    animation-delay: 1s;
+  }
+  
+  .noot-3 {
+    top: 90px;
+    left: 60%;
+    animation-delay: 1.5s;
+  }
+  
+  .noot-4 {
+    top: 40px;
+    left: 90%;
+    animation-delay: 2s;
+  }
+  
+  @keyframes notes {
+    0% {
+      transform: scale(1) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.5) translate(50%, -50%);
+    }
+    80% {
+      opacity: 0;
+      transform: scale(1.5) translate(100%, -100%);
+    }
+    100% {
+      transform: scale(1.5) translate(100%, -100%);
+      opacity: 0;
+    }
+  }
+
+
+  .speech-bubble {
+    position: absolute;
+    left:2%;
+    top:250%;
+    background: white;
+    border-radius: .4em;
+    height:150px;
+    width: 200px;
+  }
+  
+  .speech-bubble:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 33px solid transparent;
+    border-left-color:white;
+    border-right: 0;
+    border-bottom: 0;
+    margin-top: -16.5px;
+    margin-right: -33px;
+  }
+  
   
