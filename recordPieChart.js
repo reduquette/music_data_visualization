@@ -15,7 +15,7 @@ export function recordPieChart(){
     var svg = svg_container.append("g")
             .attr("transform", "translate(" + width / 2 + "," + height / 2 + ") rotate(" + 90 + ")");
 
-    var decade = "1950s";
+
 
     var background = svg.append("image")
         .attr("xlink:href", "./record.png")
@@ -34,13 +34,25 @@ export function recordPieChart(){
         }
 
     }
+    function html_text(d, total_hits, decade){
+        console.log(decade)
+        var line1 =  '<b>' + d.data.producer +'</b>'+ " produced " + '<b>' + Math.round(d.data.num_hits / total_hits * 100, 2) +'</b>'+ "% of hit songs in the " + decade;
+        var line2 = '<b> Hit Songs:</b> <br>'
+        var i;
+        for (i = 0; i <d.data.hit_songs.length;i++){
+            line2 += '\t' + d.data.hit_songs[i] + "<br>"
+        }
+        return line1 + '<br>' + line2
+    }
         
     var tooltip = d3.select("#piechart_container .tooltip")
         .style("color", 'black');
 
-    var data;
+    let data, decade, num_hits_decade;
 
-    function update(_data, decade){
+    function update(_data, _decade){
+        console.log(decade);
+        decade=_decade
         data = Object.values(_data[decade]);
 
         svg.transition()
@@ -62,28 +74,19 @@ export function recordPieChart(){
         var pie = d3.pie()
             .value(function(d) {return d.num_hits; });
         var data_ready = pie(data)
-            .sort(function(a, b) { return d3.ascending(a.index, b.index);} )
+            .sort(function(a, b) { return d3.ascending(a.index, b.index);} );
 
-        var top_10 = data_ready.slice(0,10).map(d=>d.data.producer);
-        var num_hits_decade = d3.sum(data_ready, d=>d.data.num_hits);
+        num_hits_decade = d3.sum(data_ready, d=>d.data.num_hits);
+
         
-        function html_text(d){
-            var line1 =  '<b>' + d.data.producer +'</b>'+ " produced " + '<b>' + Math.round(d.data.num_hits / num_hits_decade * 100, 2) +'</b>'+ "% of hit songs in the " + decade;
-            var line2 = '<b> Hit Songs:</b> <br>'
-            var i;
-            for (i = 0; i <d.data.hit_songs.length;i++){
-                line2 += '\t' + d.data.hit_songs[i] + "<br>"
-            }
-            return line1 + '<br>' + line2
-        }
         console.log(num_hits_decade);
-        console.log(top_10);
+        console.log(decade);
 
         // map to data
 
         var u = svg.selectAll("path")
             .data(data_ready)
-
+        console.log(decade)
         // Build the pie chart
         u
             .enter()
@@ -92,9 +95,10 @@ export function recordPieChart(){
             console.log("mouse enter");
             console.log(event);
             console.log(d.data.producer);
+            console.log(decade);
             tooltip
                 .style('display', 'block')
-                .html(html_text(d))
+                .html(html_text(d, num_hits_decade, decade))
                 .style('top', event.clientY + "px")
                 .style('left', event.clientX + "px");
             })
