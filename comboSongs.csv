@@ -5,17 +5,17 @@ Imagine,Joseph Williams,John Lennon," Lennon, Phil Spector, Yoko Ono",1971," Oct
 What's Going On,Henri Salvador," Gaye, Renaldo Benson, Al Cleveland", Gaye ,1971," Feb. '71, Tamla",13 weeks; No. 2,0.703,0.24,0.326,0
 Respect,Fabien Nataf, Otis Redding,Jerry Wexler,1967," April '67, Atlantic",12 weeks; No. 1,0.95,0.331,0.225,0.123
 Good Vibrations,Henri Salvador," Brian Wilson, Mike Love", Wilson,1966," Oct. '66, Capitol",14 weeks; No. 1,0.749,0.578,0.0948,0
-Johnny B. Goode,Martin & les fÃ©es, Chuck Berry, Leonard and Phil Chess,1958," April '58, Chess",15 weeks; No. 8,0.344,0.703,0.27,0
+Johnny B. Goode,Martin & les fÃ©es, Chuck Berry," Leonard Chess, Phil Chess",1958," April '58, Chess",15 weeks; No. 8,0.344,0.703,0.27,0
 HeyJude,Laura Mayne,"John Lennon, Paul McCartney", George Martin,1968," Aug. '68, Apple",19 weeks; No. 1,0.939,0.416,0.269,0
 Smells Like Teen Spirit,Chorus, Kurt Cobain, Butch Vig,1991," Sept. '91, DGC",20 weeks; No. 6,0.00104,0.734,0.481,0.00086
 My Generation,Leopold Stokowski, Pete Townshend, Shel Talmy,1965," Nov. '65, Decca",5 weeks; No. 74,0.921,0.191,0.145,0.529
 A Change Is Gonna Come,Randy Newman, Cooke," Hugo Peretti, Luigi Creatore",1964," Dec. '64, RCA",7 weeks; No. 31,0.0383,0.23,0.133,0.887
 Yesterday,Idoles De La Musique,"John Lennon, Paul McCartney", George Martin,1965," Sept. '65, Capitol",11 weeks; No. 1,0.215,0.68,0.6,0.0729
 Blowin' in the Wind,Chorus, Dylan,John Hammond,1963," May '63, Columbia",Did not chart,0.958,0.758,0.264,0
-London Calling,Richard M. Sherman," MickJones,Joe Strummer", Guy Stevens,1980,"Jan. '80, Epic",Did not chart,0.97,0.4,0.174,0.933
+London Calling,Richard M. Sherman," Mick Jones,Joe Strummer", Guy Stevens,1980,"Jan. '80, Epic",Did not chart,0.97,0.4,0.174,0.933
 I Want to Hold Your Hand,Michel Roux,"John Lennon, Paul McCartney", George Martin,1963," Dec. '63, Capitol",15 weeks; no. 1,0.548,0.588,0.405,0
 Purple Haze,Jean Claude Corbel, Hendrix, Chas Chandler,1967," March '67, Reprise",8 weeks; No. 65,0.7,0.625,0.237,0
-Maybellene,Bernard Minet, Berry, Leonard and Phil Chess,1955,"July '55, Chess",11 weeks; No. 5,0.488,0.744,0.953,0
+Maybellene,Bernard Minet, Berry," Leonard Chess, Phil Chess",1955,"July '55, Chess",11 weeks; No. 5,0.488,0.744,0.953,0
 Hound Dog,Henri Salvador,"Jerry Leiber, Mike Stoller", Steve Sholes,1956,"July '56, RCA",28 weeks; No. 1,0.381,0.451,0.491,0
 Let It Be,Amalya,"John Lennon, Paul McCartney", George Martin,1970," March '70, Apple",14 weeks; No. 1,0.161,0.522,0.748,7.25E-06
 Born to Run,Martin & les fÃ©es, Springsteen," Springsteen, Mike Appel",1975," Aug. '75, Columbia",11 weeks; No. 23,0.852,0.362,0.436,0
@@ -50,13 +50,13 @@ The Tracks of My Tears,DorothÃ©e," Pete Moore, Robinson, Marv Tamplin", Robins
 The Message,Claire Guyot," Duke Bootee, Melle Mel", Sylvia Robinson,1982," May '82, Sugar Hill",7 weeks; No. 62 ,0.902,0.489,0.26,0.000683
 When a Man Loves a Woman,Henri Salvador," Calvin Lewis, Andrew Wright"," Marlin Greene, Quin Ivy",1966," March '66, Atlantic",13 weeks; No. 1 ,0.712,0.63,0.606,0
 Louie Louie,Lucie Dolene, Richard Berry, Ken Chase,1963,"June '63,Jerden",16 weeks; No. 2 ,0.917,0.428,0.317,0
-Long Tall Sally,Jean Piat," Robert ""Bumps"" Blackwell, EnotrisJohnson, Little Richard", Blackwell,1956," March '56, Specialty",19 weeks; No. 6 ,0.924,0.683,0.147,0
-Anarchy in the U.K.,Justin Hurwitz," Paul Cook, SteveJones, Glen Matlock,Johnny Rotten"," Chris Thomas, Bill Price",1977," Nov. '77, Warner Bros.",Non-single,0.967,0.55,0.0148,0.0608
+Long Tall Sally,Jean Piat," Robert ""Bumps"" Blackwell, Enotris Johnson, Little Richard","Robert ""Bumps"" Blackwell",1956," March '56, Specialty",19 weeks; No. 6 ,0.924,0.683,0.147,0
+Anarchy in the U.K.,Justin Hurwitz," Paul Cook, Steve Jones, Glen Matlock,Johnny Rotten"," Chris Thomas, Bill Price",1977," Nov. '77, Warner Bros.",Non-single,0.967,0.55,0.0148,0.0608
 Whiter Shade of Pale,Chorus," Keith Reid, Gary Brooker", Denny Cordell,1967,"June '67, A&M",12 weeks; No. 5,0.989,0.262,0.151,0
-BillieJean,Henri Salvador,Jackson,"Jackson, QuincyJones",1983,"Jan. '83, Epic",7 weeks; No. 1,0.728,0.538,0.294,0
-The Times They Are A-Changin,Randy Newman, Dylan, BobJohnston,1964,"Jan. '64, Columbia",Did not chart ,0.871,0.297,0.0808,0.891
-Let's Stay Together,Chorus," Al Green, AlJacksonJr., Willie Mitchell", Mitchell,1971," Dec. '71, Hi",16 weeks; No. 1,0.126,0.542,0.797,0
-Bo Diddley,Chorus, Ellas McDaniel, Phil and Leonard Chess,1955,"June '55, Checker ",Did not chart,0.455,0.714,0.346,0
+BillieJean,Henri Salvador,Jackson,"Jackson, Jones",1983,"Jan. '83, Epic",7 weeks; No. 1,0.728,0.538,0.294,0
+The Times They Are A-Changin,Randy Newman, Dylan, Bob Johnston,1964,"Jan. '64, Columbia",Did not chart ,0.871,0.297,0.0808,0.891
+Let's Stay Together,Chorus," Al Green, Al JacksonJr., Willie Mitchell", Mitchell,1971," Dec. '71, Hi",16 weeks; No. 1,0.126,0.542,0.797,0
+Bo Diddley,Chorus, Ellas McDaniel," Phil Chess, Leonard Chess",1955,"June '55, Checker ",Did not chart,0.455,0.714,0.346,0
 For What It's Worth,Henri Salvador, Stephen Stills," Charles Greene, Brian Stone",1967," Feb. '67, Atco","15 weeks, No. 7",0.983,0.341,0.156,0.0418
 Sunshine of Your Love,Chorus,"Jack Bruce, Pete Brown, Eric Clapton", Felix Pappalardi,1968,"Jan. '68, Atco",26 weeks; No. 5 ,0.71,0.582,0.679,0.0286
 Redemption Song,Karine Costa, Marley, Chris Blackwell,1980,"June '80, Island",Did not chart,0.0575,0.59,0.847,0
@@ -70,7 +70,7 @@ Superstition,Frank Churchill, Wonder," Wonder, Malcolm Cecil, Robert Margouleff"
 Summertime Blues,Chorus," Cochran,Jerry Capehart", Capehart,1958,"July '58, Liberty",16 weeks; No. 8,0.939,0.582,0.174,8.63E-05
 Whole Lotta Love,Jean Claude Corbel," Willie Dixon, Led Zeppelin",Jimmy Page,1969," Oct. '69, Atlantic",15 weeks; No. 4,0.695,0.71,0.231,0
 Strawberry Fields Forever,Jean Claude Corbel,"John Lennon, Paul McCartney", George Martin,1967," Feb. '67, Capitol",9 weeks; No. 8,0.756,0.564,0.275,0
-Mystery Train,Dominique Tirmont,"Junior Parker, Sam Phillips", Phillips,1955," Sept. '55, Sun",Did not chart,0.91,0.388,0.448,0
+Mystery Train,Dominique Tirmont,"Junior Parker, Sam Phillips",Sam Phillips,1955," Sept. '55, Sun",Did not chart,0.91,0.388,0.448,0
 I Got You (I Feel Good),Henri Salvador, Brown, Brown,1965," Nov. '65, King",12 weeks; No. 3,0.776,0.363,0.153,9.00E-06
 Mr. Tambourine Man,Jean Claude Corbel, Bob Dylan, Terry Melcher,1965," May '65, Columbia",13 weeks; No. 1,0.715,0.569,0.345,0
 You Really Got Me,Jean Claude Corbel, Ray Davies, Shel Talmy,1964," Sept. '64, Reprise ",15 weeks; No. 7,0.778,0.61,0.266,0
@@ -83,12 +83,12 @@ Ring of Fire,Chorus,"June Carter, Merle Kilgore", Don Law,1963," May '63, Columb
 My Girl,Chorus," Smokey Robinson, Ronald White"," Robinson, White",1965,"Jan. '65, Gordy",13 weeks; No. 1,0.847,0.494,0.444,0
 California Dreamin,Bernard Minet,John and Michelle Phillips, Lou Adler,1965," Dec. '65, Dunhill",17 weeks; No. 4,0.66,0.657,0.626,6.03E-06
 In the Still of the Night,Chorus, Fred Parris, The Five Satins,1956," Sept. '56, Standord",19 weeks; No. 24,0.366,0.694,0.376,0
-Suspicious Minds,Chorus, MarkJames," Chips Moman, FeltonJarvis, Presley",1969," Sept. '69, RCA",15 weeks; No. 1,0.357,0.61,0.833,3.55E-05
+Suspicious Minds,Chorus, Mark James," Chips Moman, Felton Jarvis, Presley",1969," Sept. '69, RCA",15 weeks; No. 1,0.357,0.61,0.833,3.55E-05
 I Still Haven't Found What I'm Looking For,Martin & les fÃ©es, Bono," Daniel Lanois, Brian Eno",1987," May '87, Island",17 weeks; No. 1,0.345,0.505,0.522,0
-"Good Golly, Miss Molly",Henri Salvador," Robert ""Bumps"" Blackwell,John Marascalco", Blackwell,1958," Feb. '58, Specialty",15 weeks; No. 10,0.79,0.701,0.347,3.16E-06
+"Good Golly, Miss Molly",Henri Salvador," Robert ""Bumps"" Blackwell,John Marascalco","Robert ""Bumps"" Blackwell",1958," Feb. '58, Specialty",15 weeks; No. 10,0.79,0.701,0.347,3.16E-06
 Blue Suede Shoes,Henri Salvador, Perkins, Sam Phillips,1956," Feb '56, Sun",21 weeks; No. 2,0.0367,0.441,0.643,0
 Great Balls of Fire,Claire Guyot," Otis Blackwell,Jack Hammer", Sam Phillips,1957," Nov. '57, Sun",21 weeks; No. 2,0.744,0.193,0.477,7.44E-05
-Roll Over Beethoven,Chorus, Berry, Leonard and Phil Chess,1956," May '56, Chess",5 weeks; No. 29,0.84,0.688,0.331,0
+Roll Over Beethoven,Chorus, Berry," Leonard Chess, Phil Chess",1956," May '56, Chess",5 weeks; No. 29,0.84,0.688,0.331,0
 Fortunate Son,Richard M. Sherman,John Fogerty, Fogerty,1969," Oct. '69, Fantasy",14 weeks; No. 14,0.987,0.429,0.0478,0.959
 Crazy,Dominique Tirmont, Willie Nelson, Owen Bradley,1961," Oct. '61, Decca",11 weeks; No. 9,0.611,0.702,0.509,0
 You Can't Always Get What You Want,Chorus,"Mick Jagger, Keith Richards",Jimmy Miller,1969,"July '69, London",8 weeks; No. 42,0.636,0.615,0.846,7.55E-05
@@ -118,7 +118,7 @@ Changes,Houcine, Bowie, Ken Scott,1971," Dec. '71, RCA",11 Weeks; No. 41,0.00759
 Born to Be Wild,Chorus, Mars Bonfire, Gabriel Mekler,1968,"Jan. '68, Dunhill ",13 Weeks; No. 2  ,0.78,0.606,0.389,0
 Maggie May,Randy Newman," Stewart, Martin Quittenton", Stewart,1971,"June '71, Mercury",17 weeks; No. 1,0.989,0.375,0.107,0.785
 With or Without You,Lucie Dolene," Bono, the Edge, Adam Clayton, Larry MullenJr."," Brian Eno, Daniel Lanois ",1987," March '87, Island",18 weeks; No. 1,0.89,0.441,0.214,8.59E-06
-Who Do You Love?,Randy Newman, Ellas McDaniel, Phil and Leonard Chess,1957," March '57, Checker",Did not chart,0.979,0.211,0.041,0.926
+Who Do You Love?,Randy Newman, Ellas McDaniel," Phil Chess, Leonard Chess",1957," March '57, Checker",Did not chart,0.979,0.211,0.041,0.926
 In the Midnight Hour,China Moses," Pickett, Steve Cropper","Jerry Wexler,Jim Stewart",1965,"July '65, Atlantic",12 weeks; No. 21,0.566,0.522,0.392,5.03E-06
 While My Guitar Gently Weeps,Mary J. Blige, George Harrison, George Martin,1968," Nov. '68, Apple",Non-single ,0.083,0.724,0.689,0
 Your Song,Rihanna," Bernie Taupin,John", Gus Dudgeon,1970," Nov. '70, Uni",14 weeks; No. 8 ,0.323,0.685,0.61,0
@@ -126,7 +126,7 @@ Eleanor Rigby,Yung Bleu,"John Lennon, Paul McCartney", George Martin,1966," Aug.
 Family Affair,Surfaces, Sly Stone, Stone,1971," Oct. '71, Epic",14 weeks; No. 1,0.36,0.563,0.366,0.00243
 I Saw Her Standing There,Olivia O'Brien,"John Lennon, Paul McCartney", George Martin,1964,"Jan. '64, Capitol",11 weeks; No. 14,0.596,0.653,0.621,0
 Kashmir,ELHAE,"John Bonham,Jimmy Page, Robert Plant", Page,1975," March '75, Swan Song",Non-single,0.661,0.51,0.331,0
-All I Have to Do Is Dream,Nao, Boudleaux and Felice Bryant, Archie Bleyer,1958," May '58, Cadence",11 weeks; No. 21,0.667,0.67,0.649,0.00013
+All I Have to Do Is Dream,Nao," Boudleaux Bryant, Felice Bryant", Archie Bleyer,1958," May '58, Cadence",11 weeks; No. 21,0.667,0.67,0.649,0.00013
 "Please, Please, Please",Frank Ocean," Brown,Johnny Terry", Ralph Bass,1956," Feb. '56, Federal",2 weeks; No. 95,0.975,0.377,0.255,0.000208
 Purple Rain,Layton Greene,Prince,Prince,1984,"June '84, Warner Bros.",16 weeks; No. 2,0.72,0.523,0.507,0
 I Wanna Be Sedated,Usher, Ramones," Tommy Erdelyi, Ed Stasium",1978," Oct. '78, Sire",Did not chart,0.0359,0.761,0.639,0
@@ -162,13 +162,13 @@ Don't Worry Baby,Yuna," Brian Wilson, Roger Christian", Wilson,1964," May '64, C
 Free Fallin,Keri Hilson," Petty,Jeff Lynne", Lynne,1989,"June '89, MCA",21 weeks; No. 7,0.203,0.666,0.87,0
 Love Will Tear Us Apart,The Japanese House," Ian Curtis, Peter Hook, Stephen Morris, Bernard Sumner", Martin Hannett,1980," April '80, Enigma",Did not chart,0.0729,0.605,0.446,0
 Hey Ya!,T-Pain, Andr_ 3000,Andre 3000,2003," Sept. '03, LaFace",32 weeks; No. 1,0.0761,0.738,0.519,0
-Green Onions,Tory Lanez," Booker T.Jones, Steve Cropper, Lewis Steinberg, AlJackson",Jim Stewart,1962," Oct. '62, Stax",16 weeks; No. 3,0.305,0.539,0.886,0
+Green Onions,Tory Lanez," Booker T.Jones, Steve Cropper, Lewis Steinberg, Al Jackson",Jim Stewart,1962," Oct. '62, Stax",16 weeks; No. 3,0.305,0.539,0.886,0
 Save the Last Dance for Me,The Weeknd," Doc Pomus, Mort Shuman","Jerry Leiber, Mike Stoller",1960," Sept. '60, Atlantic",18 weeks; No. 1,0.682,0.671,0.428,0.0002
 The Thrill is Gone,H.E.R.," Roy Hawkins, Rick Darnell", Bill Szymczyk,1969," Dec. '69, BluesWay",14 weeks; No. 15,0.313,0.794,0.448,0.0184
 Desolation Row,City Girls, Dylan,Bob Johnston,1965," Aug. '65, Columbia",Non-single,0.0101,0.595,0.695,0
 Who'll Stop the Rain,Brent Faiyaz,John Fogerty, Fogerty,1970,"Jan. '70, Fantasy",Did not chart,0.575,0.385,0.473,2.88E-05
 I Never Loved a Man (the Way I Love You),Jacquees, Ronny Shannon,Jerry Wexler,1967," March '67, Atlantic",11 weeks; No. 9,0.0163,0.71,0.578,0
-Back in Black,JP Saxe," Angus Young, Malcolm Young, BrianJohnson", Mutt Lange,1980,"July '80, Atlantic",15 weeks; No. 37,0.64,0.536,0.426,5.88E-06
+Back in Black,JP Saxe," Angus Young, Malcolm Young, Brian Johnson", Mutt Lange,1980,"July '80, Atlantic",15 weeks; No. 37,0.64,0.536,0.426,5.88E-06
 Stayin' Alive,Chingy," Robin Gibb, Barry Gibb, Maurice Gibb"," Barry Gibb, Robin Gibb, Maurice Gibb, Karl Richardson, Albhy Galuten",1977," Nov. '77, RSO",27 weeks; No. 1,0.15,0.866,0.749,0
 Knockin' on Heaven's Door,H.E.R., Dylan, Gordon Carroll,1973,"July '73, Columbia",16 weeks; No. 12,0.865,0.535,0.395,1.78E-05
 Free Bird,Wale," Allen Collins, Ronnie Van Zant", Al Kooper,1973," Sept. '73, MCA",12 weeks; No. 19,0.611,0.512,0.598,0
@@ -184,11 +184,11 @@ Flash Light,Rihanna," George Clinton, Bernie Worrell, Bootsy Collins", Clinton,1
 Loser,Jason Derulo, Beck Hansen, Karl Stephenson,1993," 1993, Bong Load   ",24 weeks; No. 10,0.128,0.442,0.83,0
 Bizarre Love Triangle,DJ Khaled," Bernard Albrecht, Gillian Gilbert, Peter Hook, Stephen Morris", New Order,1986," Oct. '86, Qwest",2 weeks; No. 98,0.0104,0.549,0.791,0
 Come Together,Demi Lovato,"John Lennon, Paul McCartney", George Martin,1969," Sept. '69, Apple",16 weeks; No. 1,0.0978,0.583,0.435,0
-Positively 4th Street,Nao, Dylan, BobJohnston,1965," Sept. '65, Columbia",9 weeks; No. 7,0.0895,0.488,0.62,3.03E-05
+Positively 4th Street,Nao, Dylan, Bob Johnston,1965," Sept. '65, Columbia",9 weeks; No. 7,0.0895,0.488,0.62,3.03E-05
 Try a Little Tenderness,Adrian Marcel,"Jimmy Campbell, Reginald Connelly, Harry Woods"," Steve Cropper,Jim Stewart",1966," Dec. '66, Stax",10 weeks; No. 25,0.0523,0.849,0.521,0
 Lean on Me,Mario, Withers, Withers,1972,"June '72, Sussex",19 weeks; No. 1,0.215,0.684,0.455,1.08E-06
 "Reach Out, I'll Be There",Jagged Edge," Eddie Holland, Lamont Dozier, Brian Holland"," Holland, Dozier, Holland",1966," Aug. '66, Motown",15 weeks; No. 1,0.31,0.596,0.661,0
-Bye Bye Love,T-Pain, Boudleaux and Felice Bryant, Archie Bleyer,1957," May '57, Cadence",27 weeks; No. 2,0.0236,0.705,0.584,0
+Bye Bye Love,T-Pain," Boudleaux Bryant, Felice Bryant", Archie Bleyer,1957," May '57, Cadence",27 weeks; No. 2,0.0236,0.705,0.584,0
 Gloria,Ari Lennox, Van Morrison, Tommy Scott,1965," March '65, Parrot",1 week; No. 95,0.619,0.733,0.508,0.00452
 In My Room,Big Sean," Brian Wilson, Gary Usher", Wilson,1963," Sept. '63, Capitol",11 weeks; No. 23,0.0167,0.656,0.564,1.39E-06
 96 Tears,bLAck pARty, Rudy Martinez, Martinez,1966," Sept. '66, Pa-Go-Go",15 weeks; No. 1,0.261,0.749,0.399,0.0126
@@ -196,21 +196,21 @@ In My Room,Big Sean," Brian Wilson, Gary Usher", Wilson,1963," Sept. '63, Capito
 1999,GoldLink,Prince,Prince,1982," Oct. '82, Warner Bros.",27 weeks; No. 12,0.104,0.691,0.75,0
 Rockin' in the Free World,Raveena, Young," Niko Bolas, Young",1989," Oct. '89, Reprise",Non-single,0.465,0.759,0.404,0.00131
 Your Cheatin' Heart,Trevor Daniel," Williams, Fred Rose", Rose,1953,"Jan. '53, MGM",Predates pop charts,0.121,0.803,0.485,0
-Do You Believe in Magic,T-Pain,John Sebastian, ErikJacobsen,1965,"July '65, Kama Sutra",13 weeks; No. 9,0.019,0.514,0.291,0
+Do You Believe in Magic,T-Pain,John Sebastian, Erik Jacobsen,1965,"July '65, Kama Sutra",13 weeks; No. 9,0.019,0.514,0.291,0
 Jolene,Tinashe, Parton, Bob Ferguson,1974,"Jan. '74, RCA",8 weeks; No. 60,0.571,0.717,0.599,8.99E-06
 Boom Boom,Peter CottonTale, Hooker, Calvin Carter,1962," Feb. '62, Vee-Jay",10 weeks; No. 60,0.852,0.362,0.443,0.000132
-Spoonful,DaniLeigh, Willie Dixon, Leonard and Phil Chess,1960,"June '60, Chess",Did not chart,0.0353,0.835,0.511,1.19E-06
+Spoonful,DaniLeigh, Willie Dixon," Leonard Chess, Phil Chess",1960,"June '60, Chess",Did not chart,0.0353,0.835,0.511,1.19E-06
 Walk Away Renee,Ty Dolla $ign," Michael Brown, Bob Calilli, Tony Sansone", Harry Lookofsky,1966," Sept. '66, Smash",13 weeks; No. 5,0.00888,0.858,0.398,0
 Walk on the Wild Side,James Blake, Reed," David Bowie, Mick Ronson, Reed",1972," Dec. '72, RCA",14 weeks; No. 16,0.723,0.557,0.278,2.24E-05
 "Oh, Pretty Woman",Dreezy," Orbison, Billy Dees", Wesley Rose,1964," Aug. '64, Monument",15 weeks; No. 1,0.261,0.889,0.451,0
 Dance to the Music,Snoh Aalegra, Sylvester Stewart (Sly Stone), Stone,1968,"Jan. '68, Epic",15 weeks; No. 8,0.362,0.705,0.513,0.0559
-Hoochie Coochie Man,Zara Larsson, Willie Dixon," Leonard and Phil Chess, Dixon",1954,"Jan. '54, Chess",Did not chart,0.00778,0.576,0.782,0
+Hoochie Coochie Man,Zara Larsson, Willie Dixon," Leonard Chess, Phil Chess, Willie Dixon",1954,"Jan. '54, Chess",Did not chart,0.00778,0.576,0.782,0
 Fire and Rain,BeyoncÃ©, Taylor, Peter Asher,1970," Feb. '70, Warner Bros.",16 weeks; No. 3,0.308,0.665,0.787,0
 Should I Stay or Should I Go,Jarreau Vandal, The Clash, GlynJohns,1982," May '82, Epic",13 weeks; No. 45,0.558,0.737,0.429,0
 Good Times,Alina Baraz," Nile Rodgers, Bernard Edwards"," Rodgers, Edwards",1979,"June '79, Atlantic",19 weeks; No. 1,0.672,0.63,0.501,0.00131
-Mannish Boy,The Carters," McKinley Morganfield, Mel London, Ellas McDaniel"," Leonard and Phil Chess, Willie Dixon",1955," May '55, Chess",Did not chart,0.092,0.912,0.533,1.48E-06
+Mannish Boy,The Carters," McKinley Morganfield, Mel London, Ellas McDaniel"," Leonard Chess, Phil Chess, Willie Dixon",1955," May '55, Chess",Did not chart,0.092,0.912,0.533,1.48E-06
 Moondance,Trey Songz, Morrison, Morrison,1970," Feb. '70, Warner Bros.",4 weeks; No. 92,0.0379,0.663,0.693,0
-Just Like a Woman,T-Pain, Dylan, BobJohnston,1966," May '66, Columbia",6 weeks; No. 33,0.0076,0.647,0.484,0
+Just Like a Woman,T-Pain, Dylan, Bob Johnston,1966," May '66, Columbia",6 weeks; No. 33,0.0076,0.647,0.484,0
 Sexual Healing,BJ The Chicago Kid," Gaye, Odell Brown, David Ritz", Gaye,1982," Oct. '82, Columbia",21 weeks; No. 3,0.38,0.655,0.597,0
 Only the Lonely,SZA,"Joe Melson, Orbison", Fred Foster,1960," May '60, Monument",21 weeks; No. 2,0.0658,0.805,0.702,0
 We Gotta Get Out of This Place,James Blake," Barry Mann, Cynthia Weil", Mickie Most,1965," Aug.  '65, MGM",11 weeks; No. 13,0.849,0.649,0.468,0.00706
@@ -237,18 +237,18 @@ Heart of Glass,Mario," Deborah Harry, Chris Stein", Mike Chapman,1978," Sept. '7
 Mississippi,August Alsina, Dylan,Jack Frost,2001," Sept. '01, Columbia",Non-Single,0.00648,0.577,0.625,0
 Wild Thing,T-Pain, Chip Taylor, Larry Page,1966,"June '66, Atco/Fontana",11 weeks; No. 1,0.000582,0.604,0.577,0
 I Can See For Miles,Doja Cat, Pete Townshend, Kit Lambert,1967," Oct. '67, Decca",11 weeks; No. 9,0.0716,0.71,0.71,1.07E-06
-Oh,Arin Ray," MarvinJunior,John Funches", Bobby Miller,1969," Aug. '69, Cadet",11 weeks; No. 10,0.257,0.686,0.701,0.00281
+Oh,Arin Ray," Marvin Junior,John Funches", Bobby Miller,1969," Aug. '69, Cadet",11 weeks; No. 10,0.257,0.686,0.701,0.00281
 Hallelujah,Usher, Leonard Cohen, Andy Wallace,1994," Aug. '94, Columbia",Non-Single,0.0586,0.845,0.467,0
 Higher Ground,HONNE, Wonder, Wonder,1973," Aug. '73, Tamla",14 weeks; No. 4,0.21,0.503,0.581,0.000708
 Ooo Baby Baby,Madison Beer," Robinson, Warren Moore", Robinson,1965," March '65, Tamla",11 weeks; No. 16,0.028,0.743,0.793,0
 Sail Away,Ellie Goulding, Newman, Lenny Waronker,1972,"June '72, Reprise",Did not chart,0.258,0.702,0.705,5.93E-06
 Tighten Up,Ama Lou," Bell, Billy Butler", Skipper Lee Frazier,1968," March '68, Atlantic",15 weeks; No. 1,0.855,0.688,0.261,1.25E-06
-Personality Crisis,Charli XCX," DavidJohansen,Johnny Thunders", Todd Rundgren,1973," Aug. '73, Mercury",Did not chart,0.0646,0.867,0.545,0.000289
+Personality Crisis,Charli XCX," David Johansen,Johnny Thunders", Todd Rundgren,1973," Aug. '73, Mercury",Did not chart,0.0646,0.867,0.545,0.000289
 Jesus Walks,Annmarie," Kanye West, Rhymefest", West,2004," Feb. '04, Roc-a-Fella",25 weeks; No. 11,0.717,0.649,0.646,1.84E-05
 Roadrunner,Jason Derulo,Jonathan Richman,John Cale,1976," Oct. '76, Beserkley",Did not chart ,0.0165,0.668,0.718,0
 He Stopped Loving Her Today,James Blake," Bobby Braddock,Curly Putnam", Billy Sherrill,1980," March '80, Epic",Did not chart ,0.886,0.413,0.349,0.000195
 SloopJohn B,T-Pain," Traditional, Brian Wilson", Wilson,1966," March '66, Capitol",11 weeks; No. 3,0.0871,0.51,0.626,0
-Sweet Little Sixteen,Chris Brown, Berry, Leonard and Phil Chess,1958,"Jan. '58, Chess",16 weeks; No. 2,0.388,0.644,0.601,0
+Sweet Little Sixteen,Chris Brown, Berry," Leonard Chess, Phil Chess",1958,"Jan. '58, Chess",16 weeks; No. 2,0.388,0.644,0.601,0
 Something,Ty Dolla $ign, George Harrison, George Martin,1969," Oct. '69, Apple",16 weeks; No. 3,0.0116,0.77,0.426,0
 Somebody to Love,Jorja Smith, Darby Slick, RickJarrard,1967," Feb. '67, RCA",15 weeks; No. 5,0.47,0.583,0.677,0.193
 Born in the U.S.A.,The Weeknd, Springsteen," Springsteen,Jon Landau, Chuck Plotkin, Steve Van Zandt",1984,"June '84, Columbia",17 weeks; No. 9,0.418,0.469,0.417,0.000189
@@ -259,15 +259,15 @@ Seven Nation Army,Henri Salvador,Jack White, White,2003," April '03, V2/Third Ma
 You Are the Sunshine of My Life,Henri Salvador, Wonder, Wonder,1972," Nov. '72, Tamla",17 weeks; No. 1,0.959,0.495,0.23,0.000207
 Help Me,Leopold Stokowski, Mitchell, Mitchell,1974," Feb. '74, Asylum",19 weeks; No. 7,0.88,0.142,0.13,0.655
 Call Me,Henri Salvador," Giorgio Moroder, Deborah Harry", Moroder,1980," Feb. '80, Chrysalis",25 weeks; No. 1 ,0.502,0.379,0.368,0
-Smokestack Lightning,Henri Salvador, Chester Burnett," Leonard and Phil Chess, Willie Dixon",1956," March '56, Chess",Did not chart ,0.602,0.378,0.378,0.162
+Smokestack Lightning,Henri Salvador, Chester Burnett," Leonard Chess, Phil Chess, Willie Dixon",1956," March '56, Chess",Did not chart ,0.602,0.378,0.378,0.162
 Walk This Way,Martin & les fÃ©es," Steven Tyler,Joe Perry"," Rick Rubin,Russell Simmons",1986," May '86, Profile",16 weeks; No. 4,0.317,0.574,0.439,0
 Money (That's What I Want),Chorus," Berry Gordy,Janie Bradford", Gordy,1960,"Jan. '60, Anna",17 weeks; No. 23,0.445,0.505,0.504,0
 Can't Buy Me Love,Karine Costa,"John Lennon, Paul McCartney", George Martin,1964," March '64, Capitol",10 weeks; No. 1,0.533,0.522,0.431,0
 Stan,Randy Newman," Marshall Mathers,D. Armstrong, P. Herman"," Eminem, the 45 King",2000," March '00, Aftermath",15 weeks; No. 51,0.939,0.192,0.0923,0.912
-She's Not There,Henri Salvador, Rod Argent, KenJones,1964," Oct. '64, Parrot",15 weeks; No. 2 ,0.221,0.739,0.916,0
-Train in Vain,Jean Piat," MickJones,Joe Strummer", Guy Stevens,1979," Dec. '79, Epic",14 weeks; No. 23,0.879,0.751,0.158,0
+She's Not There,Henri Salvador, Rod Argent, Ken Jones,1964," Oct. '64, Parrot",15 weeks; No. 2 ,0.221,0.739,0.916,0
+Train in Vain,Jean Piat," Mick Jones,Joe Strummer", Guy Stevens,1979," Dec. '79, Epic",14 weeks; No. 23,0.879,0.751,0.158,0
 Tired of Being Alone,Leopold Stokowski, Green," Willie Mitchell, Green",1971,"July '71, Hi",19 weeks; No. 11,0.903,0.394,0.279,0.881
-Black Dog,Henri Salvador,"Jimmy Page, Robert Plant,John PaulJones", Page,1971," Nov. '71, Atlantic",12 weeks; No. 15,0.992,0.509,0.0133,0.0119
+Black Dog,Henri Salvador,"Jimmy Page, Robert Plant,John Paul Jones", Page,1971," Nov. '71, Atlantic",12 weeks; No. 15,0.992,0.509,0.0133,0.0119
 Street Fighting Man,Idoles De La Musique,"Mick Jagger, Keith Richards",Jimmy Miller,1968,"Aug. '68, London",6 weeks; No. 48,0.28,0.756,0.575,0
 "Get Up, Stand Up",Chorus,"Bob Marley, Peter Tosh",Chris Blackwell,1975,"Nov. '75, Island",Did not chart,0.976,0.302,0.146,8.94E-06
 Heart of Gold,Chorus,Young,"Elliot Mazer, Young",1972,"Feb '72, Reprise",14 weeks; No. 1,0.126,0.492,0.686,0.000191
@@ -280,7 +280,7 @@ Ruby Tuesday,Henri Salvador,"Mick Jagger, Keith Richards",Andrew Loog Oldham,196
 With a Little Help From My Friends,Henri Salvador,"John Lennon, Paul McCartney",George Martin,1967,"June '67, Capitol",Non-single,0.0575,0.577,0.403,0
 Thats Entertainment,Jean Claude Corbel,Paul Weller,"Vic Coppersmith-Heaven, theJam",1980,"Nov. '80, Polydor",Non-single in the U.S.,0.616,0.686,0.221,0
 Why Do Fools Fall In Love,Bernard Minet,"Lymon, Morris Levy",George Goldner,1956,"Jan. '56, Gee",21 weeks; No. 6,0.316,0.644,0.851,0
-Lonely Teardrops,Jodi Benson,"Berry Gordy, Gwen Gordy, Tyran Carlo",DickJacobs,1958,"Nov. '58, Brunswick",21 weeks; No. 7,0.219,0.362,0.412,0
+Lonely Teardrops,Jodi Benson,"Berry Gordy, Gwen Gordy, Tyran Carlo",Dick Jacobs,1958,"Nov. '58, Brunswick",21 weeks; No. 7,0.219,0.362,0.412,0
 Whats Love Got to Do With It,Henri Salvador,"Terry Britten, Graham Lyle",Britten,1984,"June '84, Capitol",28 weeks; No. 1,0.981,0.605,0.0673,0.00204
 Iron Man,Generation B.O.,Black Sabbath,Roger Bain,1971,"Feb. '71, Warner",10 weeks; No. 52,0.6,0.164,0.402,3.41E-06
 Wake Up Little Susie,CÃ©line Languedoc,"Felice Bryant, Boudleaux Bryant",Archie Bleyer,1957,"Sept. '57, Cadence",26 weeks; No. 1,0.688,0.582,0.687,0
@@ -293,7 +293,7 @@ Wish You Were Here,Randy Newman,"David Gilmour, Roger Waters",Pink Floyd,1975,"S
 Many Rivers to Cross,Les HÃ©rissons,Cliff,Cliff,1969,"Dec. '69, A&M",Did not chart,0.672,0.839,0.36,0
 Schools Out,Chorus,"Michael Bruce, Glen Buxton, Cooper, Dennis Dunway, Neal Smith",Bob Ezrin,1972,"May '72, Warner Bros.",13 weeks; No. 7,0.74,0.702,0.865,1.62E-06
 Take Me Out,Leopold Stokowski,"Alex Kapranos, Nick McCarthy",ToreJohansson,2004,"Feb. '04, Domino",19 weeks; No. 66,0.933,0.375,0.434,0.962
-Heartbreaker,Henri Salvador,"Jimmy Page, Robert Plant,John Bonham,John PaulJones",Page,1969,"Oct. '69, Atlantic",Non-single,0.11,0.488,0.573,0
+Heartbreaker,Henri Salvador,"Jimmy Page, Robert Plant,John Bonham,John Paul Jones",Page,1969,"Oct. '69, Atlantic",Non-single,0.11,0.488,0.573,0
 Cortez the Killer,Henri Salvador,Young,"Young, David Briggs",1975,"Nov. '75, Reprise",Non-single,0.928,0.505,0.0949,4.48E-05
 Fight the Power,Chorus,"Chuck D, Eric Sadler, Hank Shocklee, Keith Shocklee","Sadler, Hank Shocklee",1989,"June '89, DefJam",Did not chart,0.765,0.644,0.262,0
 Dancing Barefoot,Jean Claude Corbel,"Smith, Ivan Kral",Todd Rundgren,1979,"May '79, Arista",Did not chart,0.535,0.538,0.424,0
@@ -305,10 +305,10 @@ Way of the World,Jean Piat,"Maurice White, Verdine White, Charles Stepney",Mauri
 We Will Rock You,Bernard Minet,"Brian May, Mike Stone",Queen,1977,"Oct. '77, Elektra",14 weeks; No. 52,0.645,0.67,0.88,0.000347
 I Can't Make You Love Me,Chorus,"Mike Reid, Allen Shamblin","Don Was, Raitt",1991,"Nov. '91, Capitol",20 weeks; No. 18,0.991,0.461,0.131,0
 Subterranean Homesick Blues,Leopold Stokowski,Dylan,Tom Wilson,1965,"March '65, Columbia",8 weeks; No. 39,0.945,0.44,0.365,0.664
-Spirit in the Sky,Marie-ThÃ©rÃ¨se Orain,Greenbaum,ErikJacobsen,1970,"Feb. '70, Reprise",15 weeks; No. 3,0.856,0.574,0.467,1.14E-05
+Spirit in the Sky,Marie-ThÃ©rÃ¨se Orain,Greenbaum,Erik Jacobsen,1970,"Feb. '70, Reprise",15 weeks; No. 3,0.856,0.574,0.467,1.14E-05
 SweetJane,Dominique Tirmont,Lou Reed,"The Velvet Underground, Shel Kagan, Geoffrey Haslam",1970,"Aug. '70, Cotillion",Non-Single,0.976,0.412,0.145,0
 Wild Horses,Randy Newman,"Mick Jagger, Keith Richards",Jimmy Miller,1971,"April '71, Rolling Stones",8 weeks; No. 28,0.995,0.512,0.0297,0.881
-Beat It,Chorus,Jackson,QuincyJones,1982,"Dec. '82, Epic",25 weeks; No. 1,0.00187,0.61,0.949,0.000955
+Beat It,Chorus,Jackson,Quincy Jones,1982,"Dec. '82, Epic",25 weeks; No. 1,0.00187,0.61,0.949,0.000955
 Beautiful Day,Henri Salvador,U2,"Daniel Lanoise, Brian Eno",2000,"Oct. '00, Island",25 weeks; No. 1,0.498,0.338,0.333,4.54E-06
 Walk This Way,Martin & les fÃ©es," Steven Tyler,Joe Perry"," Rick Rubin,Russell Simmons",1986," May '86, Profile",16 weeks; No. 4,0.317,0.574,0.439,0
 Maybe I'm Amazed,Leopold Stokowski,McCartney,McCartney,1970,"April '70, Apple",13 weeks; No. 10,0.942,0.0883,0.174,0.944
@@ -323,7 +323,7 @@ Spanish Harlem,Leopold Stokowski,"Phil Spector,Jerry Leiber","Mike Stoller, Leib
 The Loco-Motion,Marie-ThÃ©rÃ¨se Orain,"Gerry Goffin, Carole King",Goffin,1962,"June '62, Dimension",16 weeks; No. 1,0.89,0.614,0.487,0
 The Great Pretender,Henri Salvador,Buck Ram,Ram,1955,"Dec. '55, Mercury",24 weeks; No. 1,0.961,0.358,0.12,5.85E-05
 All Shook Up,Chorus,"Otis Blackwell, Presley",Steve Sholes,1957,"March '57, RCA",30 weeks; No. 1,0.507,0.538,0.795,0
-Tears in Heaven,Henri Salvador,"Clapton, WillJennings",Russ Titelman,1992,"Jan. '92, Duck/Reprise",26 weeks; No. 2,0.925,0.789,0.437,0.000321
+Tears in Heaven,Henri Salvador,"Clapton, Will Jennings",Russ Titelman,1992,"Jan. '92, Duck/Reprise",26 weeks; No. 2,0.925,0.789,0.437,0.000321
 Bad Moon Rising,Chorus,John Fogerty,Fogerty,1969,"April '69, Fantasy",14 weeks; No. 2,0.00081,0.549,0.748,0.253
 Sweet Dreams (Are Made of This),Henri Salvador,"Annie Lennox, Dave Stewart",Stewart,1983,"April '83, RCA",26 weeks; No. 1,0.553,0.673,0.358,0
 Little Wing,Henri Salvador,Hendrix,Chas Chandler,1968,"Feb. '68, Reprise",Non-single,0.793,0.701,0.168,4.66E-06
@@ -332,7 +332,7 @@ Got My Mojo Working,Martin & les fÃ©es,Preston Foster,"Phil Chess, Leonard Che
 Killing Me Softly With His Song,Frank Churchill,"Norman Gimbel, Charles Fox",Joel Dorn,1973,"Jan '73, Atlantic",16 weeks; No. 1,0.995,0.6,0.23,0.954
 All You Need is Love,Henri Salvador,"John Lennon, Paul McCartney",George Martin,1967,"July '67, Capitol",11 weeks; No. 1,0.114,0.432,0.4,4.83E-06
 The Letter,Jean Claude Corbel,Wayne Carson Thompson,Dan Penn,1967,"July '67, Mala",16 weeks; No. 1,0.756,0.597,0.165,0
-Highway 61 Revisited,Chorus,Dylan,BobJohnston,1965,"Aug. '65, Columbia",Did not chart,0.388,0.238,0.535,0
+Highway 61 Revisited,Chorus,Dylan,Bob Johnston,1965,"Aug. '65, Columbia",Did not chart,0.388,0.238,0.535,0
 Unchained Melody,Michel Roux,"Alex North, Hy Zaret",Phil Spector,1965,"July '65, Philles",13 weeks; No. 4,0.801,0.698,0.306,0
 How Deep Is Your Love,Chantal Goya,Bee Gees,"Bee Gees, Karl Richardson, Albhy Galuten",1977,"Sept. '77, RSO",33 weeks; No. 1 ,0.0238,0.804,0.682,0
 White Room,Chorus,"Pete Brown,Jack Bruce",Felix Pappalardi,1968,"Aug. '68, Atco",11 weeks; No. 6,0.0309,0.503,0.588,0
@@ -354,7 +354,7 @@ Ticket to Ride,Houcine,"John Lennon, Paul McCartney",George Martin,1965,"April '
 Tiny Dancer,Lucie Dolene,"John, Bernie Taupin",Gus Dudgeon,1971,"Nov. '71, Uni",7 weeks; No. 41,0.972,0.592,0.299,5.11E-05
 Roxanne,Chorus,Sting,The Police,1979,"Jan '79, A&M",13 weeks; No. 32,0.901,0.459,0.806,0
 Baby I Need Your Loving,Jean Piat,"Brian Holland, Lamont Dozier, Eddie Holland","Holland, Dozier, Holland",1964,"July '64, Motown",12 weeks; No. 11,0.909,0.624,0.171,0
-Summer in the City,Henri Salvador,"John Sebastian, Steve Boone, Mark Sebastian",ErikJacobsen,1966,"June '66, Kama Sutra",11 weeks; No. 1,0.956,0.7,0.376,0
+Summer in the City,Henri Salvador,"John Sebastian, Steve Boone, Mark Sebastian",Erik Jacobsen,1966,"June '66, Kama Sutra",11 weeks; No. 1,0.956,0.7,0.376,0
 O-o-h Child,Jean Claude Corbel,Stan Vincent,Vincent,1970,"April '70, Buddha",16 weeks; No. 8,0.709,0.584,0.589,0
 Cant Help Falling in Love,Chorus,"George Weiss, Hugo Peretti, Luigi Creatore",Joseph Lilley,1961,"Oct. '61, RCA",14 weeks; No. 1,0.5,0.571,0.759,2.56E-05
 (Dont Fear) the Reaper,Randy Newman,Donald Roeser,"Murray Krugman, Sandy Pearlman, David Lucas",1976,"July '76, Columbia",14 weeks; No. 12,0.67,0.189,0.171,0.711
@@ -362,7 +362,7 @@ Thirteen,Henri Salvador,"Alex Chilton, Chris Bell",John Fry,1972,"April '72, Ard
 Sweet Home Alabama,Debbie Davis,"Ed King, Gary Rossington, Ronnie Van Zant",Al Kooper,1974,"April '74, MCA",17 weeks; No. 8,0.906,0.365,0.202,4.93E-05
 Enter Sandman,Ken Page,"James Hetfield, Lars Ulrich, Kirk Hammett","Bob Rock, Hetfield, Ulrich",1991,"July '91, Elektra",20 weeks; No. 16,0.89,0.392,0.246,3.92E-06
 Umbrella,Chorus,"The-Dream, Kuk Harrell,Jay-Z, Christopher ""Tricky"" Stewart","Harrell, Stewart",2007,"March' 07, DefJam",27 weeks; No. 1,0.00506,0.696,0.736,3.66E-05
-Visions ofJohanna,Francois Le Roux,Dylan,BobJohnston,1966,"May '66, Columbia",Non-Single,0.476,0.513,0.546,1.30E-06
+Visions ofJohanna,Francois Le Roux,Dylan,Bob Johnston,1966,"May '66, Columbia",Non-Single,0.476,0.513,0.546,1.30E-06
 Weve OnlyJust Begun,Idoles De La Musique,"Paul Williams, Roger Nichols",Jack Daugherty,1970,"Sept. '70, A&M",17 weeks; No. 2,0.827,0.203,0.312,3.28E-05
 In Bloom,Leopold Stokowski,Kurt Cobain,Butch Vig,1991,"Sept. '91, DGC",Non-Single,0.955,0.321,0.134,0.325
 Sweet Emotion,Chorus,"Steven Tyler, Tom Hamilton",Jack Douglas,1975,"April '75, Columbia",8 weeks; No. 36,0.578,0.658,0.491,3.33E-06
@@ -409,7 +409,7 @@ Sheena Is a Punk Rocker,Henri Salvador,Ramones,"Tony Bongiovi, T. Erdelyi",1977,
 All Apologies,Frank Churchill,Kurt Cobain,Steve Albini,1993,"Sept. '93, Geffen",22 weeks; No. 45,0.761,0.251,0.16,0.984
 Soul Man,Chorus,"Isaac Hayes, David Porter","Hayes, Porter",1967,"Sept. '67, Stax",15 weeks; No. 2,0.983,0.482,0.263,0.0215
 Kiss,Chorus,Prince and the Revolution,Prince and the Revolution,1986,"Feb. '86, Paisley Park",18 weeks; No. 1,0.862,0.474,0.599,0.0716
-Rollin Stone,Chorus,McKinley Morganfield,Leonard and Phil Chess,1948,"1948, Chess",predates chart,0.745,0.656,0.44,0.03
+Rollin Stone,Chorus,McKinley Morganfield,"Leonard Chess, Phil Chess",1948,"1948, Chess",predates chart,0.745,0.656,0.44,0.03
 Get Ur Freak On,Anika Noni Rose,"Elliott, Timbaland",Timbaland,2001,"March '01, Gold Mind/Elektra",25 weeks; No. 7,0.988,0.352,0.0886,0.207
 Respect Yourself,Martin & les fÃ©es,"Luther Ingram, Mack Rice",Al Bell,1971,"Oct. '71, Stax",14 weeks; No. 12,0.517,0.634,0.752,0
 Rain,Bernard Minet,"John Lennon, Paul McCartney",George Martin,1966,"June '66, Capitol",7 weeks; No. 23,0.326,0.695,0.967,0.00681
@@ -421,7 +421,7 @@ Into the Mystic,Chorus,Morrison,Morrison,1970,"March '70, Warner Bros.",Non-Sing
 Where Did Our Love Go,Chorus,"Brian Holland, Lamont Dozier, Eddie Holland","Brian Holland, Dozier",1964,"June '64, Motown",14 weeks; No. 1,0.885,0.594,0.344,0
 Do Right Woman _Êî Do Right Man,Claire Guyot,"Chips Moman, Dan Penn",Jerry Wexler,1967,"March '67, Atlantic",11 weeks; No. 9,0.909,0.507,0.262,0
 Last Nite,Leopold Stokowski,Julian Casablancas,Gordon Raphael,2001,"Aug. '01, RCA",Did Not Chart,0.896,0.31,0.412,0.89
-I Want to Know What Love Is,Leopold Stokowski,MickJones,"Jones, Alex Sadkin",1984,"Nov. '84, Atlantic",21 weeks; No. 1,0.947,0.177,0.391,0.905
+I Want to Know What Love Is,Leopold Stokowski,Mick Jones,"Jones, Alex Sadkin",1984,"Nov. '84, Atlantic",21 weeks; No. 1,0.947,0.177,0.391,0.905
 Sabotage,DorothÃ©e,Beastie Boys,"Beastie Boys, Mario CaldatoJr.",1994,"May '94, Grand Royal",Did Not Chart,0.751,0.906,0.438,0
 Super Freak,Chorus,"James, Alonzo Miller",James,1981,"Aug. '81, Gordy",24 weeks; No. 16,0.446,0.425,0.2,0
 Since U Been Gone,Jean Claude Corbel,"Dr. Luke, Max Martin","Dr. Luke, Martin",2004,"Nov. '04, RCA",46 weeks; No. 2,0.625,0.461,0.254,0

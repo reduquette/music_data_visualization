@@ -222,3 +222,22 @@ stroke: white;
   }
   
   
+
+
+.tooltip{
+    position:fixed;
+    display:none;
+    width: 250px;
+    height: auto;
+    padding: 10px;
+    text-align: left;
+    background-color: white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+    font-size:15px;
+}

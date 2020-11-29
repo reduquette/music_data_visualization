@@ -26,17 +26,6 @@
             "producer": "Arnold Maxin"
         },
         {
-            "num_hits": 5,
-            "hit_songs": [
-                "Tutti-Frutti",
-                "Long Tall Sally",
-                "Good Golly, Miss Molly",
-                "You Send Me",
-                "The Girl Cant Help It"
-            ],
-            "producer": "Blackwell"
-        },
-        {
             "num_hits": 1,
             "hit_songs": [
                 "La Bamba"
@@ -69,17 +58,7 @@
             "hit_songs": [
                 "Lonely Teardrops"
             ],
-            "producer": "DickJacobs"
-        },
-        {
-            "num_hits": 4,
-            "hit_songs": [
-                "Hoochie Coochie Man",
-                "Mannish Boy",
-                "Smokestack Lightning",
-                "Got My Mojo Working"
-            ],
-            "producer": "Dixon"
+            "producer": "Dick Jacobs"
         },
         {
             "num_hits": 1,
@@ -142,29 +121,23 @@
             "producer": "Leiber"
         },
         {
-            "num_hits": 5,
-            "hit_songs": [
-                "Bo Diddley",
-                "Who Do You Love?",
-                "Got My Mojo Working",
-                "Im a Man",
-                "Brown Eyed Handsome Man"
-            ],
-            "producer": "Leonard Chess"
-        },
-        {
-            "num_hits": 8,
+            "num_hits": 13,
             "hit_songs": [
                 "Johnny B. Goode",
                 "Maybellene",
+                "Bo Diddley",
                 "Roll Over Beethoven",
+                "Who Do You Love?",
                 "Hoochie Coochie Man",
                 "Mannish Boy",
                 "Sweet Little Sixteen",
                 "Smokestack Lightning",
+                "Got My Mojo Working",
+                "Im a Man",
+                "Brown Eyed Handsome Man",
                 "Rollin Stone"
             ],
-            "producer": "Leonard and Phil Chess"
+            "producer": "Leonard Chess"
         },
         {
             "num_hits": 1,
@@ -184,11 +157,13 @@
             "producer": "Petty"
         },
         {
-            "num_hits": 10,
+            "num_hits": 12,
             "hit_songs": [
                 "Johnny B. Goode",
                 "Maybellene",
+                "Bo Diddley",
                 "Roll Over Beethoven",
+                "Who Do You Love?",
                 "Hoochie Coochie Man",
                 "Mannish Boy",
                 "Sweet Little Sixteen",
@@ -198,27 +173,6 @@
                 "Rollin Stone"
             ],
             "producer": "Phil Chess"
-        },
-        {
-            "num_hits": 2,
-            "hit_songs": [
-                "Bo Diddley",
-                "Who Do You Love?"
-            ],
-            "producer": "Phil and Leonard Chess"
-        },
-        {
-            "num_hits": 7,
-            "hit_songs": [
-                "I Walk the Line",
-                "Mystery Train",
-                "Blue Suede Shoes",
-                "Great Balls of Fire",
-                "That's All Right",
-                "Folsom Prison Blues",
-                "Blue Suede Shoes"
-            ],
-            "producer": "Phillips"
         },
         {
             "num_hits": 1,
@@ -249,9 +203,11 @@
             "producer": "Richard Barrett"
         },
         {
-            "num_hits": 2,
+            "num_hits": 4,
             "hit_songs": [
                 "Tutti-Frutti",
+                "Long Tall Sally",
+                "Good Golly, Miss Molly",
                 "The Girl Cant Help It"
             ],
             "producer": "Robert \"Bumps\" Blackwell"
@@ -265,9 +221,10 @@
             "producer": "Rose"
         },
         {
-            "num_hits": 6,
+            "num_hits": 7,
             "hit_songs": [
                 "I Walk the Line",
+                "Mystery Train",
                 "Blue Suede Shoes",
                 "Great Balls of Fire",
                 "That's All Right",
@@ -304,8 +261,9 @@
             "producer": "The Five Satins"
         },
         {
-            "num_hits": 3,
+            "num_hits": 4,
             "hit_songs": [
+                "Hoochie Coochie Man",
                 "Mannish Boy",
                 "Smokestack Lightning",
                 "Got My Mojo Working"
@@ -413,9 +371,14 @@
             "producer": "Bill Szymczyk"
         },
         {
-            "num_hits": 1,
+            "num_hits": 6,
             "hit_songs": [
-                "Desolation Row"
+                "The Times They Are A-Changin",
+                "Desolation Row",
+                "Positively 4th Street",
+                "Just Like a Woman",
+                "Highway 61 Revisited",
+                "Visions ofJohanna"
             ],
             "producer": "Bob Johnston"
         },
@@ -425,17 +388,6 @@
                 "I Fought the Law"
             ],
             "producer": "Bob Keane"
-        },
-        {
-            "num_hits": 5,
-            "hit_songs": [
-                "The Times They Are A-Changin",
-                "Positively 4th Street",
-                "Just Like a Woman",
-                "Highway 61 Revisited",
-                "Visions ofJohanna"
-            ],
-            "producer": "BobJohnston"
         },
         {
             "num_hits": 1,
@@ -601,7 +553,7 @@
                 "Do You Believe in Magic",
                 "Summer in the City"
             ],
-            "producer": "ErikJacobsen"
+            "producer": "Erik Jacobsen"
         },
         {
             "num_hits": 2,
@@ -616,7 +568,7 @@
             "hit_songs": [
                 "Suspicious Minds"
             ],
-            "producer": "FeltonJarvis"
+            "producer": "Felton Jarvis"
         },
         {
             "num_hits": 3,
@@ -874,7 +826,7 @@
             "hit_songs": [
                 "She's Not There"
             ],
-            "producer": "KenJones"
+            "producer": "Ken Jones"
         },
         {
             "num_hits": 1,
@@ -906,7 +858,7 @@
             "hit_songs": [
                 "Spoonful"
             ],
-            "producer": "Leonard and Phil Chess"
+            "producer": "Leonard Chess"
         },
         {
             "num_hits": 1,
@@ -1016,6 +968,13 @@
                 "I Want You Back"
             ],
             "producer": "Perren"
+        },
+        {
+            "num_hits": 1,
+            "hit_songs": [
+                "Spoonful"
+            ],
+            "producer": "Phil Chess"
         },
         {
             "num_hits": 1,
@@ -1470,7 +1429,7 @@
             "hit_songs": [
                 "Spirit in the Sky"
             ],
-            "producer": "ErikJacobsen"
+            "producer": "Erik Jacobsen"
         },
         {
             "num_hits": 1,
@@ -2470,12 +2429,11 @@
             "producer": "Prince and the Revolution"
         },
         {
-            "num_hits": 2,
+            "num_hits": 1,
             "hit_songs": [
-                "BillieJean",
                 "Beat It"
             ],
-            "producer": "QuincyJones"
+            "producer": "Quincy Jones"
         },
         {
             "num_hits": 3,

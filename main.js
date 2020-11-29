@@ -1,7 +1,7 @@
 import {histogram} from "./histogram.js"
-import {} from "./recordPieChart.js"
+import {recordPieChart} from "./recordPieChart.js"
 import {} from "./dancers.js"
-
+import {pieChartText} from"./pieChartText.js"
 
         
 
@@ -49,6 +49,24 @@ var data = d3.csv('comboSongs.csv', d3.autoType).then(data => {
 });
 
 
+var piechart = recordPieChart();
+var piecharttext = pieChartText();
+var decade, producer_data;
+d3.json('data_by_decade.json', d3.autoType).then(data => {
+    producer_data = data;
+    console.log("reached data loading for producers")
+    console.log(data);
+    // piechart.update(data, '1950s');
 
+});
 
+d3.select('#decade')
+    .on('change', (event,d)=>{
 
+        console.log(event.target.value);
+        decade = event.target.value;
+        // _data = Object.values(data[event.target.value]);
+        // console.log(_data);
+        piechart.update(producer_data, decade);
+        piecharttext.update(producer_data, decade);
+});
