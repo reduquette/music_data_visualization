@@ -1,6 +1,6 @@
 export function histogram(container){
 
-var margin = {top: 10, right: 40, bottom: 30, left: 40},
+var margin = {top: 8, right: 40, bottom: 45, left: 40},
     width = 720 - margin.left - margin.right,
     height = 520 - margin.top - margin.bottom;
 
@@ -52,9 +52,9 @@ function updateBins(nBin){
         .call(d3.axisBottom(x)
         .ticks(nBin))
         .selectAll("text")
-        .attr('font-size', 9)
+        .style('font-size', 8)
         .attr('y', -4)
-        .attr('x', -18)
+        .attr('x', -22)
         .attr("transform", "rotate(-90)")
 
     y.domain([0, d3.max(bins, function(d) { return d.length; })]);  

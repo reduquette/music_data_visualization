@@ -223,6 +223,28 @@ stroke: white;
   
   
 
+text {
+  font-family: 'Helvetica';
+  font-size:12px;
+  font-weight: bold;
+  stroke: none;
+  fill:#BFEFFF;
+  alignment-baseline: middle;
+}
+
+circle.center {
+  stroke-width: 2px;
+  stroke: #BFEFFF;
+  fill: #145B60;
+}
+
+polygon.area {
+  stroke: #BFEFFF;
+  stroke-width: 2px;
+  fill:none;
+  fill:#4493AA;
+  fill-opacity:.4;
+}
 
 .tooltip{
     position:fixed;

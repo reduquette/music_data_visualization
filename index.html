@@ -152,7 +152,12 @@
     
     <div style="padding-left: 5%; padding-right: 5%;">
         
-
+        <h4 style="width: 700px">
+            The graph below shows how many of the <span style="font-weight: bold;">Top 500</span> songs were made in different year intervals. By changing the interval, you can see how many songs were created every year, 2 years, 5 years, etc. Once you hover over a bar, you are shown a list of the songs made during that time period.  
+        </h4>
+        <h4 style="width: 700px">
+            The color scale above reflects the amount of songs. The more songs in a certain time period, the darker the <span style="color:lightblue; font-weight: bold;">blue</span>   becomes. 
+        </h4>
         <p>
             <label>Year Interavals</label>
             <select type="number" id="nBin" >
@@ -165,17 +170,13 @@
             </select>
           </p>
         <div>
+            
             <div id="histogram" ></div> 
             <!-- style="float: left" -->
             <div id="histogramText" class = "hist" style=" cursor: grab;
-            overflow: auto; font-size: 13px; height: 500px; width: 300px; overflow: scroll; float:right; position: absolute; top: 238%; left:75%"></div>
+            overflow: auto; font-size: 13px; height: 500px; width: 300px; overflow: scroll; float:right; position: absolute; top: 258%; left:75%"></div>
             <!-- float: left; -->
-            <h4 style="width: 700px">
-                The graph above shows how many of the <span style="font-weight: bold;">Top 500</span> songs were made in different year intervals. By changing the interval, you can see how many songs were created every year, 2 years, 5 years, etc. Once you hover over a bar, you are shown a list of the songs made during that time period.  
-            </h4>
-            <h4 style="width: 700px">
-                The color scale above reflects the amount of songs. The more songs in a certain time period, the darker the <span style="color:lightblue; font-weight: bold;">blue</span>   becomes. 
-            </h4>
+            
             <div style="height:400px;">
             <h3 style="color: white; width: 700px; background-color: #4AE7E3;
              font-family: 'Lato', sans-serif;
@@ -266,23 +267,48 @@
             <div class="mySlides">
             <div class="numbertext">2 / 5</div>
                 <h3>1960s</h3>
-                <div id="radar1"></div>
+                
+                <h4 class="radar-song1">The Twist - 39 weeks</h4>>
+                <p>During this decade, the Twist was the best performing song.</p>
+                <div id="chart-1960"></div>
             </div>
         
             <div class="mySlides">
             <div class="numbertext">3 / 5</div>
                  <h3>1970s</h3>
-                 <div id="radar1"></div>
+                
+                 <h4 class="radar-song1">The Twist (1960 - 39 weeks)</h4>
+                 <h4 class="radar-song2"> How Deep is Your Love (1977 - 33 weeks)</h4>
+                 <p>Also in the top 4 of the best performing songs is How Deep is Your Love. In comparison to each other, both had trends of relatively high energy and danceability</p>
+                 <div id="chart-1960-70"></div>
             </div>
 
             <div class="mySlides">
+            <div class="numbertext">4 / 5</div>
                 <h3>2000s</h3>
-                <div class="numbertext">4 / 5</div>
-                <div id="radar2"></div>
-                </div>
+                <h4 class="radar-song1">Since U Been Gone (2004 - 46 weeks)</h4>
+                <h4 class="radar-song2"> Hey Ya! (2003 - 33 weeks)</h4>
+                <p>Two of the best performing songs on the top 500 were in the same decade - 2000s. Both songs seem to skew on levels leaning towards high danceability, though "Since U Been Gone" skews most towards acoustic song characteristics.</p>
+                <div id="chart-2000"></div>
+
+            </div>
 
                 <div class="mySlides">
                     <div class="numbertext">5 / 5</div>
+                    <h3>Comparing each other</h3>
+                    <h4 class="radar-song1">Since U Been Gone (2004 - 46 weeks)</h4>
+                    <h4>vs.</h4>
+                    <h4 class="radar-song2">The Twist (1960 - 39 weeks)</h4>
+                
+                    <div id="radar1"></div>
+                    
+                    <h4 class="radar-song1">Hey Ya! (2003 - 33 weeks)</h4>
+                    <h4>vs.</h4>
+                    <h4 class="radar-song2">How Deep is Your Love? (1977 - 33 weeks)</h4>
+                
+                    <div id="radar2"></div>
+
+
                     <div style="height:400px;">
                         <h3 style="color: white; width: 700px; background-color: #4AE7E3;
                          font-family: 'Lato', sans-serif;
@@ -337,7 +363,7 @@
     
 </div>
 </section>
-<section class = "panel radar">
+<!-- <section class = "panel radar">
     <h2 style="width: 700px; padding: 5px;">How do characteristics compare with songs with the highest streak on the top charts?</h2>
     <p>Let's Compare the Top Songs</p>
 
@@ -371,10 +397,13 @@
 </div>
 
 
-</section>
+</section> -->
 </center>
 
     <script type="module" src="main.js" ></script>
+    <script type="module" src="1960-best-song.js" ></script>
+    <script type="module" src="1960-70-best-song.js" ></script>
+    <script type="module" src="2000s-best-songs.js" ></script>
     <script type="module" src="soundwaves.js" ></script>
     <script type="module" src="radarchart1.js" ></script>
     <script type="module" src="radarchart2.js" ></script>
