@@ -59,14 +59,16 @@ d3.json('data_by_decade.json', d3.autoType).then(data => {
     // piechart.update(data, '1950s');
 
 });
-
+let piechart_comments = d3.select("#piechart_commentary");
 d3.select('#decade')
     .on('change', (event,d)=>{
 
         console.log(event.target.value);
         decade = event.target.value;
-        // _data = Object.values(data[event.target.value]);
-        // console.log(_data);
+
         piechart.update(producer_data, decade);
         piecharttext.update(producer_data, decade);
+
+        piechart_comments.html("Test: :musical_score:"+ decade)
 });
+
