@@ -1,7 +1,7 @@
 import {histogram} from "./histogram.js"
 import {recordPieChart} from "./recordPieChart.js"
 import {} from "./dancers.js"
-import {pieChartText} from"./pieChartText.js"
+import {pieChartText, get_producer_commentary} from"./pieChartText.js"
 
         
 
@@ -69,6 +69,6 @@ d3.select('#decade')
         piechart.update(producer_data, decade);
         piecharttext.update(producer_data, decade);
 
-        piechart_comments.html("Test: :musical_score:"+ decade)
+        piechart_comments.html(get_producer_commentary(decade))
 });
 

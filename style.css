@@ -223,7 +223,7 @@ stroke: white;
   
   
 
-text {
+#histogram text {
   font-family: 'Helvetica';
   font-size:12px;
   font-weight: bold;
