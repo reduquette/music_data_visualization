@@ -1,8 +1,8 @@
 import {histogram} from "./histogram.js"
 import {recordPieChart} from "./recordPieChart.js"
 import {} from "./dancers.js"
-import {pieChartText} from"./pieChartText.js"
 import {soundwaves} from"./soundwaves.js"
+import {pieChartText, get_producer_commentary} from"./pieChartText.js"
 
 var count = 0;
 
@@ -72,14 +72,16 @@ d3.json('data_by_decade.json', d3.autoType).then(data => {
     // piechart.update(data, '1950s');
 
 });
-
+let piechart_comments = d3.select("#piechart_commentary");
 d3.select('#decade')
     .on('change', (event,d)=>{
 
         console.log(event.target.value);
         decade = event.target.value;
-        // _data = Object.values(data[event.target.value]);
-        // console.log(_data);
+
         piechart.update(producer_data, decade);
         piecharttext.update(producer_data, decade);
+
+        piechart_comments.html(get_producer_commentary(decade))
 });
+

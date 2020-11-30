@@ -36,11 +36,11 @@ export function recordPieChart(){
     }
     function html_text(d, total_hits, decade){
         console.log(decade)
-        var line1 =  '<b>' + d.data.producer +'</b>'+ " produced " + '<b>' + Math.round(d.data.num_hits / total_hits * 100, 2) +'</b>'+ "% of hit songs in the " + decade;
+        var line1 =  '<b>' + d.data.producer +'</b>'+ " produced " + '<b>' + parseFloat(d.data.num_hits / total_hits * 100).toFixed(2) +'</b>'+ "% of hit songs in the " + decade;
         var line2 = '<b> Hit Songs:</b> <br>'
         var i;
         for (i = 0; i <d.data.hit_songs.length;i++){
-            line2 += '\t' + d.data.hit_songs[i] + "<br>"
+            line2 += '🎤 ' + d.data.hit_songs[i] + "<br>"
         }
         return line1 + '<br>' + line2
     }
@@ -51,7 +51,6 @@ export function recordPieChart(){
     let data, decade, num_hits_decade;
 
     function update(_data, _decade){
-        console.log(decade);
         decade=_decade
         data = Object.values(_data[decade]);
 
@@ -78,24 +77,15 @@ export function recordPieChart(){
 
         num_hits_decade = d3.sum(data_ready, d=>d.data.num_hits);
 
-        
-        console.log(num_hits_decade);
-        console.log(decade);
-
         // map to data
 
         var u = svg.selectAll("path")
             .data(data_ready)
-        console.log(decade)
         // Build the pie chart
         u
             .enter()
             .append('path')
             .on("mouseenter",(event,d)=>{
-            console.log("mouse enter");
-            console.log(event);
-            console.log(d.data.producer);
-            console.log(decade);
             tooltip
                 .style('display', 'block')
                 .html(html_text(d, num_hits_decade, decade))
@@ -103,7 +93,6 @@ export function recordPieChart(){
                 .style('left', event.clientX + "px");
             })
             .on("mouseout",(event,d)=>{
-            console.log("mouse out");
             tooltip
                 .style('display', 'none');
             })
