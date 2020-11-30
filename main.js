@@ -15,6 +15,7 @@ $(window).scroll(function() {
         console.log("VISABLE")
     }
 
+
 });
         
 

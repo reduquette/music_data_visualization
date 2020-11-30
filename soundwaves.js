@@ -9,6 +9,8 @@ export function soundwaves(){
 var svg = d3.select("#soundwaves")
   .attr("class", "scrollwaves")
   .append("svg")
+  .attr("class", "sound")
+  .attr("opacity",1)
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
@@ -430,4 +432,13 @@ d3.csv("comboSongs.csv", d3.autoType).then(data =>  {
 })
 
 
+}
+
+export function removeSoundwaves(){
+  var div = d3.selectAll(".sound")
+  div.attr("opacity",0)
+}
+
+export function showSoundwaves(){
+  soundwaves()
 }
