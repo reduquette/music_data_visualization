@@ -2,7 +2,20 @@ import {histogram} from "./histogram.js"
 import {recordPieChart} from "./recordPieChart.js"
 import {} from "./dancers.js"
 import {pieChartText} from"./pieChartText.js"
+import {soundwaves} from"./soundwaves.js"
 
+var count = 0;
+
+$(window).scroll(function() { 
+    // console.log($("section:nth-of-type(5)").offset().top)
+
+    if ($(window).scrollTop() >  $("section:nth-of-type(5)").offset().top-1 && count == 0) {
+        soundwaves()
+        count = 1;
+        console.log("VISABLE")
+    }
+
+});
         
 
 $(function() {

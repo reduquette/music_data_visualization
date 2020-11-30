@@ -83,7 +83,7 @@ function updateBins(nBin){
           // console.log(_data[i].title, "TITLE")
           songList += "<br>" + _data[i].title
         }
-        console.log(songList)
+        // console.log(songList)
         return songList
       }
 

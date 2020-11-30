@@ -1,15 +1,20 @@
-var margin = {top: 50, right: 110, bottom: 30, left: 30},
+var margin = {top: 50, right: 110, bottom: 50, left: 30},
     width = 810 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
+
+export function soundwaves(){
+
 // append the svg object to the body of the page
 var svg = d3.select("#soundwaves")
+  .attr("class", "scrollwaves")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")")
+
 
 d3.csv("averages.csv",d3.autoType).then(data => {
 
@@ -142,6 +147,8 @@ var totalLength1 = path1.node().getTotalLength();
 var totalLength2 = path2.node().getTotalLength();
 var totalLength3 = path3.node().getTotalLength();
 
+
+
 path1
     .attr("stroke-dasharray", totalLength1 + " " + totalLength1)
     .attr("stroke-dashoffset", totalLength1)
@@ -165,7 +172,6 @@ path1
     .duration(4000) 
     .ease(d3.easeLinear) 
     .attr("stroke-dashoffset", 0); 
-
 
 
     var tooltip2 = d3.select("#soundwaves")
@@ -258,7 +264,6 @@ path1
     .style("fill", "white")
     .attr('font-family','Lato')
     .attr('font-size',13)
-
 
 
 
@@ -421,4 +426,8 @@ d3.csv("comboSongs.csv", d3.autoType).then(data =>  {
     console.log(average90s)
     console.log(average2000s)
 
+
 })
+
+
+}
