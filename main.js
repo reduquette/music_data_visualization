@@ -3,7 +3,7 @@ import {recordPieChart} from "./recordPieChart.js"
 import {} from "./dancers.js"
 import {soundwaves} from"./soundwaves.js"
 import {pieChartText, get_producer_commentary} from"./pieChartText.js"
-
+AOS.init();
 var count = 0;
 
 $(window).scroll(function() { 

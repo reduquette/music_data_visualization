@@ -22,6 +22,8 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 
 
     
@@ -70,7 +72,7 @@
 </section>
     
     <section style="height: 2000px"> 
-        <div class="muzieknootjes" style="width: 100%; margin-top:100px;">
+        <div class="muzieknootjes" style="width: 100%; margin-top:100px;" >
             <div class="noot-1">
             &#9835; &#9833;
           </div>
@@ -116,7 +118,7 @@
             </div>
             
             </div>
-            <div style="position: absolute; top:140%; left:25%;">
+            <div style="position: absolute; top:140%; left:25%;" data-aos="zoom-in">
                 <center>
                  <div style="height:100px;">
      
@@ -149,9 +151,9 @@
     </section>
 
     <section class = "panel histo" style="height: 2400px; padding-bottom: 400px">
-    <h2 style="width: 700px; padding: 5px; margin: 50px;">What years are the most songs in the Top 500 from?</h2>
+    <h2 style="width: 700px; padding: 5px; margin: 50px;" data-aos="zoom-in">What years are the most songs in the Top 500 from?</h2>
     
-    <div style="padding-left: 5%; padding-right: 5%;">
+    <div style="padding-left: 5%; padding-right: 5%;" data-aos="zoom-in">
         
         <h4 style="width: 700px">
             The graph below shows how many of the <span style="font-weight: bold;">Top 500</span> songs were made in different year intervals. By changing the interval, you can see how many songs were created every year, 2 years, 5 years, etc. Once you hover over a bar, you are shown a list of the songs made during that time period.  
@@ -172,10 +174,10 @@
           </p>
         <div>
             
-            <div id="histogram" ></div> 
+            <div id="histogram" data-aos="zoom-in"></div> 
             <!-- style="float: left" -->
             <div id="histogramText" class = "hist" style=" cursor: grab;
-            overflow: auto; font-size: 13px; height: 500px; width: 300px; overflow: scroll; float:right; position: absolute; top: 258%; left:75%"></div>
+            overflow: auto; font-size: 13px; height: 500px; width: 300px; overflow: scroll; float:right; position: absolute; top: 12%; left:75%"></div>
             <!-- float: left; -->
             
             <div style="height:400px;">
@@ -197,7 +199,7 @@
     
 <section class = "panel pie" style="height: 830px;">
     <br>
-    <div id="piechart_container">
+    <div id="piechart_container" data-aos="zoom-in">
         
         <h2 style="width: 700px">Who produces hit songs?</h2>
         <!-- <h4 style="width: 700px; padding: 5px;">
@@ -215,7 +217,7 @@
             <option value="1990s">1990s</option>
             <option value="2000s">2000s</option>
         </select>
-        <div id='piechart'></div>
+        <div id='piechart' data-aos="zoom-in"></div>
         <div class='tooltip' text-align='left'>
 
         </div>
@@ -232,8 +234,9 @@
             The number of producers represented in the top songs correlates with the number of hit songs.    </h3>
     </div>
 </section>
-<section class = "panel sound">
-    <div id="soundwaves" style="height:550px">
+<section class = "panel sound" >
+    <div data-aos="zoom-in">
+    <div id="soundwaves" style="height:550px" >
         <h3 style="width: 700px; margin-top: 100px; color: white;
         background: #E805F6;
         box-shadow: 0px 0px 15px #E805F6; 
@@ -246,17 +249,18 @@
         padding: 5px; "> How have songs changed in acousticness, danceability, and energy since 1948?</h3>
 
     </div>
+</div>
 
 
-    <div class="container">
+    <div class="container" data-aos="zoom-in">
                     <!-- Next and previous buttons -->
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
             <!-- Full-width images with number text -->
-            <div class="mySlides">
+            <div class="mySlides" >
             <div class="numbertext">1 / 5</div>
-            <div id="soundwaves">
+            <div id="soundwaves" >
     
                 <h4 style="width: 700px; padding: 5px;">The blue line represents the acousticness of songs throughout the decades. The confidence measure from 0 to 1 of whether the track is acoustic. 1 represents high confidence the track is acoustic. The amount of acousticness in songs had a low dip in 1960 and then went to its max in 1970 before dropping to almost zero. </h4>
                 <h4 style="width: 700px; padding: 5px;">The yellow line represents the energy of songs throughout the decades. Energy is measure from 0 to 1 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy. There was a major dip close to zero in 1970 and from there steadily increases with only a small dip in 1990.</h4>
@@ -410,6 +414,10 @@
     <script type="module" src="radarchart2.js" ></script>
     <script type="module" src = "recordPieChart.js"></script>
     <script type="module" src = "pieChartText.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 
 
