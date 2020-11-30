@@ -152,7 +152,12 @@
     
     <div style="padding-left: 5%; padding-right: 5%;">
         
-
+        <h4 style="width: 700px">
+            The graph below shows how many of the <span style="font-weight: bold;">Top 500</span> songs were made in different year intervals. By changing the interval, you can see how many songs were created every year, 2 years, 5 years, etc. Once you hover over a bar, you are shown a list of the songs made during that time period.  
+        </h4>
+        <h4 style="width: 700px">
+            The color scale above reflects the amount of songs. The more songs in a certain time period, the darker the <span style="color:lightblue; font-weight: bold;">blue</span>   becomes. 
+        </h4>
         <p>
             <label>Year Interavals</label>
             <select type="number" id="nBin" >
@@ -165,17 +170,13 @@
             </select>
           </p>
         <div>
+            
             <div id="histogram" ></div> 
             <!-- style="float: left" -->
             <div id="histogramText" class = "hist" style=" cursor: grab;
             overflow: auto; font-size: 13px; height: 500px; width: 300px; overflow: scroll; float:right; position: absolute; top: 238%; left:75%"></div>
             <!-- float: left; -->
-            <h4 style="width: 700px">
-                The graph above shows how many of the <span style="font-weight: bold;">Top 500</span> songs were made in different year intervals. By changing the interval, you can see how many songs were created every year, 2 years, 5 years, etc. Once you hover over a bar, you are shown a list of the songs made during that time period.  
-            </h4>
-            <h4 style="width: 700px">
-                The color scale above reflects the amount of songs. The more songs in a certain time period, the darker the <span style="color:lightblue; font-weight: bold;">blue</span>   becomes. 
-            </h4>
+            
             <div style="height:400px;">
             <h3 style="color: white; width: 700px; background-color: #4AE7E3;
              font-family: 'Lato', sans-serif;

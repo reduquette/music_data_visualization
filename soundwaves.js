@@ -1,5 +1,5 @@
-var margin = {top: 50, right: 100, bottom: 30, left: 30},
-    width = 800 - margin.left - margin.right,
+var margin = {top: 50, right: 110, bottom: 30, left: 30},
+    width = 810 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
