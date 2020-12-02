@@ -1,7 +1,7 @@
 import {histogram} from "./histogram.js"
 import {recordPieChart} from "./recordPieChart.js"
 import {} from "./dancers.js"
-import {soundwaves} from"./soundwaves.js"
+// import {soundwaves} from"./soundwaves.js"
 import {pieChartText, get_producer_commentary} from"./pieChartText.js"
 AOS.init();
 var count = 0;
@@ -9,34 +9,35 @@ var count = 0;
 $(window).scroll(function() { 
     // console.log($("section:nth-of-type(5)").offset().top)
 
-    if ($(window).scrollTop() >  $("section:nth-of-type(5)").offset().top-1 && count == 0) {
-        soundwaves()
-        count = 1;
-        console.log("VISABLE")
-    }
+    // if ($(window).scrollTop() >  $("section:nth-of-type(5)").offset().top-1 && count == 0) {
+    //     soundwaves()
+    //     count = 1;
+    //     console.log("VISABLE")
+    // }
 
 
 });
+
         
 
-$(function() {
-    $.scrollify({
-    section : "section"
-    })
-});
+// $(function() {
+//     $.scrollify({
+//     section : "section"
+//     })
+// });
 
 
 // When the user scrolls the page, execute myFunction 
-window.onscroll = function () {
-    updateScrollProgress()
-  };
+// window.onscroll = function () {
+//     updateScrollProgress()
+//   };
   
-  function updateScrollProgress() {
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var scrolled = (winScroll / height) * 100;
-    document.getElementById("myBar").style.height = scrolled + "%";
-  }
+//   function updateScrollProgress() {
+//     var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+//     var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+//     var scrolled = (winScroll / height) * 100;
+//     document.getElementById("myBar").style.height = scrolled + "%";
+//   }
 
 var csvdata;
 //load data

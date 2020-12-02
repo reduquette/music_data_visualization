@@ -23,15 +23,13 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-
-
+    <script type="module" src="soundwaves.js" >         import {soundwaves} from"./soundwaves.js"
+    </script>
     
-
     <!-- <script type="text/javascript" src="../d3.js"></script> -->
 
     <script src="jquery-3.2.1.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <!--<script src="https://unpkg.com/scrollreveal"></script>
     <script src="jquery.scrollify.js"></script>
     <script>
     $(function() {
@@ -39,39 +37,47 @@
                 section : "section",
             });
     });            
-    </script>
+    </script>-->
 </head>
 
 <style> body { padding-left: 25px; padding-right: 50px; } </style>
 
 <body> 
-    
-    
-    <center>
+
         
-    <section class = "panel header">
-        <div class="progress-container">
-            <div class="progress-bar" id="myBar"></div>
-        </div> 
+    <div class="slideshow-container" style="width:100%;">
+    <div class="mySlidesAll" >
         <center>
-        <div style="padding-top:20%;">
-    <h1>
-        Does modern music suck?
-    </h1>
-    
-    
-    <subheading>
-        What makes a good song? How has that changed over time? 
-        <br>
-        We examine data on the Top 500 songs of all time according to Rolling Stone magazine. 
-    </subheading>
-    <img src="wave3.gif" alt="Flowers in Chania" style="padding-top: 90px; width:1500px;height:400px;" >
-</center> 
+        <div class="numbertext" style="position: absolute; top:5%; left:48%;">1 / 6</div>
+        <a class="prevAll" onclick="plusSlidesAll(-1)">&#10094;</a>
+        <a class="nextAll" onclick="plusSlidesAll(1)">&#10095;</a>
+        <section class = "panel header">
+            <!--<div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div> -->
+            <div style="padding-top:20%;">
+        <h1>
+            Does modern music suck?
+        </h1>
+        
+        <subheading>
+            What makes a good song? How has that changed over time? 
+            <br>
+            We examine data on the Top 500 songs of all time according to Rolling Stone magazine. 
+        </subheading>
+        <img src="wave3.gif" alt="Flowers in Chania" style="padding-top: 90px; width:1500px;height:400px;" >
+        </div>
+    </section>
+</center>
     </div>
 
-</section>
-    
-    <section style="height: 2000px"> 
+    <div class="mySlidesAll" >
+        <center>
+        <div class="numbertext" style="position: absolute; top:5%; left:48%;">2 / 6</div>
+        <a class="prevAll" onclick="plusSlidesAll(-1)">&#10094;</a>
+        <a class="nextAll" onclick="plusSlidesAll(1)">&#10095;</a>
+
+    <section > 
         <div class="muzieknootjes" style="width: 100%; margin-top:100px;" >
             <div class="noot-1">
             &#9835; &#9833;
@@ -118,8 +124,7 @@
             </div>
             
             </div>
-            <div style="position: absolute; top:140%; left:25%;" data-aos="zoom-in">
-                <center>
+            <div style="position: absolute; top:30%; left:25%;" data-aos="zoom-in">
                  <div style="height:100px;">
      
                  </div>
@@ -141,16 +146,18 @@
              box-shadow: 0px 0px 5px #4AE7E3;">
                  Through the following visualizations we will investigate the truth to the claim that "Modern music sucks".
              </h3>
-         </center>
      </div>
-
-          
-        
-
-
     </section>
+</center>
+</div>
 
-    <section class = "panel histo" style="height: 2400px; padding-bottom: 400px">
+<div class="mySlidesAll" >
+    <center>
+    <div class="numbertext" style="position: absolute; top:5%; left:48%;">3 / 6</div>
+    <a class="prevAll" onclick="plusSlidesAll(-1)">&#10094;</a>
+<a class="nextAll" onclick="plusSlidesAll(1)">&#10095;</a>
+
+    <section class = "panel histo" style="margin-top: 5%;">
     <h2 style="width: 700px; padding: 5px; margin: 50px;" data-aos="zoom-in">What years are the most songs in the Top 500 from?</h2>
     
     <div style="padding-left: 5%; padding-right: 5%;" data-aos="zoom-in">
@@ -162,13 +169,12 @@
             The color scale above reflects the amount of songs. The more songs in a certain time period, the darker the <span style="color:lightblue; font-weight: bold;">blue</span>   becomes. 
         </h4>
         <p>
-            <label>Year Interavals</label>
+            <label>Year Intervals</label>
             <select type="number" id="nBin" >
                 <option value="61">Every year</option>
                 <option value="40">Every 2</option>
                 <option value="10">Every 5 </option>
                 <option value="5">Every 10</option>
-                <option value="0">All years</option>
 
             </select>
           </p>
@@ -195,9 +201,16 @@
 
     </div>
 </section>
+</center>
+</div>
 
-    
-<section class = "panel pie" style="height: 830px;">
+<div class="mySlidesAll" >
+    <center>
+    <div class="numbertext" style="position: absolute; top:5%; left:48%;">4 / 6</div>
+    <a class="prevAll" onclick="plusSlidesAll(-1)">&#10094;</a>
+<a class="nextAll" onclick="plusSlidesAll(1)">&#10095;</a>
+
+<section class = "panel pie" style="margin-top: 5%;">
     <br>
     <div id="piechart_container" data-aos="zoom-in">
         
@@ -234,6 +247,15 @@
             The number of producers represented in the top songs correlates with the number of hit songs.    </h3>
     </div>
 </section>
+</center>
+</div>
+
+<div class="mySlidesAll" >
+    <center>
+    <div class="numbertext" style="position: absolute; top:5%; left:48%;">5 / 6</div>
+    <a class="prevAll" onclick="plusSlidesAll(-1)">&#10094;</a>
+<a class="nextAll" onclick="plusSlidesAll(1)">&#10095;</a>
+
 <section class = "panel sound" >
     <div data-aos="zoom-in">
     <div id="soundwaves" style="height:550px" >
@@ -254,6 +276,7 @@
 
     <div class="container" data-aos="zoom-in">
                     <!-- Next and previous buttons -->
+                    
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
@@ -332,49 +355,95 @@
             <div class="caption-container">
             <p id="caption"></p>
             </div>
+             
+        </section>
+
+        <!-- Image text -->
+        <div class="caption-container">
+            <p id="captionAll"></p>
             </div>
-            <script>
-                var slideIndex = 1;
-                    showSlides(slideIndex);
+        </center>
+    </div>
 
-                    // Next/previous controls
-                    function plusSlides(n) {
-                    showSlides(slideIndex += n);
-                    }
+<div class="mySlidesAll" >
+    <center>
+    <div class="numbertext" style="position: absolute; top:5%; left:48%;">6 / 6</div>
+    <a class="prevAll" onclick="plusSlidesAll(-1)">&#10094;</a>
+<a class="nextAll" onclick="plusSlidesAll(1)">&#10095;</a>
 
-                    // Thumbnail image controls
-                    function currentSlide(n) {
-                    showSlides(slideIndex = n);
-                    }
-
-                    function showSlides(n) {
-                    var i;
-                    var slides = document.getElementsByClassName("mySlides");
-                    var dots = document.getElementsByClassName("demo");
-                    var captionText = document.getElementById("caption");
-                    if (n > slides.length) {slideIndex = 1}
-                    if (n < 1) {slideIndex = slides.length}
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";
-                    }
-                    for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" active", "");
-                    }
-                    slides[slideIndex-1].style.display = "block";
-                    dots[slideIndex-1].className += " active";
-                    captionText.innerHTML = dots[slideIndex-1].alt;
-                    }
-            </script>
-    
-</div>
-</section>
 <section>
-    <div style="padding-top:20%;">
+    <div>
         <h1>
            So, what do you think? <br> Does Modern Music really suck?
         </h1>
         </div>
 </section>
+</center>
+</div>
+</div>
+
+<script type="text/javascript" src="soundwaves.js"></script>
+<script>
+    var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+        }
+
+
+        var slideIndexAll = 1;
+        showSlidesAll(slideIndexAll);
+
+        // Next/previous controls
+        function plusSlidesAll(n) {
+        showSlidesAll(slideIndexAll += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlideAll(n) {
+        showSlidesAll(slideIndexAll = n);
+        }
+
+        function showSlidesAll(n) {
+        var i;
+        var slidesAll = document.getElementsByClassName("mySlidesAll");
+        var captionTextAll = document.getElementById("captionAll");
+        
+        if (n > slidesAll.length) {slideIndexAll = 1}
+        if (n < 1) {slideIndexAll = slidesAll.length}
+        for (i = 0; i < slidesAll.length; i++) {
+            slidesAll[i].style.display = "none";
+        }
+        if(slideIndexAll == 5){
+            soundwaves()
+        }
+        slidesAll[slideIndexAll-1].style.display = "block";
+        }
+</script>
+
+
+
+
+
 <!-- <section class = "panel radar">
     <h2 style="width: 700px; padding: 5px;">How do characteristics compare with songs with the highest streak on the top charts?</h2>
     <p>Let's Compare the Top Songs</p>
@@ -410,13 +479,12 @@
 
 
 </section> -->
-</center>
 
     <script type="module" src="main.js" ></script>
     <script type="module" src="1960-best-song.js" ></script>
     <script type="module" src="1960-70-best-song.js" ></script>
     <script type="module" src="2000s-best-songs.js" ></script>
-    <script type="module" src="soundwaves.js" ></script>
+
     <script type="module" src="radarchart1.js" ></script>
     <script type="module" src="radarchart2.js" ></script>
     <script type="module" src = "recordPieChart.js"></script>

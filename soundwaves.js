@@ -2,9 +2,11 @@ var margin = {top: 50, right: 110, bottom: 50, left: 30},
     width = 810 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
+var count = 0;
 
-export function soundwaves(){
-
+ function soundwaves(){
+console.log("RAN")
+if (count == 0){
 // append the svg object to the body of the page
 var svg = d3.select("#soundwaves")
   .attr("class", "scrollwaves")
@@ -431,15 +433,6 @@ d3.csv("comboSongs.csv", d3.autoType).then(data =>  {
 
 
 })
-
-
 }
-
-export function removeSoundwaves(){
-  var div = d3.selectAll(".sound")
-  div.attr("opacity",0)
-}
-
-export function showSoundwaves(){
-  soundwaves()
+count = 1;
 }
