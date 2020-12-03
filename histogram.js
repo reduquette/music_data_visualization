@@ -2,7 +2,7 @@ export function histogram(container){
 
 var margin = {top: 8, right: 40, bottom: 45, left: 40},
     width = 720 - margin.left - margin.right,
-    height = 520 - margin.top - margin.bottom;
+    height = 420 - margin.top - margin.bottom;
 
 var svg = d3.select("#histogram")
   .append("svg")
