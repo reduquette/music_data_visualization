@@ -292,3 +292,12 @@ polygon.area {
     pointer-events: none;
     font-size:15px;
 }
+
+.info {
+  bottom: 5%;
+  position: absolute; 
+  left:46%;
+  background: white;
+  color: black;
+  padding: 5px;
+}
