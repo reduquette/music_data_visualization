@@ -1,7 +1,12 @@
 var margin = {top: 50, right: 100, bottom: 30, left: 30},
     width = 800 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
+var COUNTER = 0;
 
+function soundwaveStatic(){
+  console.log("HERE")
+  if (COUNTER == 0){
+    console.log("HII")
 // append the svg object to the body of the page
 var svgStatic = d3.select("#soundwave-static")
   .append("svg")
@@ -28,7 +33,7 @@ d3.csv("averages.csv",d3.autoType).then(data => {
     console.log(dataReady)
 
         // A color scale: one color for each group
-    var myColor = d3.scaleOrdinal()
+    var myColor2 = d3.scaleOrdinal()
       .domain(allGroup)
       .range(["#E4E808", "#E805F6", "#4AE7E3"]);
 
@@ -76,20 +81,108 @@ d3.csv("averages.csv",d3.autoType).then(data => {
         .attr("in","SourceGraphic");
 
 
-    svgStatic.selectAll("myLines2")
-      .data(dataReady)
-      .enter()
-      .append("path")
-        .attr("d", function(d){ 
-            console.log("LINE", d.values)
-            return (line(d.values))
-        })
-        .attr("stroke", function(d){ console.log(myColor(d.name)); return myColor(d.name) })
-        .style("filter", "url(#glow)")
-        .style("stroke-width", 4)
-        .style("opacity", "0.4")
+    // svgStatic.selectAll("myLines2")
+    //   .data(dataReady)
+    //   .enter()
+    //   .append("path")
+    //     .attr("d", function(d){ 
+    //         console.log("LINE", d.values)
+    //         return (line(d.values))
+    //     })
+    //     .attr("stroke", function(d){ console.log(myColor(d.name)); return myColor(d.name) })
+    //     .style("filter", "url(#glow)")
+    //     .style("stroke-width", 4)
+    //     .style("opacity", "0.4")
 
         
+       //make defs and add the linear gradient
+      //  var lg2 = svgStatic.append("defs").append("linearGradient")
+      //  .attr("id", "mygrad")//id of the gradient
+      //  .attr("x1", "0%")
+      //  .attr("x2", "0%")
+      //  .attr("y1", "0%")
+      //  .attr("y2", "100%")//since its a vertical linear gradient 
+      //  ;
+      //  lg2.append("stop")
+      //  .attr("offset", "0%")
+      //  .style("stop-color", "red")//end in red
+      //  .style("stop-opacity", 1)
+   
+      //  lg2.append("stop")
+      //  .attr("offset", "100%")
+      //  .style("stop-color", "blue")//start in blue
+      //  .style("stop-opacity", 1)
+   
+   
+       var path21 = svgStatic.append("path")
+       .datum(dataReady)
+       .attr("fill", "none")
+       .attr("stroke", function(d){ return myColor2(d[0].name) })
+       .attr("stroke-width", 1.5)
+       .attr("d", function(d){ 
+                 console.log(d[0].values)
+                 return (line(d[0].values))
+             })
+            //  .style("filter", "url(#glow)")
+            //      .style("stroke-width", 4)
+            //      .style("opacity", "0.4")
+   
+       var path22 = svgStatic.append("path")
+                 .datum(dataReady)
+                 .attr("fill", "none")
+                 .attr("stroke", function(d){ return myColor2(d[1].name) })
+                 .attr("stroke-width", 1.5)
+                 .attr("d", function(d){ 
+                           console.log(d[1].values)
+                           return (line(d[1].values))
+                       })
+                      //  .style("filter", "url(#glow)")
+                      //      .style("stroke-width", 4)
+                      //      .style("opacity", "0.4")
+   
+       var path23 = svgStatic.append("path")
+                           .datum(dataReady)
+                           .attr("fill", "none")
+                           .attr("stroke", function(d){ return myColor2(d[2].name) })
+                           .attr("stroke-width", 1.5)
+                           .attr("d", function(d){ 
+                                     console.log(d[2].values)
+                                     return (line(d[2].values))
+                                 })
+                                //  .style("filter", "url(#glow)")
+                                //      .style("stroke-width", 4)
+                                //      .style("opacity", "0.4")
+       
+   
+   var totalLength21 = path21.node().getTotalLength();
+   var totalLength22 = path22.node().getTotalLength();
+   var totalLength23 = path23.node().getTotalLength();
+   
+   
+   
+   path21
+       .attr("stroke-dasharray", totalLength21 + " " + totalLength21)
+       .attr("stroke-dashoffset", totalLength21)
+       .transition() 
+       .duration(4000) 
+       .ease(d3.easeLinear) 
+       .attr("stroke-dashoffset", 0); 
+   
+       path22
+       .attr("stroke-dasharray", totalLength22 + " " + totalLength22)
+       .attr("stroke-dashoffset", totalLength22)
+       .transition() 
+       .duration(4000) 
+       .ease(d3.easeLinear) 
+       .attr("stroke-dashoffset", 0); 
+   
+       path23
+       .attr("stroke-dasharray", totalLength23 + " " + totalLength23)
+       .attr("stroke-dashoffset", totalLength23)
+       .transition() 
+       .duration(4000) 
+       .ease(d3.easeLinear) 
+       .attr("stroke-dashoffset", 0); 
     
     // Add the points
     svgStatic
@@ -98,7 +191,7 @@ d3.csv("averages.csv",d3.autoType).then(data => {
       .data(dataReady)
       .enter()
         .append('g')
-        .style("fill", function(d){ return myColor(d.name) })
+        .style("fill", function(d){ return myColor2(d.name) })
       // Second we need to enter in the 'values' part of this group
       .selectAll("myPoints2")
       .data(function(d){ return d.values })
@@ -120,7 +213,7 @@ d3.csv("averages.csv",d3.autoType).then(data => {
           .attr("transform", function(d) { return "translate(" + x(d.value.decade) + "," + y(d.value.value) + ")"; }) // Put the text at the position of the last point
           .attr("x", 12) // shift the text a bit more right
           .text(function(d) { return d.name; })
-          .style("fill", function(d){ return myColor(d.name) })
+          .style("fill", function(d){ return myColor2(d.name) })
           .style("font-size", 15)
           //tooltip
 
@@ -148,5 +241,6 @@ d3.csv("averages.csv",d3.autoType).then(data => {
 
 
 
-
-
+  }
+COUNTER = 1;
+  }

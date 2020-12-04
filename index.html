@@ -48,7 +48,7 @@
     <div class="slideshow-container" style="width:100%;">
     <div class="mySlidesAll" >
         <center>
-        <div class="numbertext" style="position: absolute; top:5%; left:48%;">1 / 6</div>
+        <div class="numbertext" style="position: absolute; top:5%; left:48%;">1 / 7</div>
         <a class="nextAll" onclick="plusSlidesAll(1)">&#10095;</a>
         <section class = "panel header">
             <!--<div class="progress-container">
@@ -72,7 +72,7 @@
 
     <div class="mySlidesAll" >
         <center>
-        <div class="numbertext" style="position: absolute; top:5%; left:48%;">2 / 6</div>
+        <div class="numbertext" style="position: absolute; top:5%; left:48%;">2 / 7</div>
       
 
     <section > 
@@ -153,7 +153,7 @@
 
 <div class="mySlidesAll" >
     <center>
-    <div class="numbertext" style="position: absolute; top:5%; left:48%;">3 / 6</div>
+    <div class="numbertext" style="position: absolute; top:5%; left:48%;">3 / 7</div>
 
     <section class = "panel histo" style="margin-top: 5%;">
     <h2 style="width: 700px; padding: 5px; margin: 30px;" data-aos="zoom-in">What years are the most songs in the Top 500 from?</h2>
@@ -206,7 +206,7 @@
 
 <div class="mySlidesAll" >
     <center>
-    <div class="numbertext" style="position: absolute; top:5%; left:48%;">4 / 6</div>
+    <div class="numbertext" style="position: absolute; top:5%; left:48%;">4 / 7</div>
 
 <section class = "panel pie" style="margin-top: 5%;">
     <br>
@@ -252,7 +252,7 @@
 
 <div class="mySlidesAll" >
     <center>
-    <div class="numbertext" style="position: absolute; top:5%; left:48%;">5 / 6</div>
+    <div class="numbertext" style="position: absolute; top:5%; left:48%;">5 / 7</div>
 
 <section class = "panel sound" >
     <div data-aos="zoom-in">
@@ -376,7 +376,7 @@
 
     <div class="mySlidesAll" >
         <center>
-        <div class="numbertext" style="position: absolute; top:5%; left:48%;">6 / 6</div>
+        <div class="numbertext" style="position: absolute; top:5%; left:48%;">6 / 7</div>
     
     
     <section>
@@ -391,7 +391,7 @@
 
 <div class="mySlidesAll" >
     <center>
-    <div class="numbertext" style="position: absolute; top:5%; left:48%;">6 / 6</div>
+    <div class="numbertext" style="position: absolute; top:5%; left:48%;">7 / 7</div>
 
 
 <section>
@@ -409,6 +409,7 @@
 </div>
 
 <script type="text/javascript" src="soundwaves.js"></script>
+<script type="text/javascript" src="soundwave-static.js"></script>
 <script>
     var slideIndex = 1;
         showSlides(slideIndex);
@@ -450,6 +451,7 @@
         }
 
         function showSlidesAll(n) {
+            console.log(slideIndexAll)
         var i;
         var slidesAll = document.getElementsByClassName("mySlidesAll");
         var captionTextAll = document.getElementById("captionAll");
@@ -461,6 +463,9 @@
         }
         if(slideIndexAll == 5){
             soundwaves()
+        }
+        if(slideIndexAll == 6){
+            soundwaveStatic()
         }
         slidesAll[slideIndexAll-1].style.display = "block";
         }
