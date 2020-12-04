@@ -331,17 +331,7 @@
                 <div class="mySlides">
                     <div class="numbertext">5 / 5</div>
                     <h3>Comparing each other</h3>
-                    <h4 class="radar-song1">Since U Been Gone (2004 - 46 weeks)</h4>
-                    <h4>vs.</h4>
-                    <h4 class="radar-song2">The Twist (1960 - 39 weeks)</h4>
-                
-                    <div id="radar1"></div>
-                    
-                    <h4 class="radar-song1">Hey Ya! (2003 - 33 weeks)</h4>
-                    <h4>vs.</h4>
-                    <h4 class="radar-song2">How Deep is Your Love? (1977 - 33 weeks)</h4>
-                
-                    <div id="radar2"></div>
+
 
 
                     <div style="height:400px;">
@@ -382,10 +372,67 @@
     <section>
         <h2>1960s</h2>
         <div id=soundwave-static></div>
+        <svg width="400" height="600" transform="translate(-280,-805)">
+            <rect x="300" y="480" rx="20" ry="20" width="125" height="310"
+            style="fill:grey;stroke:black;stroke-width:5;opacity:0.5" />
+          </svg>
     </section>
     </center>
     <a class="prevAll" onclick="plusSlidesAll(-1)">&#10094;</a>
     <a class="nextAll" onclick="plusSlidesAll(1)">&#10095;</a>
+    </div>
+
+    <div class="mySlidesAll" >
+        <center>
+        <div class="numbertext" style="position: absolute; top:5%; left:48%;">6 / 7</div>
+    
+    
+    <section>
+        <h2>1970s</h2>
+        <div id=soundwave-static2></div>
+    </section>
+
+    </center>
+    <a class="prevAll" onclick="plusSlidesAll(-1)">&#10094;</a>
+    <a class="nextAll" onclick="plusSlidesAll(1)">&#10095;</a>
+    </div>
+
+    <div class="mySlidesAll" >
+        <center>
+        <div class="numbertext" style="position: absolute; top:5%; left:48%;">6 / 7</div>
+    
+        <section>
+            <h2>2000s</h2>
+            <div id=soundwave-static3></div>
+        </section>
+        </center>
+        <a class="prevAll" onclick="plusSlidesAll(-1)">&#10094;</a>
+        <a class="nextAll" onclick="plusSlidesAll(1)">&#10095;</a>
+    </div>
+
+    <div class="mySlidesAll" >
+        <center>
+        <div class="numbertext" style="position: absolute; top:5%; left:48%;">6 / 7</div>
+    
+        <section>
+            <h2>Comparing both</h2>
+
+            <h4 class="radar-song1">Since U Been Gone (2004 - 46 weeks)</h4>
+            <h4>vs.</h4>
+            <h4 class="radar-song2">The Twist (1960 - 39 weeks)</h4>
+        
+            <div id="radar1"></div>
+            
+            <h4 class="radar-song1">Hey Ya! (2003 - 33 weeks)</h4>
+            <h4>vs.</h4>
+            <h4 class="radar-song2">How Deep is Your Love? (1977 - 33 weeks)</h4>
+        
+            <div id="radar2"></div>
+            
+        </section>
+        </center>
+        <a class="prevAll" onclick="plusSlidesAll(-1)">&#10094;</a>
+        <a class="nextAll" onclick="plusSlidesAll(1)">&#10095;</a>
     </div>
 
 
@@ -410,6 +457,8 @@
 
 <script type="text/javascript" src="soundwaves.js"></script>
 <script type="text/javascript" src="soundwave-static.js"></script>
+<script type="text/javascript" src="soundwave-static2.js"></script>
+<script type="text/javascript" src="soundwave-static3.js"></script>
 <script>
     var slideIndex = 1;
         showSlides(slideIndex);
@@ -467,6 +516,12 @@
         if(slideIndexAll == 6){
             soundwaveStatic()
         }
+        if(slideIndexAll == 7){
+            soundwaveStatic2()
+        }
+        if(slideIndexAll == 8){
+            soundwaveStatic3()
+        }
         slidesAll[slideIndexAll-1].style.display = "block";
         }
 </script>
@@ -513,6 +568,8 @@
 
     <script type="module" src="main.js" ></script>
     <script type="module" src="soundwave-static.js" ></script>
+    <script type="module" src="soundwave-static2.js" ></script>
+    <script type="module" src="soundwave-static3.js" ></script>
     <script type="module" src="1960-best-song.js" ></script>
     <script type="module" src="1960-70-best-song.js" ></script>
     <script type="module" src="2000s-best-songs.js" ></script>
