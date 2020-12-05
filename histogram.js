@@ -158,6 +158,9 @@ function updateBins(nBin){
         .exit()
         .remove()
 
+
+    
+
     svg.append("text")
 		.attr('x', 0)
 		.attr('y', -5)
@@ -166,6 +169,8 @@ function updateBins(nBin){
     .attr('font-family','Lato')
     .attr('fill', 'white')
     .attr("transform", "rotate(90)");
+
+
 
   svg.append("text")
       .attr('font-family','Lato')
@@ -176,12 +181,64 @@ function updateBins(nBin){
             .attr('font-size',13)
 
 
+  var w = 300, h = 50;
+
+  var key = d3.select("#legend1")
+    .append("svg")
+    .attr("width", w)
+    .attr("height", h);
+
+  var legend = key.append("defs")
+    .append("svg:linearGradient")
+    .attr("id", "gradient")
+    .attr("x1", "0%")
+    .attr("y1", "100%")
+    .attr("x2", "100%")
+    .attr("y2", "100%")
+    .attr("spreadMethod", "pad");
+
+  legend.append("stop")
+    .attr("offset", "20%")
+    .attr("stop-color", "#44CDE0")
+    .attr("stop-opacity", 1);
+
+  legend.append("stop")
+    .attr("offset", "100%")
+    .attr("stop-color", "#0604AA")
+    .attr("stop-opacity", 1);
+
+  key.append("rect")
+    .attr("width", w)
+    .attr("height", h - 30)
+    .style("fill", "url(#gradient)")
+    .attr("transform", "translate(0,10)");
+
+  var yKey = d3.scaleLinear()
+    .range([300, 0])
+    .domain([68, 12]);
+
+  var yAxisKey = d3.axisBottom()
+    .scale(y)
+    .ticks(5);
+
+  key.append("g")
+    .attr("class", "y axis")
+    .attr("transform", "translate(0,30)")
+    .call(yAxisKey)
+    .append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("yKey", 0)
+    .attr("dy", ".71em")
+    .style("text-anchor", "end")
+    .text("axis title");
+
+
+  
+
+
 }
 updateBins(61)
 
-d3.select("#nBin").on("input", function() {
-  updateBins(+this.value);
-});
 
 }
 
