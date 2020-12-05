@@ -308,3 +308,8 @@ polygon.area {
  width: 100px;
  height: 100px
 }
+
+
+.legend {
+  fill:white;
+}
