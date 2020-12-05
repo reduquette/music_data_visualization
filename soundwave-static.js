@@ -231,8 +231,17 @@ d3.csv("averages.csv",d3.autoType).then(data => {
                       .attr("x", 10)
                       .attr("y", 10000)
                       .attr("width", 50)
-                      .attr("height", 1000)
-                
+                      
+
+    d3.select("#highlight1")
+           .attr("height", 0)
+          .transition()
+          .delay(1000)
+          .duration(2000)
+          .attr("height", 1000)
+                      
+    
+
 
     svgStatic.append("text")
     .attr('x', 0)
