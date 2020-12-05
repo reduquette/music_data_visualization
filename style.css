@@ -7,6 +7,8 @@ body {
   color: white;
 }
 
+
+
 h1 {
     color: white;
     font-family: 'Lato', sans-serif;
@@ -300,4 +302,9 @@ polygon.area {
   background: white;
   color: black;
   padding: 5px;
+}
+
+#static-container{
+ width: 100px;
+ height: 100px
 }
