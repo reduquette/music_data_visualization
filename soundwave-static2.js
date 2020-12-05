@@ -39,7 +39,7 @@ d3.csv("averages.csv",d3.autoType).then(data => {
 
     // Add X axis --> it is a date format
     var x = d3.scaleLinear()
-      .domain([1940, d3.max(data, function(d) { return +d.decade })])
+      .domain([1960, 1980])
       .range([ 0, width ]);
 
     svgStatic2.append("g")
@@ -183,6 +183,14 @@ d3.csv("averages.csv",d3.autoType).then(data => {
           .style("fill", function(d){ return myColor2(d.name) })
           .style("font-size", 15)
           //tooltip
+
+
+       //Draw the Rectangle
+       var rectangle2 = svgStatic2.append("rect")
+       .attr("x", 10)
+       .attr("y", 10000)
+       .attr("width", 50)
+       .attr("height", 1000);
 
 
     svgStatic2.append("text")
