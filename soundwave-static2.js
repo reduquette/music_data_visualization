@@ -39,7 +39,7 @@ d3.csv("averages.csv",d3.autoType).then(data => {
 
     // Add X axis --> it is a date format
     var x = d3.scaleLinear()
-      .domain([1960, 1980])
+      .domain([1948, 2000])
       .range([ 0, width ]);
 
     svgStatic2.append("g")
@@ -131,7 +131,7 @@ d3.csv("averages.csv",d3.autoType).then(data => {
        .attr("stroke-dasharray", totalLength21 + " " + totalLength21)
        .attr("stroke-dashoffset", totalLength21)
        .transition() 
-       .duration(4000) 
+       .duration(2000) 
        .ease(d3.easeLinear) 
        .attr("stroke-dashoffset", 0); 
    
@@ -139,7 +139,7 @@ d3.csv("averages.csv",d3.autoType).then(data => {
        .attr("stroke-dasharray", totalLength22 + " " + totalLength22)
        .attr("stroke-dashoffset", totalLength22)
        .transition() 
-       .duration(4000) 
+       .duration(2000) 
        .ease(d3.easeLinear) 
        .attr("stroke-dashoffset", 0); 
    
@@ -147,7 +147,7 @@ d3.csv("averages.csv",d3.autoType).then(data => {
        .attr("stroke-dasharray", totalLength23 + " " + totalLength23)
        .attr("stroke-dashoffset", totalLength23)
        .transition() 
-       .duration(4000) 
+       .duration(2000) 
        .ease(d3.easeLinear) 
        .attr("stroke-dashoffset", 0); 
     
