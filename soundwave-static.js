@@ -226,11 +226,13 @@ d3.csv("averages.csv",d3.autoType).then(data => {
 
     //Draw the Rectangle
       var rectangle = svgStatic.append("rect")
-                      .attr("rx", 8)
-                      .attr("ry", 8)
-                      .attr("x", 10)
-                      .attr("y", 10000)
-                      .attr("width", 50)
+      .attr("rx", 8)
+      .attr("ry", 8)
+      .attr("x", 10)
+      .attr("y", 10000)
+      .attr("width", 50)
+      .attr("height", 1000);
+
                       
 
     d3.select("#highlight1")

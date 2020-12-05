@@ -187,6 +187,8 @@ d3.csv("averages.csv",d3.autoType).then(data => {
 
        //Draw the Rectangle
        var rectangle2 = svgStatic2.append("rect")
+       .attr("rx", 8)
+       .attr("ry", 8)
        .attr("x", 10)
        .attr("y", 10000)
        .attr("width", 50)
