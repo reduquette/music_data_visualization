@@ -367,18 +367,26 @@
     
         <section>
             <h2>2000s</h2>
+
+            <div style="width: 100%; display: table;">
+                <div style="display: table-row; height: 100px;">
+                    <div style="width: 50%; display: table-cell;">
+                        <div id=soundwave-static3></div>
+                        <svg width="150" height="280" transform="translate(330,-920)">
+                            <rect id="highlight3" rx="12" ry="12" x="0" y="0" width="30" height="1000" fill="grey" opacity="0.5"/>
+                            </svg>
+                    </div>
+                    <div style="display: table-cell;"> 
+                        <div id="chart-2000"></div>
+                        <div id="static-container">      
+                        <h4 class="radar-song1">Since U Been Gone (2004 - 46 weeks)</h4>
+                        <h4 class="radar-song2">Hey Ya (2003 - 33 weeks))</h4>
+                    </div>
+                </div>
+            </div>
             
-            <div id=soundwave-static3></div>
-
-            <div id="chart-2000"></div>
-            <div id="static-container">
-                            
-            <h4 class="radar-song1">Since U Been Gone (2004 - 46 weeks)</h4>
-            <h4 class="radar-song2">Hey Ya (2003 - 33 weeks))</h4>
-                <svg width="150" height="280" transform="translate(330,-920)">
-                <rect id="highlight3" rx="12" ry="12" x="0" y="0" width="30" height="1000" fill="grey" opacity="0.5"/>
-                </svg>
-
+    
+            
             </div>
         </section>
         </center>
@@ -395,8 +403,17 @@
         
             <!-- <div id="radar1"></div> -->
 
-            <div class="radar1"></div> 
-            <div class="radar2"></div> 
+            <div style="width: 100%; display: table;">
+                <div style="display: table-row; height: 100px;">
+                    <div style="width: 50%; display: table-cell;">
+                        <div class="radar1"></div> 
+                    </div>
+                    <div style="display: table-cell;"> 
+                        <div class="radar2"></div> 
+                    </div>
+                </div>
+            </div>
+
 
             <script src="radarchart1.js"></script>	
 
@@ -413,7 +430,7 @@
 						{axis: 'danceability', value: 0.46},
 						{axis: 'energy', value: 0.25},
 					],
-                color: '#E4E808'
+                color: '#00FFFF'
                         },
                         { name: 'The Twist (1960 - 39 weeks)',
                             axes: [
@@ -434,7 +451,7 @@
                             ],
                             
 
-                color: '#E805F6'
+                color: '#00FFFF'
                         },     { name: 'How Deep is Your Love? (1977 - 33 weeks)',
                             axes: [
                             {axis: "acousticness", value: 0.02},
@@ -450,7 +467,7 @@
 			  margin: margin,
 			  levels: 5,
 			  roundStrokes: false,
-				color: d3.scaleOrdinal().range(["#E805F6", "#2a2fd4"]),
+				color: d3.scaleOrdinal().range(["#00FFFF", "#2a2fd4"]),
                 format: '.0f',
                 legend: { title: 'Best Performing Songs', translateX: 100, translateY: 40 }
             };
@@ -461,7 +478,7 @@
 			  margin: margin,
 			  levels: 5,
 			  roundStrokes: false,
-				color: d3.scaleOrdinal().range(["#E805F6", "#2a2fd4"]),
+				color: d3.scaleOrdinal().range(["#00FFFF", "#2a2fd4"]),
                 format: '.0f',
                 legend: { title: 'Best Performing Songs', translateX: 100, translateY: 40 }
 			};
