@@ -39,7 +39,7 @@ d3.csv("averages.csv",d3.autoType).then(data => {
 
     // Add X axis --> it is a date format
     var x = d3.scaleLinear()
-      .domain([1948, 2000])
+      .domain([1940, 2000])
       .range([ 0, width ]);
 
     svgStatic2.append("g")
