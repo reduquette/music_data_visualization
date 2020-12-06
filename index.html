@@ -427,8 +427,15 @@
                     <div style="display: table-cell;"> 
                         <div class="radar2"></div> 
                     </div>
+               
                 </div>
+           
             </div>
+            <center>
+           
+                <div class="radar3"></div> 
+      
+        </center>
 
 
             <script src="radarchart1.js"></script>	
@@ -477,6 +484,42 @@
                 color: '#2a2fd4'
                         }]
 
+            var data3 = 
+[	{ name: 'Since U Been Gone (2004 - 46 weeks)',
+					axes: [
+						{axis: 'acousticness', value: 0.623},
+						{axis: 'danceability', value: 0.46},
+						{axis: 'energy', value: 0.25},
+					],
+                color: '#70E713'
+                        },
+                        { name: 'The Twist (1960 - 39 weeks)',
+                            axes: [
+                                {axis: 'acousticness', value: 0.46},
+                                {axis: 'danceability', value: 0.64},
+                                {axis: 'energy', value: 0.97},
+                            ],
+                color: '#F7E000'},
+                        
+
+            { name: 'Hey Ya! (2003 - 33 weeks)',
+                            axes: [
+                            {axis: 'acousticness', value: 0.08},
+                                {axis: 'danceability', value: 0.74},
+                                {axis: 'energy', value: 0.52},
+                            ],
+                            
+
+                color: '#9101F7'
+                        },     { name: 'How Deep is Your Love? (1977 - 33 weeks)',
+                            axes: [
+                            {axis: "acousticness", value: 0.02},
+                {axis: "danceability", value: 0.8},
+                {axis: "energy", value: 0.68}
+                            ],
+                color: '#001DF7'
+                        }]
+
 			var radarChartOptions = {
 			  w: 290,
 			  h: 350,
@@ -497,11 +540,23 @@
 				color: d3.scaleOrdinal().range(["#00FFFF", "#2a2fd4"]),
                 format: '.0f',
                 legend: { title: 'Best Performing Songs', translateX: 100, translateY: 40 }
+            };
+            
+            var radarChartOptions3 = {
+			  w: 290,
+			  h: 350,
+			  margin: margin,
+			  levels: 5,
+			  roundStrokes: false,
+				color: d3.scaleOrdinal().range(["#70E713", "#F7E000", "#9101F7", "#F16D6D"]),
+                format: '.0f',
+                legend: { title: 'Best Performing Songs', translateX: 100, translateY: 40 }
 			};
 
 			// Draw the chart, get a reference the created svg element :
             let svg_radar1 = RadarChart(".radar1", data, radarChartOptions);
             let svg_radar2 = RadarChart(".radar2", data2, radarChartOptions2);
+            let svg_radar3 = RadarChart(".radar3", data3, radarChartOptions3);
 
             
             </script>
