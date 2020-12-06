@@ -199,12 +199,12 @@ function updateBins(nBin){
 
   legend.append("stop")
     .attr("offset", "20%")
-    .attr("stop-color", "#44CDE0")
+    .attr("stop-color", "#0604AA")
     .attr("stop-opacity", 1);
 
   legend.append("stop")
     .attr("offset", "100%")
-    .attr("stop-color", "#0604AA")
+    .attr("stop-color", "#44CDE0")
     .attr("stop-opacity", 1);
 
   key.append("rect")
