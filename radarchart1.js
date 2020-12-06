@@ -295,7 +295,7 @@ const RadarChart = function RadarChart(parent_selector, data, options) {
 			.attr("transform", "translate(" + (cfg.w/2 + cfg.margin.left) + "," + (cfg.h/2 + cfg.margin.top) + ")");
 
 	//Filter for the outside glow
-	let filter = g.append('defs').append('filter').attr('id','glow'),
+	let filter = g.append('defs').append('filter').attr('id','glowRadar'),
 		feGaussianBlur = filter.append('feGaussianBlur').attr('stdDeviation','2.5').attr('result','coloredBlur'),
 		feMerge = filter.append('feMerge'),
 		feMergeNode_1 = feMerge.append('feMergeNode').attr('in','coloredBlur'),
@@ -315,7 +315,7 @@ const RadarChart = function RadarChart(parent_selector, data, options) {
 		.style("fill", "#CDCDCD")
 		.style("stroke", "#CDCDCD")
 		.style("fill-opacity", cfg.opacityCircles)
-		.style("filter" , "url(#glow)");
+		.style("filter" , "url(#glowRadar)");
 
 	//Text indicating at what % each level is
 	axisGrid.selectAll(".axisLabel")
@@ -411,7 +411,7 @@ const RadarChart = function RadarChart(parent_selector, data, options) {
 		.style("stroke-width", cfg.strokeWidth + "px")
 		.style("stroke", (d,i) => cfg.color(i))
 		.style("fill", "none")
-		.style("filter" , "url(#glow)");
+		.style("filter" , "url(#glowRadar)");
 
 	//Append the circles
 	blobWrapper.selectAll(".radarCircle")
