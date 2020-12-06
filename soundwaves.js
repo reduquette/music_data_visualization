@@ -78,7 +78,7 @@ d3.csv("averages.csv",d3.autoType).then(data => {
 
     //Filter for the outside glow
     var filter = defs.append("filter")
-        .attr("id","glow");
+        .attr("id","glow10");
     filter.append("feGaussianBlur")
         .attr("stdDeviation","4")
         .attr("result","coloredBlur");
@@ -117,9 +117,9 @@ d3.csv("averages.csv",d3.autoType).then(data => {
               console.log(d[0].values)
               return (line(d[0].values))
           })
-          // .style("filter", "url(#glow)")
-          //     .style("stroke-width", 4)
-          //     .style("opacity", "0.4")
+          .style("filter", "url(#glow10)")
+              .style("stroke-width", 4)
+              .style("opacity", "0.4")
 
     var path2 = svg.append("path")
               .datum(dataReady)
@@ -130,9 +130,9 @@ d3.csv("averages.csv",d3.autoType).then(data => {
                         console.log(d[1].values)
                         return (line(d[1].values))
                     })
-                    // .style("filter", "url(#glow)")
-                    //     .style("stroke-width", 4)
-                    //     .style("opacity", "0.4")
+                    .style("filter", "url(#glow10)")
+                        .style("stroke-width", 4)
+                        .style("opacity", "0.4")
 
     var path3 = svg.append("path")
                         .datum(dataReady)
@@ -143,9 +143,9 @@ d3.csv("averages.csv",d3.autoType).then(data => {
                                   console.log(d[2].values)
                                   return (line(d[2].values))
                               })
-                              // .style("filter", "url(#glow)")
-                              //     .style("stroke-width", 4)
-                              //     .style("opacity", "0.4")
+                              .style("filter", "url(#glow10)")
+                                  .style("stroke-width", 4)
+                                  .style("opacity", "0.4")
     
 
 var totalLength1 = path1.node().getTotalLength();

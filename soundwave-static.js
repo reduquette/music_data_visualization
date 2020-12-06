@@ -130,9 +130,9 @@ d3.csv("averages.csv",d3.autoType).then(data => {
                  console.log(d[0].values)
                  return (line(d[0].values))
              })
-            //  .style("filter", "url(#glow)")
-            //      .style("stroke-width", 4)
-            //      .style("opacity", "0.4")
+             .style("filter", "url(#glow2)")
+                 .style("stroke-width", 4)
+                 .style("opacity", "0.4")
    
        var path22 = svgStatic.append("path")
                  .datum(dataReady)
@@ -143,9 +143,9 @@ d3.csv("averages.csv",d3.autoType).then(data => {
                            console.log(d[1].values)
                            return (line(d[1].values))
                        })
-                      //  .style("filter", "url(#glow)")
-                      //      .style("stroke-width", 4)
-                      //      .style("opacity", "0.4")
+                       .style("filter", "url(#glow2)")
+                           .style("stroke-width", 4)
+                           .style("opacity", "0.4")
    
        var path23 = svgStatic.append("path")
                            .datum(dataReady)
@@ -156,9 +156,9 @@ d3.csv("averages.csv",d3.autoType).then(data => {
                                      console.log(d[2].values)
                                      return (line(d[2].values))
                                  })
-                                //  .style("filter", "url(#glow)")
-                                //      .style("stroke-width", 4)
-                                //      .style("opacity", "0.4")
+                                 .style("filter", "url(#glow2)")
+                                     .style("stroke-width", 4)
+                                     .style("opacity", "0.4")
        
    
    var totalLength21 = path21.node().getTotalLength();
