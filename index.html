@@ -323,6 +323,11 @@
                     <div id="chart-1960"></div>
                     <div id="static-container">      
                         <h4 class="radar-song1">The Twist (1960 - 39 weeks)</h4>
+
+                        <audio id="audioTwist">
+                            <source src="The-Twist.mp3" type="audio/mpeg">
+                          </audio>
+                  
  
                 </div>
             </div>
@@ -331,7 +336,7 @@
 
     </section>
     </center>
-    <a class="prevAll" onclick="plusSlidesAll(-1)">&#10094;</a>
+    <a class="prevAll" onclick="plusSlidesAll(-1)" >&#10094;</a>
     <a class="nextAll" onclick="plusSlidesAll(1)">&#10095;</a>
     </div>
 
@@ -359,6 +364,10 @@
                     <div id="static-container">      
                         <h4 class="radar-song1">The Twist (1960 - 39 weeks)</h4>
                         <h4 class="radar-song2">How Deep is Your Love? (1977 - 33 weeks)</h4>
+                        <audio id="audioDeep">
+                            <source src="How-Deep-Is-Your-Love.mp3" type="audio/mpeg">
+                          </audio>
+                  
                 </div>
             </div>
         </div>
@@ -384,6 +393,9 @@
     
         <section>
             <h2>2000s</h2>
+            <audio id="audioHeyYa">
+                <source src="HeyYa.mp3" type="audio/mpeg">
+              </audio>
 
             <div style="width: 100%; display: table;">
                 <div style="display: table-row; height: 100px;">
@@ -429,6 +441,9 @@
                     </div>
                
                 </div>
+                <audio id="audioSinceU">
+                    <source src="SinceU.mp3" type="audio/mpeg">
+                  </audio>
            
             </div>
             <center>
@@ -639,6 +654,12 @@
         var i;
         var slidesAll = document.getElementsByClassName("mySlidesAll");
         var captionTextAll = document.getElementById("captionAll");
+
+        const audioTwist = document.querySelector("#audioTwist");
+        const audioDeep = document.querySelector("#audioDeep");
+        const audioHeyYa = document.querySelector("#audioHeyYa");
+        const audioSinceU = document.querySelector("#audioSinceU");
+
         
         if (n > slidesAll.length) {slideIndexAll = 1}
         if (n < 1) {slideIndexAll = slidesAll.length}
@@ -646,16 +667,39 @@
             slidesAll[i].style.display = "none";
         }
         if(slideIndexAll == 5){
+            audioTwist.pause();
+            audioDeep.pause();
             soundwaves()
         }
-        if(slideIndexAll == 6){
+        else if(slideIndexAll == 6){
             soundwaveStatic()
+            audioTwist.play();
+            audioDeep.pause();
         }
-        if(slideIndexAll == 7){
+        else if(slideIndexAll == 7){
+            audioTwist.pause();
+            audioTwist.currentTime = 0;
+            audioDeep.play();
             soundwaveStatic2()
+            audioHeyYa.pause()
+            audioHeyYa.currentTime = 0;
         }
-        if(slideIndexAll == 8){
+        else if(slideIndexAll == 8){
+            audioDeep.pause();
+            audioSinceU.pause()
+            audioSinceU.currentTime = 0;
+            audioHeyYa.play();
+            
             soundwaveStatic3()
+        } 
+        else if(slideIndexAll == 9){
+            audioSinceU.play();
+            audioHeyYa.pause()
+            audioHeyYa.currentTime = 0;
+        } 
+        else {
+            audioSinceU.pause()
+            audioSinceU.currentTime = 0;
         }
         slidesAll[slideIndexAll-1].style.display = "block";
         }
