@@ -20,7 +20,7 @@ export function histogram(container){
     .append("div")
     .attr("class", "songs")
     .style("filter", "url(#glow)")
-    // .style("top", )
+    
   
   function update(_data){
       
@@ -43,6 +43,7 @@ export function histogram(container){
   
   function updateBins(nBin){
   
+    
       var histogram = d3.histogram()
         .value(function(d) { return d.release_yr; }) 
         .domain(x.domain()) 
@@ -168,7 +169,7 @@ export function histogram(container){
           .exit()
           .remove()
   
-  
+          
       
   
       svg.append("text")
@@ -190,8 +191,9 @@ export function histogram(container){
               .text("Years")
               .attr('font-size',13)
   
-  
-    var w = 300, h = 50;
+    var w = 320, h = 50;
+
+    d3.select("#legend1").selectAll("svg").remove()
   
     var key = d3.select("#legend1")
       .append("svg")
@@ -222,6 +224,8 @@ export function histogram(container){
       .attr("height", h - 30)
       .style("fill", "url(#gradient)")
       .attr("transform", "translate(0,10)");
+
+
   
     var yKey = d3.scaleLinear()
       .range([300, 0])
@@ -242,20 +246,17 @@ export function histogram(container){
       .style("text-anchor", "end")
       .text("axis title");
   
-  
     
-  
-  
+      d3.select("#nBin").on("input", function() {
+        updateBins(+this.value);
+        legend.style("opacity", "0")  });
+      
+
+
   }
   updateBins(61)
 
-  d3.select("#nBin").on("input", function() {
-    updateBins(+this.value);
-    legend.style("opacity", "0")
-   
-  });
   }
-  
   
   
   return {
