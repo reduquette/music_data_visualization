@@ -2,9 +2,9 @@
 var COUNTER3 = 0;
 
 function soundwaveStatic3(){
-  var margin = {top: 50, right: 100, bottom: 100, left: 150},
+  var margin = {top: 10, right: 100, bottom: 35, left: 120},
     width = 800 - margin.left - margin.right,
-    height = 380 - margin.top - margin.bottom;
+    height = 340 - margin.top - margin.bottom;
   console.log("HERE")
   if (COUNTER3 == 0){
     console.log("HII")
@@ -212,8 +212,8 @@ d3.csv("averages.csv",d3.autoType).then(data => {
     .attr("transform", "rotate(90)");
 
     svgStatic3.append("text")
-    .attr('x', 590)
-    .attr('y', 282)
+    .attr('x', 620)
+    .attr('y', 350)
     .text("Decades")
     .style("fill", "white")
     .attr('font-family','Lato')
