@@ -317,17 +317,6 @@ const RadarChart = function RadarChart(parent_selector, data, options) {
 		.style("fill-opacity", cfg.opacityCircles)
 		.style("filter" , "url(#glowRadar)");
 
-	//Text indicating at what % each level is
-	axisGrid.selectAll(".axisLabel")
-	   .data(d3.range(1,(cfg.levels+1)).reverse())
-	   .enter().append("text")
-	   .attr("class", "axisLabel")
-	   .attr("x", 4)
-	   .attr("y", d => -d * radius / cfg.levels)
-	   .attr("dy", "0.4em")
-	   .style("font-size", "10px")
-	   .attr("fill", "#737373")
-	   .text(d => Format(maxValue * d / cfg.levels) + cfg.unit);
 
 	/////////////////////////////////////////////////////////
 	//////////////////// Draw the axes //////////////////////
@@ -442,13 +431,17 @@ const RadarChart = function RadarChart(parent_selector, data, options) {
 		.attr("cy", (d,i) => rScale(d.value) * sin(angleSlice*i - HALF_PI))
 		.style("fill", "none")
 		.style("pointer-events", "all")
-		.on("mouseover", function(d,i) {
+		.on("mouseover", function(event,d) {
+			console.log(d.value)
 			tooltip
 				.attr('x', this.cx.baseVal.value - 10)
 				.attr('y', this.cy.baseVal.value - 10)
 				.transition()
 				.style('display', 'block')
-				.text(Format(d.value) + cfg.unit);
+				.style('fill', 'magenta')
+				.style('background-color', '#FFFFF')
+				.style('font-weight', 'bold')
+				.text((d.value));
 		})
 		.on("mouseout", function(){
 			tooltip.transition()
