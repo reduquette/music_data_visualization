@@ -42,7 +42,7 @@ d3.csv("averages.csv",d3.autoType).then(data => {
         // A color scale: one color for each group
     var myColor2 = d3.scaleOrdinal()
       .domain(allGroup)
-      .range(["#E4E808", "#E805F6", "#4AE7E3"]);
+      .range(["#E4E808", "#F17E67", "#4AE7E3"]);
 
     // Add X axis --> it is a date format
     var x = d3.scaleLinear()

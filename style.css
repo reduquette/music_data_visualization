@@ -6,68 +6,53 @@ body {
   background-color: black;
   color: white;
 }
-
-
-
-h1 {
-    color: white;
-    font-family: 'Lato', sans-serif;
-    font-weight: 800;
-}
-
-h2 {
-    color: white;
-    font-family: 'Lato', sans-serif;
-    background: #E805F6;
-    box-shadow: 0px 0px 15px #E805F6;
-    border-radius: 20px;
-    padding: 5px;
-
-}
-
 div.scroll { 
-    margin:4px, 4px; 
-    padding:4px; 
-    background-color: green; 
-    width: 500px; 
-    height: 110px; 
-    overflow-x: hidden; 
-    overflow-y: auto; 
-    text-align:justify; 
+  margin:4px, 4px; 
+  padding:4px; 
+  background-color: green; 
+  width: 500px; 
+  height: 110px; 
+  overflow-x: hidden; 
+  overflow-y: auto; 
+  text-align:justify; 
 } 
-
-h4 {
-    font-family: 'Lato', sans-serif;
-    color: white;
-    width: 500px;
-    font-weight: 200;
-}
-
 h4.radar-song1 { 
-    color:#F834BE ;
-    font-weight:bold;
-    font-family:'Lato';
-    font-size:20; 
+  color:#F17E67 ;
+  font-size:20; 
 }
-h4.radar-song2 { color: orange ;font-weight:bold;font-family:'Lato';font-size:20 }
-
-p{
-    font-family: 'Lato', sans-serif;
-    color: white;
-    width: 700px;
-
+h4.radar-song2 { 
+  color: orange ;
+  font-size:20 
 }
-
-subheading {
-    font-family: 'Lato', sans-serif;
-    color: white 
+h5{
+  width: 700px; 
+  margin-top: 70px; 
+  color: white;
+  background: #F17E67;
+  display: block;
+  font-size: 1.8rem;   
+  background-color: #F17E67;
+  border: solid;
+  padding: 2%;
+  border-width: 2px;
+  border-radius: 5px;
+  line-height:1.5;
 }
 
 label{
-    font-family: 'Lato', sans-serif;
+    /* font-family: 'Nunito sans', sans-serif; */
     color: white
 }
 
+select{
+  color:white; 
+  background-color:black;
+}
+
+option{
+  color:white; 
+  background-color:black;
+}
 
 .axisWhite line{
 stroke: white;
@@ -82,8 +67,8 @@ stroke: white;
 }  
 
 .songs {
-    background-color: #E805F6;
-    font-family: 'Lato', sans-serif;
+    background-color: #F17E67;
+    /* font-family: 'Nunito sans', sans-serif; */
     white-space: normal;
     border: solid;
     border-width: 2px;
@@ -94,7 +79,7 @@ stroke: white;
     pointer-events: none;
     color: white;
     float: left;
-    box-shadow: 0px 0px 5px #E805F6;
+    box-shadow: 0px 0px 5px #F17E67;
     margin: 15px;
     overflow-x: hidden;
 }
@@ -107,7 +92,7 @@ stroke: white;
   padding: 16px;
   margin-top: -22px;
   color: white;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
@@ -155,7 +140,7 @@ stroke: white;
    
   /* Handle */
   .hist::-webkit-scrollbar-thumb {
-    background: #E805F6; 
+    background: #F17E67; 
     border-radius: 5px;
   }
 
@@ -255,9 +240,9 @@ stroke: white;
   
 
 #histogram text {
-  font-family: 'Helvetica';
+  /* font-family: 'Helvetica'; */
   font-size:12px;
-  font-weight: bold;
+  /* font-weight: bold; */
   stroke: none;
   fill:#BFEFFF;
   alignment-baseline: middle;
@@ -318,7 +303,7 @@ polygon.area {
 .paths {
   stroke-width: 4;
   opacity: 0.4;
-  box-shadow: 0px 0px 5px #E805F6;
+  box-shadow: 0px 0px 5px #F17E67;
 }
 
 .numbertext{

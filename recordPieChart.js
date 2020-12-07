@@ -27,10 +27,20 @@ export function recordPieChart(){
     function color(d){
 
         if (d.index == 0){
-            return 'blue'
+            return '#f17e67'
         }
         else{
             return 'black'
+        }
+
+    }
+    function opacity(d){
+
+        if (d.index == 0){
+            return 1
+        }
+        else{
+            return .5
         }
 
     }
@@ -107,7 +117,7 @@ export function recordPieChart(){
             .attr('fill', function(d){ return(color(d)) })
             .attr("stroke", "grey")
             .style("stroke-width", "1px")
-            .style("opacity", .5)
+            .style("opacity", d=>opacity(d))
 
 
 

@@ -7,15 +7,17 @@
 
     <!-- CSS Reset -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-    <link rel="stylesheet" href="style.css">
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     
+    <!-- <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'> -->
+    <!-- Milligram CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <link rel="stylesheet" href="style.css">
 
     <meta charset="utf-8">
     <title> 🎧 Does Modern Music Suck?</title>
-    <style>
-        body{ font-family: Helvetica, sans-serif;}
-    </style>
+    <!-- <style>
+        body{ font-family: 'Nunito Sans', sans-serif;}
+    </style> -->
     <script type="text/javascript" src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://unpkg.com/topojson@3"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
@@ -122,26 +124,27 @@
             </div>
             
         </div>
-        <div style="position: absolute; top:20%; left:25%; width:50%" data-aos="zoom-in">
+        <div style="position: absolute; top:20%; left:20%; width:60%" data-aos="zoom-in">
             <div style="height:100px;">
      
             </div>
             <h3 style="color: white; width: 100%; background-color:#F17E67;
-             font-family: 'Lato', sans-serif;
              padding: 2%;
              border: solid;
+             font-size:1.8rem;
              border-width: 2px;
              border-radius: 5px;
-             box-shadow: 0px 0px 5px #4AE7E3;">
+             line-height:1.5;
+             letter-spacing: -.05rem;">
                  Have you ever been told that modern music cannot compare to the music of previous generations? Or have you yourself thought that the "classics" are far superior to modern music?
             </h3>
             <h3 style="color: white; width: 100%; background-color:#F17E67;
-             font-family: 'Lato', sans-serif;
              border: solid;
              padding: 2%;
+             font-size:1.8rem;
              border-width: 2px;
              border-radius: 5px;
-             box-shadow: 0px 0px 5px #4AE7E3;">
+             line-height:1.5">
                  Through the following visualizations we will investigate the truth to the claim that "Modern music sucks".
             </h3>
         </div>
@@ -157,27 +160,26 @@
 
     <section class = "panel histo" >
     <h3 style="width: 700px; margin-top: 70px; color: white;
-    background: #E805F6;
-    box-shadow: 0px 0px 15px #E805F6; 
+    background: #F17E67;
+    box-shadow: 0px 0px 15px #F17E67; 
     display: block;
-    font-size: 1.5em;   
-    font-family: 'Lato', sans-serif;
+    font-size: 2.8rem;   
     border-radius: 20px; 
     padding: 5px;
-    font-weight: bold;
+    /* font-weight: bold; */
     padding: 5px; " data-aos="zoom-in">What years are the most songs in the Top 500 from?</h3>
     
     <div style="padding-left: 5%; padding-right: 5%;" data-aos="zoom-in">
         
-        <h4 style="width: 700px">
+        <p style="width: 700px">
             The graph below shows how many of the <span style="font-weight: bold;">Top 500</span> songs were made in different year intervals. By changing the interval, you can see how many songs were created every year, 2 years, 5 years, etc. Once you hover over a bar, you are shown a list of the songs made during that time period.  
-        </h4>
-        <h4 style="width: 700px">
+        </p>
+        <p style="width: 700px">
             The color scale below reflects the amount of songs. The more songs in a certain time period, the darker the <span style="color:lightblue; font-weight: bold;">blue</span>   becomes. 
-        </h4>
+        </p>
         <p>
             <label>Year Intervals</label>
-            <select type="number" id="nBin" >
+            <select style="width:50%" type="number" id="nBin" >
                 <option value="61">Every year</option>
                 <option value="40">Every 2</option>
                 <option value="10">Every 5 </option>
@@ -195,15 +197,9 @@
             <!-- float: left; -->
             
             <div style="height:400px;">
-            <h3 style="color: white; width: 700px; background-color: #4AE7E3;
-             font-family: 'Lato', sans-serif;
-             border: solid;
-             padding: 2%;
-             border-width: 2px;
-             border-radius: 5px;
-             box-shadow: 0px 0px 5px #4AE7E3;">
+            <h5>
                  No matter what size time periods you look at, the 60s and early 70s hold the highest counts of the Top 500 songs. Songs from the 90s and 2000s combined barely make up 10% of the Top 500 songs. 
-            </h3>
+            </h5>
         </div>
 
 
@@ -218,26 +214,20 @@
     <div class="numbertext" style="position: absolute; top:5%; left:48%;">4 / 7</div>
 
 <section class = "panel pie" >
-    <br>
-    <div id="piechart_container" data-aos="zoom-in">
+    <div id="piechart_container" style = "color: white" data-aos="zoom-in">
         
         <h3 style="width: 700px; margin-top: 70px; color: white;
-        background: #E805F6;
-        box-shadow: 0px 0px 15px #E805F6; 
+        background: #F17E67;
+        box-shadow: 0px 0px 15px #F17E67; 
         display: block;
-        font-size: 1.5em;   
-        font-family: 'Lato', sans-serif;
         border-radius: 20px;
         padding: 5px;
-        font-weight: bold;
+        /* font-weight: bold; */
         padding: 5px; ">Who produces hit songs?</h3>
-        <!-- <h4 style="width: 700px; padding: 5px;">
-            The number of producers represented in the top songs has declined over time. The size of the single largest share-- the producer who's listed on the most tracks for that decade-- decreased from the 50s until the 70s, and has varied since then. Select different years below to see.
-        </h4> -->
-        <!-- <br> -->
-        <h3>Percentage of songs by producer</h3>
+     
+        <h4>Percentage of songs by producer</h4>
         <label for="decade">Decade:</label>
-        <select name="decade" id="decade">
+        <select style="width:50%" name="decade" id="decade">
             <option value = ''>Choose a decade</option>
             <option value="1950s">1950s</option>
             <option value="1960s">1960s</option>
@@ -253,14 +243,8 @@
 
     </div>
     <div style="height:400px;">
-        <h3 style="color: white; width: 700px; background-color: #4AE7E3;
-         font-family: 'Lato', sans-serif;
-         border: solid;
-         padding: 3%;
-         border-width: 2px;
-         border-radius: 5px;
-         box-shadow: 0px 0px 5px #4AE7E3;" id='piechart_commentary'>
-            The number of producers represented in the top songs correlates with the number of hit songs.    </h3>
+        <h5  id='piechart_commentary'>
+            The number of producers represented in the top songs correlates with the number of hit songs.    </h5>
     </div>
 </section>
 </center>
@@ -275,14 +259,13 @@
 <center>
     <div id="soundwaves" style="height:550px" >
         <h3 style="width: 700px; margin-top: 70px; color: white;
-        background: #E805F6;
-        box-shadow: 0px 0px 15px #E805F6; 
+        background: #F17E67;
+        box-shadow: 0px 0px 15px #F17E67; 
         display: block;
-        font-size: 1.5em;   
-        font-family: 'Lato', sans-serif;
+        /* font-family: 'Nunito sans',sans-serif; */
         border-radius: 20px;
         padding: 5px;
-        font-weight: bold;
+        /* font-weight: bold; */
         padding: 5px; "> How have songs changed in acousticness, danceability, and energy since 1948?</h3>
 
     </div>
@@ -294,9 +277,9 @@
             <!-- Full-width images with number text -->
 
     <center>
-            <h4 style="width: 700px; padding: 5px;">The <span style="color:#4AE7E3; font-weight: bold;">blue</span> line represents the acousticness of songs throughout the decades. The confidence measure from 0 to 1 of whether the track is acoustic. 1 represents high confidence the track is acoustic. The amount of acousticness in songs had a low dip in 1960 and then went to its max in 1970 before dropping to almost zero. </h4>
-            <h4 style="width: 700px; padding: 5px;">The <span style="color:#E4E808; font-weight: bold;">yellow</span> line represents the energy of songs throughout the decades. Energy is measure from 0 to 1 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy. There was a major dip close to zero in 1970 and from there steadily increases with only a small dip in 1990.</h4>
-            <h4 style="width: 700px; padding: 5px;">The <span style="color:#E805F6; font-weight: bold;">magenta</span> line represents the danceability of songs throughout the decades. Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0 Is the least danceable and 1 is the most danceable. The danceability has remained fairly steady with only a dips in 1970 and a peak in 1990.</h4>
+            <p style="width: 700px; padding: 5px;">The <span style="color:#4AE7E3; font-weight: bold;">blue</span> line represents the acousticness of songs throughout the decades. The confidence measure from 0 to 1 of whether the track is acoustic. 1 represents high confidence the track is acoustic. The amount of acousticness in songs had a low dip in 1960 and then went to its max in 1970 before dropping to almost zero. </p>
+            <p style="width: 700px; padding: 5px;">The <span style="color:#E4E808; font-weight: bold;">yellow</span> line represents the energy of songs throughout the decades. Energy is measure from 0 to 1 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy. There was a major dip close to zero in 1970 and from there steadily increases with only a small dip in 1990.</p>
+            <p style="width: 700px; padding: 5px;">The <span style="color: #F17E67; font-weight: bold;">pink</span> line represents the danceability of songs throughout the decades. Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0 Is the least danceable and 1 is the most danceable. The danceability has remained fairly steady with only a dips in 1970 and a peak in 1990.</p>
         </center>
             </div>
 
@@ -322,13 +305,10 @@
     
     <section>
         <h3 style="width: 700px; margin-top: 70px; color: white;
-        background: #E805F6;
-        box-shadow: 0px 0px 15px #E805F6; 
+        background: #F17E67;
+        box-shadow: 0px 0px 15px #F17E67; 
         display: block;
-        font-size: 1.5em;   
-        font-family: 'Lato', sans-serif;
         border-radius: 20px;
-        font-weight: bold;
         padding: 5px; ">1960s</h3>
         <img src="./The-Twist.png" class="img-rotate" alt="Twist" style="width:300px;height:300px;" >
 
@@ -366,17 +346,18 @@
     
     
     <section>
+        
         <h3 style="width: 700px; margin-top: 70px; color: white;
-        background: #E805F6;
-        box-shadow: 0px 0px 15px #E805F6; 
+        background: #F17E67;
+        box-shadow: 0px 0px 15px #F17E67; 
         display: block;
-        font-size: 1.5em;   
-        font-family: 'Lato', sans-serif;
         border-radius: 20px;
         padding: 5px;
-        font-weight: bold;
         padding: 5px; ">1970s</h3>
+
+        
         <img src="./how-deep.gif" class="img-rotate" alt="Deep" style="width:300px;height:300px;" >
+                
 
       
 
@@ -397,12 +378,9 @@
                             <source src="How-Deep-Is-Your-Love.mp3" type="audio/mpeg">
                           </audio>
                   
+                    </div>
                 </div>
-            </div>
-        </div>
-        
-
-        
+            </div>        
         </div>
 
         <div id="static-container">
@@ -422,14 +400,11 @@
     
         <section>
             <h3 style="width: 700px; margin-top: 70px; color: white;
-            background: #E805F6;
-            box-shadow: 0px 0px 15px #E805F6; 
+            background: #F17E67;
+            box-shadow: 0px 0px 15px #F17E67; 
             display: block;
-            font-size: 1.5em;   
-            font-family: 'Lato', sans-serif;
             border-radius: 20px;
             padding: 5px;
-            font-weight: bold;
             padding: 5px; ">2000s</h3>
             <audio id="audioHeyYa">
                 <source src="HeyYa.mp3" type="audio/mpeg">
@@ -470,14 +445,12 @@
     
         <section>
             <h4 style="width: 700px; margin-top: 70px; color: white;
-            background: #E805F6;
-            box-shadow: 0px 0px 15px #E805F6; 
+            background: #F17E67;
+            box-shadow: 0px 0px 15px #F17E67; 
             display: block;
             font-size: 1.5em;   
-            font-family: 'Lato', sans-serif;
             border-radius: 20px;
             padding: 5px;
-            font-weight: bold;
             padding: 5px; ">Comparing them all together</h4>
             <h3> The Top 4 Best Performing Songs</h3>
 
