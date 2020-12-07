@@ -50,7 +50,7 @@ d3.csv("averages.csv",d3.autoType).then(data => {
     svg.append("g")
       .attr("transform", "translate(0," + height + ")")
       .attr("stroke", "white")
-      .call(d3.axisBottom(x));
+      .call(d3.axisBottom(x).tickFormat(d3.format("d")));
 
     // Add Y axis
     var y = d3.scaleLinear()
