@@ -66,7 +66,7 @@
             <br>
             We examine data on the Top 500 songs of all time according to Rolling Stone magazine. 
         </subheading>
-        <img src="wave3.gif" alt="soundwavesgif" style="padding-top: 90px; width:100%;height:400px;" >
+        <img src="wave3.gif" alt="soundwavesgif" style="padding-top: 6%; width:100%;height:400px;" >
         </div>
     </section>
 </center>
@@ -159,7 +159,7 @@
     <div class="numbertext" style="position: absolute; top:5%; left:0%;">3 / 7</div>
 
     <section class = "panel histo" >
-    <h3 style="width: 700px; margin-top: 30px; color: white;
+    <h3 style="width: 50%; margin-top: 2%; color: white;
     background: #F17E67;
     box-shadow: 0px 0px 15px #F17E67; 
     display: block;
@@ -168,14 +168,14 @@
     padding: 5px;
     /* font-weight: bold; */
     padding: 5px; 
-    margin-top:50px;" data-aos="zoom-in">What years are the most songs in the Top 500 from?</h3>
+    margin-top:3%;" data-aos="zoom-in">What years are the most songs in the Top 500 from?</h3>
     
     <div style="padding-left: 5%; padding-right: 5%;" data-aos="zoom-in">
         
-        <p style="width: 1100px; margin-bottom: 0px;">
+        <p style="width: 85%; margin-bottom: 0px;">
             The graph below shows how many of the <span style="font-weight: bold;">Top 500</span> songs were made in different year intervals. By changing the interval, you can see how many songs were created every year, 2 years, 5 years, etc. Once you hover over a bar, you are shown a list of the songs made during that time period.  
         </p>
-        <p style="width: 1100px; margin-bottom: 0px;">
+        <p style="width: 85%; margin-bottom: 0px;">
             The color scale below reflects the amount of songs. The more songs in a certain time period, the darker the <span style="color:lightblue; font-weight: bold;">blue</span>   becomes. 
         </p>
     </div>
@@ -482,12 +482,15 @@
                 <div style="display: table-row; height: 60px;">
                     <div style="width: 23.33%; display: table-cell;">
                         <div class="radar1"></div> 
+                        <p>The best performing song has relatively higher acousticness and medium danceability. The Twist in the 1960s, however has very high energy</p>
                     </div>
                     <div style="display: table-cell;"> 
                         <div class="radar2"></div> 
+                        <p>Both songs were high performing in both decades, on the charts for 33 weeks. Both have extremely similar characteristics</p>
                     </div>
                     <div style="display: table-cell;"> 
                         <div class="radar3"></div> 
+                        <p>In general in the top 4 performing songs, they skew more towards higher levels of danceability and energy</p>
                     </div>
                 </div>
                 <audio id="audioSinceU">
@@ -501,7 +504,7 @@
             <script src="radarchart1.js"></script>	
 
             <script>
-                var margin = {top: 20, right: 150, bottom: 100, left: 100},
+                var margin = {top: 20, right: 150, bottom: 3, left: 100},
 				width = Math.min(400, window.innerWidth - 10) - margin.left - margin.right,
                 height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
                 
@@ -581,8 +584,8 @@
                         }]
 
 			var radarChartOptions = {
-			  w: 290,
-			  h: 350,
+			  w: 200,
+			  h: 200,
 			  margin: margin,
 			  levels: 5,
 			  roundStrokes: false,
@@ -592,8 +595,8 @@
             };
             
             var radarChartOptions2 = {
-			  w: 315,
-			  h: 350,
+			  w: 200,
+			  h: 200,
 			  margin: margin,
 			  levels: 5,
 			  roundStrokes: false,
@@ -603,8 +606,8 @@
             };
             
             var radarChartOptions3 = {
-			  w: 290,
-			  h: 350,
+			  w: 200,
+			  h: 200,
 			  margin: margin,
 			  levels: 5,
 			  roundStrokes: false,
