@@ -191,7 +191,7 @@ export function histogram(container){
               .text("Years")
               .attr('font-size',13)
   
-    var w = 320, h = 50;
+    var w = 300, h = 50;
 
     d3.select("#legend1").selectAll("svg").remove()
   
