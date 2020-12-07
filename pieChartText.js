@@ -62,6 +62,7 @@ export function get_producer_commentary(decade){
     "1960s": "There was a dramatic increase in the diversity of producers from the 1950s to the 1960s. There are far more producers featured on only one song (thin slices). At just under 8%, the largest single share is much smaller; the top 10 producers account for less than a third of songs.",
     "1970s": "Like the 60s, the 1970s were characterized by substantial diversity of production. In the 70s, over half of the pie chart is producers who worked on only one hit song. The largest share is miniscule, at less than 3%.",
     "1980s": "The 1980s show similar patterns to the 70s, with the majority of producers working on only one hit song. Prince is the top producer in the 80s, by virtue of working on many of his own songs.",
-    "1990s":"In the 1990s, the number of producers dropped once again. All producers have equal shares, with the exception of Butch Vig, whose success is attributable to his role as producer on Nirvana's platinum album Nevermind. "}
+    "1990s":"In the 1990s, the number of producers dropped once again. All producers have equal shares, with the exception of Butch Vig, whose success is attributable to his role as producer on Nirvana's platinum album Nevermind. ",
+    "2000s": "Overall, the <i> number of producers </i> represented in the top songs correlates with the <i> number of hit songs </i>."}
     return captions[decade]
 }

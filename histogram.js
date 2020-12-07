@@ -14,10 +14,13 @@ export function histogram(container){
       .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
   
+  // console.log("SVG postion", rect.top, rect.right, rect.bottom, rect.left);
+  
   var tooltip = d3.select("#histogramText")
     .append("div")
     .attr("class", "songs")
     .style("filter", "url(#glow)")
+    // .style("top", )
   
   function update(_data){
       
@@ -97,10 +100,15 @@ export function histogram(container){
         .merge(u) 
         .on("mouseenter", (event, d) => {
           const pos = d3.pointer(event, window)
+          var elem =document.getElementById("histogram");  
+          
+          var text = document.getElementById("histogramText");
+          text.style.top = elem.offsetTop + "px";
+          text.style.height = (elem.offsetHeight - margin.bottom).toString() + "px"
           tooltip
               .style('display', 'block')
-              .html("Songs from " + d.x0 + " - " + d.x1 + ":<br>" + songs(d.x0, d.x1, _data))
-              .style('left', 500)
+              .html("Songs from " + d.x0 + " - " + d.x1 + ":<br>" + songs(d.x0, d.x1, _data));
+
           d3.select(this).attr("box-shadow", "30px 30px 30px #fff")
       })
       .on("mouseleave", (event, d) => {
@@ -246,9 +254,6 @@ export function histogram(container){
     legend.style("opacity", "0")
    
   });
-  
-  
-  
   }
   
   

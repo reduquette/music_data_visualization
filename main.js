@@ -63,7 +63,6 @@ var data = d3.csv('comboSongs.csv', d3.autoType).then(data => {
     //make dancers chart
 });
 
-
 var piechart = recordPieChart();
 var piecharttext = pieChartText();
 var decade, producer_data;
