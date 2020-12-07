@@ -283,9 +283,9 @@
 
     <center>
 
-<p style="width: 1100px; padding: 1px; margin: 0px">The <span style="color:#4AE7E3; font-weight: bold;">blue</span> line represents the acousticness of songs throughout the decades. The confidence measure from 0 to 1 of whether the track is acoustic. 1 represents high confidence the track is acoustic. The amount of acousticness in songs had a low dip in 1960 and then went to its max in 1970 before dropping to almost zero. </p>
-<p style="width: 1100px; padding: 1px; margin: 0px">The <span style="color:#E4E808; font-weight: bold;">yellow</span> line represents the energy of songs throughout the decades. Energy is measure from 0 to 1 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy. There was a major dip close to zero in 1970 and from there steadily increases with only a small dip in 1990.</p>
-<p style="width: 1100px; padding: 1px; margin: 0px">The <span style="color: #E805F6; font-weight: bold;">pink</span> line represents the danceability of songs throughout the decades. Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0 Is the least danceable and 1 is the most danceable. The danceability has remained fairly steady with only a dips in 1970 and a peak in 1990.</p>
+<p style="width: 1100px; padding: 1px; margin: 0px">The <span style="color:#4AE7E3; font-weight: bold;">blue</span> line represents the acousticness of songs. The confidence measure from 0 to 1 of whether the track is acoustic, 1 being the high and 0 the low. The amount of acousticness in songs had a low dip in 1960 and then went to its max in 1970 before dropping to almost zero. </p>
+<p style="width: 1100px; padding: 1px; margin: 0px">The <span style="color:#E4E808; font-weight: bold;">yellow</span> line represents the energy of songs. Energy is measure from 0 to 1 and represents a perceptual measure of intensity and activity. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy. There was a major dip close to zero in 1970 and from there steadily increases with only a small dip in 1990.</p>
+<p style="width: 1100px; padding: 1px; margin: 0px">The <span style="color: #E805F6; font-weight: bold;">pink</span> line represents the danceability of songs. Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. The danceability has remained fairly steady with only a dips in 1970 and a peak in 1990.</p>
 
         </center>
             </div>
@@ -482,12 +482,15 @@
                 <div style="display: table-row; height: 60px;">
                     <div style="width: 23.33%; display: table-cell;">
                         <div class="radar1"></div> 
+                        <p>The best performing song has relatively higher acousticness and medium danceability. The Twist in the 1960s, however has very high energy</p>
                     </div>
                     <div style="display: table-cell;"> 
                         <div class="radar2"></div> 
+                        <p>Both songs were high performing in both decades, on the charts for 33 weeks. Both have extremely similar characteristics</p>
                     </div>
                     <div style="display: table-cell;"> 
                         <div class="radar3"></div> 
+                        <p>In general in the top 4 performing songs, they skew more towards higher levels of danceability and energy</p>
                     </div>
                 </div>
                 <audio id="audioSinceU">
@@ -501,7 +504,7 @@
             <script src="radarchart1.js"></script>	
 
             <script>
-                var margin = {top: 20, right: 150, bottom: 100, left: 100},
+                var margin = {top: 20, right: 150, bottom: 3, left: 100},
 				width = Math.min(400, window.innerWidth - 10) - margin.left - margin.right,
                 height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
                 
@@ -581,8 +584,8 @@
                         }]
 
 			var radarChartOptions = {
-			  w: 290,
-			  h: 350,
+			  w: 200,
+			  h: 200,
 			  margin: margin,
 			  levels: 5,
 			  roundStrokes: false,
@@ -592,8 +595,8 @@
             };
             
             var radarChartOptions2 = {
-			  w: 315,
-			  h: 350,
+			  w: 200,
+			  h: 200,
 			  margin: margin,
 			  levels: 5,
 			  roundStrokes: false,
@@ -603,8 +606,8 @@
             };
             
             var radarChartOptions3 = {
-			  w: 290,
-			  h: 350,
+			  w: 200,
+			  h: 200,
 			  margin: margin,
 			  levels: 5,
 			  roundStrokes: false,
