@@ -482,12 +482,15 @@
                 <div style="display: table-row; height: 60px;">
                     <div style="width: 23.33%; display: table-cell;">
                         <div class="radar1"></div> 
+                        <p>The best performing song has relatively higher acousticness and medium danceability. The Twist in the 1960s, however has very high energy</p>
                     </div>
                     <div style="display: table-cell;"> 
                         <div class="radar2"></div> 
+                        <p>Both songs were high performing in both decades, on the charts for 33 weeks. Both have extremely similar characteristics</p>
                     </div>
                     <div style="display: table-cell;"> 
                         <div class="radar3"></div> 
+                        <p>In general in the top 4 performing songs, they skew more towards higher levels of danceability and energy</p>
                     </div>
                 </div>
                 <audio id="audioSinceU">
@@ -501,7 +504,7 @@
             <script src="radarchart1.js"></script>	
 
             <script>
-                var margin = {top: 20, right: 150, bottom: 100, left: 100},
+                var margin = {top: 20, right: 150, bottom: 3, left: 100},
 				width = Math.min(400, window.innerWidth - 10) - margin.left - margin.right,
                 height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
                 
@@ -581,8 +584,8 @@
                         }]
 
 			var radarChartOptions = {
-			  w: 290,
-			  h: 350,
+			  w: 200,
+			  h: 200,
 			  margin: margin,
 			  levels: 5,
 			  roundStrokes: false,
@@ -592,8 +595,8 @@
             };
             
             var radarChartOptions2 = {
-			  w: 315,
-			  h: 350,
+			  w: 200,
+			  h: 200,
 			  margin: margin,
 			  levels: 5,
 			  roundStrokes: false,
@@ -603,8 +606,8 @@
             };
             
             var radarChartOptions3 = {
-			  w: 290,
-			  h: 350,
+			  w: 200,
+			  h: 200,
 			  margin: margin,
 			  levels: 5,
 			  roundStrokes: false,
