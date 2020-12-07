@@ -54,7 +54,7 @@ let vlSpec = {
         "name": "color",
         "type": "ordinal",
         "domain": {"data": "table", "field": "category"},
-        "range": {"scheme": "plasma"}
+        "range": ["#4AE7E3", "#FE53BB"]
       }
     ],
   

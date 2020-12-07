@@ -50,7 +50,7 @@
     <div class="slideshow-container" style="width:100%;">
     <div class="mySlidesAll" >
         <center>
-        <div class="numbertext" style="position: absolute; top:5%; left:48%;">1 / 7</div>
+        <div class="numbertext" style="position: absolute; top:5%; left:0%;">1 / 7</div>
         <a class="nextAll" onclick="plusSlidesAll(1)">&#10095;</a>
         <section class = "panel header">
             <!--<div class="progress-container">
@@ -74,7 +74,7 @@
 
     <div class="mySlidesAll" >
         <center>
-        <div class="numbertext" style="position: absolute; top:5%; left:48%;">2 / 7</div>
+        <div class="numbertext" style="position: absolute; top:5%; left:0%;">2 / 7</div>
       
 
     <section > 
@@ -156,10 +156,10 @@
 
 <div class="mySlidesAll" >
     <center>
-    <div class="numbertext" style="position: absolute; top:5%; left:48%;">3 / 7</div>
+    <div class="numbertext" style="position: absolute; top:5%; left:0%;">3 / 7</div>
 
     <section class = "panel histo" >
-    <h3 style="width: 700px; margin-top: 70px; color: white;
+    <h3 style="width: 700px; margin-top: 30px; color: white;
     background: #F17E67;
     box-shadow: 0px 0px 15px #F17E67; 
     display: block;
@@ -167,27 +167,31 @@
     border-radius: 20px; 
     padding: 5px;
     /* font-weight: bold; */
-    padding: 5px; " data-aos="zoom-in">What years are the most songs in the Top 500 from?</h3>
+    padding: 5px; 
+    margin-top:50px;" data-aos="zoom-in">What years are the most songs in the Top 500 from?</h3>
     
     <div style="padding-left: 5%; padding-right: 5%;" data-aos="zoom-in">
         
-        <p style="width: 700px">
+        <p style="width: 1100px; margin-bottom: 0px;">
             The graph below shows how many of the <span style="font-weight: bold;">Top 500</span> songs were made in different year intervals. By changing the interval, you can see how many songs were created every year, 2 years, 5 years, etc. Once you hover over a bar, you are shown a list of the songs made during that time period.  
         </p>
-        <p style="width: 700px">
+        <p style="width: 1100px; margin-bottom: 0px;">
             The color scale below reflects the amount of songs. The more songs in a certain time period, the darker the <span style="color:lightblue; font-weight: bold;">blue</span>   becomes. 
         </p>
+    </div>
         <p>
-            <label>Year Intervals</label>
-            <select style="width:50%" type="number" id="nBin" >
+            <div style="width:250px; height:50px;">
+            <label style="float:left; margin-top:5px;">Year Intervals</label>
+            <select style="width:130px; float:right" type="number" id="nBin" >
                 <option value="61">Every year</option>
                 <option value="40">Every 2</option>
                 <option value="10">Every 5 </option>
                 <option value="5">Every 10</option>
 
             </select>
-          </p>
         </div>
+          </p>
+        
             
             <div id="histogram" data-aos="zoom-in"></div>
             <div id="legend1"></div> 
@@ -196,7 +200,7 @@
             overflow: auto; font-size: 13px; height: 500px; width: 300px; overflow: scroll; float:right; position: absolute;top:391px; left:75%"></div>
             <!-- float: left; -->
             
-            <div style="height:400px;">
+            <div style="height:200px;">
             <h5>
                  No matter what size time periods you look at, the 60s and early 70s hold the highest counts of the Top 500 songs. Songs from the 90s and 2000s combined barely make up 10% of the Top 500 songs. 
             </h5>
@@ -211,12 +215,12 @@
 
 <div class="mySlidesAll" >
     <center>
-    <div class="numbertext" style="position: absolute; top:5%; left:48%;">4 / 7</div>
+    <div class="numbertext" style="position: absolute; top:5%; left:0%;">4 / 7</div>
 
 <section class = "panel pie" >
     <div id="piechart_container" style = "color: white" data-aos="zoom-in">
         
-        <h3 style="width: 700px; margin-top: 20px; color: white;
+        <h3 style="width: 700px; color: white;
         background: #F17E67;
         box-shadow: 0px 0px 15px #F17E67; 
         display: block;
@@ -254,11 +258,11 @@
 </div>
 
 <div class="mySlidesAll" >
-    <div class="numbertext" style="position: absolute; top:5%; left:48%;">5 / 7</div>
+    <div class="numbertext" style="position: absolute; top:5%; left:0%;">5 / 7</div>
 
 <section class = "panel sound" >
 <center>
-    <div id="soundwaves" style="height:550px" >
+    <div id="soundwaves" style="height:512px" >
         <h3 style="width: 700px; margin-top: 70px; color: white;
         background: #F17E67;
         box-shadow: 0px 0px 15px #F17E67; 
@@ -266,8 +270,8 @@
         /* font-family: 'Nunito sans',sans-serif; */
         border-radius: 20px;
         padding: 5px;
-        /* font-weight: bold; */
-        padding: 5px; "> How have songs changed in acousticness, danceability, and energy since 1948?</h3>
+       margin-top:25px;
+         "> How have songs changed in acousticness, danceability, and energy since 1948?</h3>
 
     </div>
 </center>
@@ -278,9 +282,11 @@
             <!-- Full-width images with number text -->
 
     <center>
-            <p style="width: 700px; padding: 5px;">The <span style="color:#4AE7E3; font-weight: bold;">blue</span> line represents the acousticness of songs throughout the decades. The confidence measure from 0 to 1 of whether the track is acoustic. 1 represents high confidence the track is acoustic. The amount of acousticness in songs had a low dip in 1960 and then went to its max in 1970 before dropping to almost zero. </p>
-            <p style="width: 700px; padding: 5px;">The <span style="color:#E4E808; font-weight: bold;">yellow</span> line represents the energy of songs throughout the decades. Energy is measure from 0 to 1 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy. There was a major dip close to zero in 1970 and from there steadily increases with only a small dip in 1990.</p>
-            <p style="width: 700px; padding: 5px;">The <span style="color: #F17E67; font-weight: bold;">pink</span> line represents the danceability of songs throughout the decades. Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0 Is the least danceable and 1 is the most danceable. The danceability has remained fairly steady with only a dips in 1970 and a peak in 1990.</p>
+
+<p style="width: 1100px; padding: 1px; margin: 0px">The <span style="color:#4AE7E3; font-weight: bold;">blue</span> line represents the acousticness of songs throughout the decades. The confidence measure from 0 to 1 of whether the track is acoustic. 1 represents high confidence the track is acoustic. The amount of acousticness in songs had a low dip in 1960 and then went to its max in 1970 before dropping to almost zero. </p>
+<p style="width: 1100px; padding: 1px; margin: 0px">The <span style="color:#E4E808; font-weight: bold;">yellow</span> line represents the energy of songs throughout the decades. Energy is measure from 0 to 1 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy. There was a major dip close to zero in 1970 and from there steadily increases with only a small dip in 1990.</p>
+<p style="width: 1100px; padding: 1px; margin: 0px">The <span style="color: #E805F6; font-weight: bold;">pink</span> line represents the danceability of songs throughout the decades. Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0 Is the least danceable and 1 is the most danceable. The danceability has remained fairly steady with only a dips in 1970 and a peak in 1990.</p>
+
         </center>
             </div>
 
@@ -301,16 +307,18 @@
 
     <div class="mySlidesAll" >
         <center>
-        <div class="numbertext" style="position: absolute; top:5%; left:48%;">6 / 7</div>
+        <div class="numbertext" style="position: absolute; top:5%; left:0%;">6 / 7</div>
     
     
     <section>
-        <h3 style="width: 700px; margin-top: 70px; color: white;
+        <h3 style="width: 700px; margin-top: 220px; color: white;
         background: #F17E67;
         box-shadow: 0px 0px 15px #F17E67; 
         display: block;
         border-radius: 20px;
-        padding: 5px; ">1960s</h3>
+        padding: 5px;
+        margin-top:420px;
+        ">1960s</h3>
         <img src="./The-Twist.png" class="img-rotate" alt="Twist" style="width:300px;height:300px;" >
 
         
@@ -322,9 +330,10 @@
                         <rect id="highlight1" rx="12" ry="12" x="0" y="0" width="30" height="1000" fill="grey" opacity="0.5"/>
                         </svg>          
                 </div>
-                <div style="display: table-cell;"> 
+                <div style="width: 50%; display: table-cell;"> 
                     <div id="chart-1960"></div>
-                    <h4 class="radar-song1">The Twist (1960 - 39 weeks)</h4>
+                    <p style= "color:turquoise; font-weight:bold;">The Twist (1960 - 39 weeks)</p>
+                    
                     <div id="static-container">  
                         <audio id="audioTwist">
                             <source src="The-Twist.mp3" type="audio/mpeg">
@@ -343,26 +352,26 @@
 
     <div class="mySlidesAll" >
         <center>
-        <div class="numbertext" style="position: absolute; top:5%; left:48%;">6 / 7</div>
+        <div class="numbertext" style="position: absolute; top:5%; left:0%;">6 / 7</div>
     
     
     <section>
         
-        <h3 style="width: 700px; margin-top: 70px; color: white;
+        <h3 style="width: 700px; margin-top: 310px; color: white;
         background: #F17E67;
         box-shadow: 0px 0px 15px #F17E67; 
         display: block;
         border-radius: 20px;
         padding: 5px;
-        padding: 5px; ">1970s</h3>
+        margin-top:530px;
+        ">1970s</h3>
 
         
         <img src="./how-deep.gif" class="img-rotate" alt="Deep" style="width:300px;height:300px;" >
                 
 
-      
-
-        <div style="width: 100%; display: table;">
+ 
+        <div style="width: 1100px; height:512px; padding: 1px; margin: 0px; display: table;">
             <div style="display: table-row; height: 100px;">
                 <div style="width: 50%; display: table-cell;">
                     <div id=soundwave-static2></div>
@@ -372,8 +381,8 @@
                 </div>
                 <div style="display: table-cell;"> 
                     <div id="chart-1960-70"></div>
-                    <h4 class="radar-song1">The Twist (1960 - 39 weeks)</h4>
-                    <h4 class="radar-song2">How Deep is Your Love? (1977 - 33 weeks)</h4>
+                    <p style= "color:turquoise; font-weight:bold;">The Twist (1960 - 39 weeks)</p>
+                    <p style= "color: #FE53BB; font-weight:bold;">How Deep is Your Love? (1977 - 33 weeks)</p>
                     <div id="static-container">      
                         <audio id="audioDeep">
                             <source src="How-Deep-Is-Your-Love.mp3" type="audio/mpeg">
@@ -397,16 +406,17 @@
 
     <div class="mySlidesAll" >
         <center>
-        <div class="numbertext" style="position: absolute; top:5%; left:48%;">6 / 7</div>
+        <div class="numbertext" style="position: absolute; top:5%; left:0%;">6 / 7</div>
     
         <section>
-            <h3 style="width: 700px; margin-top: 70px; color: white;
+            <h3 style="width: 700px; margin-top: 220px; color: white;
             background: #F17E67;
             box-shadow: 0px 0px 15px #F17E67; 
             display: block;
             border-radius: 20px;
             padding: 5px;
-            padding: 5px; ">2000s</h3>
+            margin-top:420px;
+            ">2000s</h3>
             <audio id="audioHeyYa">
                 <source src="HeyYa.mp3" type="audio/mpeg">
               </audio>
@@ -423,8 +433,8 @@
                     </div>
                     <div style="display: table-cell;"> 
                         <div id="chart-2000"></div>
-                        <h4 class="radar-song1">Since U Been Gone (2004 - 46 weeks)</h4>
-                        <h4 class="radar-song2">Hey Ya (2003 - 33 weeks))</h4>
+                        <p style= "color:blue; font-weight:bold;  -webkit-text-stroke: 0.1px white;">Since U Been Gone (2004 - 46 weeks)</p>
+                        <p style= "color:yellow; font-weight:bold;">Hey Ya (2003 - 33 weeks)</p>
                         <div id="static-container">      
      
                     </div>
@@ -442,7 +452,7 @@
 
     <div class="mySlidesAll" >
         <center>
-        <div class="numbertext" style="position: absolute; top:5%; left:48%;">6 / 7</div>
+        <div class="numbertext" style="position: absolute; top:5%; left:0%;">6 / 7</div>
     
         <section>
             <h4 style="width: 700px; margin-top: 70px; color: white;
@@ -452,14 +462,15 @@
             font-size: 1.5em;   
             border-radius: 20px;
             padding: 5px;
-            padding: 5px; ">Comparing them all together</h4>
+            padding: 5px; 
+            margin-top:220px;">Comparing them all together</h4>
             <h3> The Top 4 Best Performing Songs</h3>
 
 
 <img src="./The-Twist.png" class="img-rotate" alt="Twist" style="width:100px;height:100px;" >
 <img src="./how-deep.gif" class="img-rotate"  alt="Deep" style="width:100px;height:100px;" >
 <img src="./Hey-YA.png" class="img-rotate"  alt="Hey-Ya" style="width:100px;height:100px;" >
-<img src="./Since-U.png" class="img-rotate" alt="SinceU" style="width:100px;height:100px;" >
+<img src="./SinceUAlbum.jpg" class="img-rotate" alt="SinceU" style="width:100px;height:100px; border-radius:50px" >
     <br>
     <br> 
 <img src="./SinceUAlbum.jpg" alt="SinceUAlbum" style="width:100px;height:100px;" >
@@ -467,9 +478,9 @@
 <br>
 
 <center>
-            <div style="width: 80%; display: table;">
-                <div style="display: table-row; height: 100px;">
-                    <div style="width: 33.33%; display: table-cell;">
+            <div style="width: 70%; display: table;">
+                <div style="display: table-row; height: 60px;">
+                    <div style="width: 23.33%; display: table-cell;">
                         <div class="radar1"></div> 
                     </div>
                     <div style="display: table-cell;"> 
@@ -478,7 +489,6 @@
                     <div style="display: table-cell;"> 
                         <div class="radar3"></div> 
                     </div>
-               
                 </div>
                 <audio id="audioSinceU">
                     <source src="SinceU.mp3" type="audio/mpeg">
@@ -491,8 +501,8 @@
             <script src="radarchart1.js"></script>	
 
             <script>
-                var margin = {top: 100, right: 150, bottom: 100, left: 100},
-				width = Math.min(700, window.innerWidth - 10) - margin.left - margin.right,
+                var margin = {top: 20, right: 150, bottom: 100, left: 100},
+				width = Math.min(400, window.innerWidth - 10) - margin.left - margin.right,
                 height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
                 
                          
@@ -626,7 +636,7 @@
 
 <div class="mySlidesAll" >
     <center>
-    <div class="numbertext" style="position: absolute; top:5%; left:48%;">7 / 7</div>
+    <div class="numbertext" style="position: absolute; top:5%; left:0%;">7 / 7</div>
 
 
 <section>
