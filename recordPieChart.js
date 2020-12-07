@@ -44,6 +44,16 @@ export function recordPieChart(){
         }
 
     }
+    function html_text(d, total_hits, decade){	
+        console.log(decade)	
+        var line1 =  '<b>' + d.data.producer +'</b>'+ " produced " + '<b>' + parseFloat(d.data.num_hits / total_hits * 100).toFixed(2) +'</b>'+ "% of hit songs in the " + decade;	
+        var line2 = '<b> Hit Songs:</b> <br>'	
+        var i;	
+        for (i = 0; i <d.data.hit_songs.length;i++){	
+            line2 += '🎤 ' + d.data.hit_songs[i] + "<br>"	
+        }	
+        return line1 + '<br>' + line2	
+    }	
     
     var tooltip = d3.select("#piechart_container .tooltip")
         .style("color", 'black');

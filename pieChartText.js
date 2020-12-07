@@ -19,6 +19,12 @@ export function pieChartText(){
             return 'white'
         }
     }
+    function weight(d,i){
+        if (i==0){
+            return 'bold'
+        }
+        return 'normal'
+    }
     function get_producer_commentary(decade){
         var captions = {"1950s": "In the 1950s, Leonard and Phil Chess dominated production of top hits, each producing about 15% of songs. The top 10 producers account for almost three-fourths of all tracks.",
         "1960s": "There was a dramatic increase in the diversity of producers from the 1950s to the 1960s. There are far more producers featured on only one song (thin slices). At just under 8%, the largest single share is much smaller; the top 10 producers account for less than a third of songs.",
@@ -84,7 +90,8 @@ export function pieChartText(){
             .attr('y', (d,i)=>40 + i*30)
             .attr('width', 50)
             .attr('height', 10)
-            .style('fill', (d,i)=>color(d,i));
+            .style('fill', (d,i)=>color(d,i))
+            .style('font-weight', (d,i)=>weight(d,i));
         
         list_items.exit().remove();
 
