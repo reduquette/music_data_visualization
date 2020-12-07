@@ -1,9 +1,9 @@
 
 export function recordPieChart(){
     //make record pie chart
-    var margin = {top: 30, right: 30, bottom: 30, left: 30};
-    var width = 600 - margin.left - margin.right;
-    var height = 600 - margin.top - margin.bottom;
+    var margin = {top: 5, right: 5, bottom: 5, left: 5};
+    var width = 500 - margin.left - margin.right;
+    var height = 500 - margin.top - margin.bottom;
 
     var radius = Math.min(width/2, height/2)
 
@@ -44,17 +44,7 @@ export function recordPieChart(){
         }
 
     }
-    function html_text(d, total_hits, decade){
-        console.log(decade)
-        var line1 =  '<b>' + d.data.producer +'</b>'+ " produced " + '<b>' + parseFloat(d.data.num_hits / total_hits * 100).toFixed(2) +'</b>'+ "% of hit songs in the " + decade;
-        var line2 = '<b> Hit Songs:</b> <br>'
-        var i;
-        for (i = 0; i <d.data.hit_songs.length;i++){
-            line2 += '🎤 ' + d.data.hit_songs[i] + "<br>"
-        }
-        return line1 + '<br>' + line2
-    }
-        
+    
     var tooltip = d3.select("#piechart_container .tooltip")
         .style("color", 'black');
 

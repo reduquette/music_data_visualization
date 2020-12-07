@@ -84,5 +84,6 @@ d3.select('#decade')
         piecharttext.update(producer_data, decade);
 
         piechart_comments.html(get_producer_commentary(decade))
+        piechart_comments.style('display', 'block')
 });
 

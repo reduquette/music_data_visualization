@@ -216,7 +216,7 @@
 <section class = "panel pie" >
     <div id="piechart_container" style = "color: white" data-aos="zoom-in">
         
-        <h3 style="width: 700px; margin-top: 70px; color: white;
+        <h3 style="width: 700px; margin-top: 20px; color: white;
         background: #F17E67;
         box-shadow: 0px 0px 15px #F17E67; 
         display: block;
@@ -225,9 +225,9 @@
         /* font-weight: bold; */
         padding: 5px; ">Who produces hit songs?</h3>
      
-        <h4>Percentage of songs by producer</h4>
-        <label for="decade">Decade:</label>
-        <select style="width:50%" name="decade" id="decade">
+        <h4 style='margin-bottom:10px'>Percentage of songs by producer</h4>
+        <!-- <label for="decade">Decade:</label> -->
+        <select style="width:50%; margin-bottom:5px" name="decade" id="decade">
             <option value = ''>Choose a decade</option>
             <option value="1950s">1950s</option>
             <option value="1960s">1960s</option>
@@ -242,10 +242,9 @@
         </div>
 
     </div>
-    <div style="height:400px;">
-        <h5  id='piechart_commentary'>
+    
+        <h5  id='piechart_commentary' style="position:absolute; left:50%; top:55%; width:40%; display:none;">
             The number of producers represented in the top songs correlates with the number of hit songs.    </h5>
-    </div>
 </section>
 </center>
 <a class="prevAll" onclick="plusSlidesAll(-1)">&#10094;</a>
