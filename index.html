@@ -159,7 +159,7 @@
     <div class="numbertext" style="position: absolute; top:5%; left:0%;">3 / 7</div>
 
     <section class = "panel histo" >
-    <h3 style="width: 50%; margin-top: 2%; color: white;
+    <h3 style="width: 80%; margin-top: 2%; color: white;
     background: #F17E67;
     box-shadow: 0px 0px 15px #F17E67; 
     display: block;
@@ -179,7 +179,7 @@
             The color scale below reflects the amount of songs. The more songs in a certain time period, the darker the <span style="color:lightblue; font-weight: bold;">blue</span>   becomes. 
         </p>
     </div>
-        <p>
+    <div>
             <div style="width:300px; height:50px;">
             <label style="float:left; margin-top:5px;">Year Intervals</label>
             <select style="width:140px; float:right" type="number" id="nBin" >
@@ -190,21 +190,24 @@
 
             </select>
         </div>
-          </p>
+    </div>
+
         
-            
-            <div id="histogram" data-aos="zoom-in"></div>
+            <center>
+            <div id="histogram" style="width:50%;"></div>
+      
             <div id="legend1"></div> 
             <!-- style="float: left" -->
             <div id="histogramText" class = "hist" style=" cursor: grab;
             overflow: auto; font-size: 13px; height: 500px; width: 300px; overflow: scroll; float:right; position: absolute;top:391px; left:75%"></div>
             <!-- float: left; -->
             
-            <div style="height:20%">
-            <h5>
+            <div style="height:20%; width: 100%;">
+            <h5 style="width:80%">
                  No matter what size time periods you look at, the 60s and early 70s hold the highest counts of the Top 500 songs. Songs from the 90s and 2000s combined barely make up 10% of the Top 500 songs. 
             </h5>
         </div>
+    </center>
 
 
 </section>
@@ -220,14 +223,16 @@
 <section class = "panel pie" >
     <div id="piechart_container" style = "color: white" data-aos="zoom-in">
         
-        <h3 style="width: 700px; color: white;
+        <h3 style="width: 80%; margin-top: 2%; color: white;
         background: #F17E67;
         box-shadow: 0px 0px 15px #F17E67; 
         display: block;
-        border-radius: 20px;
+        font-size: 2.8rem;   
+        border-radius: 20px; 
         padding: 5px;
         /* font-weight: bold; */
-        padding: 5px; ">Who produces hit songs?</h3>
+        padding: 5px; 
+        margin-top:3%;"">Who produces hit songs?</h3>
      
         <h4 style='margin-bottom:10px'>Percentage of songs by producer</h4>
         <!-- <label for="decade">Decade:</label> -->
@@ -263,15 +268,16 @@
 <section class = "panel sound" >
 <center>
     <div id="soundwaves" style="height:512px" >
-        <h3 style="width: 700px; margin-top: 70px; color: white;
+        <h3 style="width: 80%; margin-top: 2%; color: white;
         background: #F17E67;
         box-shadow: 0px 0px 15px #F17E67; 
         display: block;
-        /* font-family: 'Nunito sans',sans-serif; */
-        border-radius: 20px;
+        font-size: 2.8rem;   
+        border-radius: 20px; 
         padding: 5px;
-       margin-top:25px;
-         "> How have songs changed in acousticness, danceability, and energy since 1948?</h3>
+        /* font-weight: bold; */
+        padding: 5px; 
+        margin-top:3%;"> How have songs changed in acousticness, danceability, and energy since 1948?</h3>
 
     </div>
 </center>
@@ -311,14 +317,16 @@
     
     
     <section>
-        <h3 style="width: 700px; margin-top: 220px; color: white;
+        <h3 style="width: 80%; margin-top: 2%; color: white;
         background: #F17E67;
         box-shadow: 0px 0px 15px #F17E67; 
         display: block;
-        border-radius: 20px;
+        font-size: 2.8rem;   
+        border-radius: 20px; 
         padding: 5px;
-        margin-top:420px;
-        ">1960s</h3>
+        /* font-weight: bold; */
+        padding: 5px; 
+        margin-top:3%;">1960s</h3>
         <img src="./The-Twist.png" class="img-rotate" alt="Twist" style="width:300px;height:300px;" >
 
         
@@ -326,7 +334,8 @@
             <div style="display: table-row; height: 100px;">
                 <div style="width: 50%; display: table-cell;">
                     <div id=soundwave-static></div>
-                    <svg width="150" height="325" transform="translate(-80,-360)">
+                    <p>In the 60s, the Twist was one of the best performing songs. This had the highest amounts of energy and into the 70s, energy levels of songs that were in the top charts increased.</p>
+                    <svg width="150" height="320" transform="translate(28,-435)">
                         <rect id="highlight1" rx="12" ry="12" x="0" y="0" width="30" height="1000" fill="grey" opacity="0.5"/>
                         </svg>          
                 </div>
@@ -357,14 +366,16 @@
     
     <section>
         
-        <h3 style="width: 700px; margin-top: 310px; color: white;
+        <h3 style="width: 80%; margin-top: 2%; color: white;
         background: #F17E67;
         box-shadow: 0px 0px 15px #F17E67; 
         display: block;
-        border-radius: 20px;
+        font-size: 2.8rem;   
+        border-radius: 20px; 
         padding: 5px;
-        margin-top:530px;
-        ">1970s</h3>
+        /* font-weight: bold; */
+        padding: 5px; 
+        margin-top:3%;">1970s</h3>
 
         
         <img src="./how-deep.gif" class="img-rotate" alt="Deep" style="width:300px;height:300px;" >
@@ -375,7 +386,8 @@
             <div style="display: table-row; height: 100px;">
                 <div style="width: 50%; display: table-cell;">
                     <div id=soundwave-static2></div>
-                    <svg width="150" height="330" transform="translate(28,-360)">
+                    <p>Compared to the Twist, in the 70s How Deep is your love had similar attributes, skewing higher towards energy and danceability </p>
+                    <svg width="150" height="300" transform="translate(28,-435)">
                         <rect id="highlight2" rx="12" ry="12" x="0" y="0" width="30" height="1000" fill="grey" opacity="0.5"/>
                         </svg>            
                 </div>
@@ -409,14 +421,16 @@
         <div class="numbertext" style="position: absolute; top:5%; left:0%;">6 / 7</div>
     
         <section>
-            <h3 style="width: 700px; margin-top: 220px; color: white;
+            <h3 style="width: 80%; margin-top: 2%; color: white;
             background: #F17E67;
             box-shadow: 0px 0px 15px #F17E67; 
             display: block;
-            border-radius: 20px;
+            font-size: 2.8rem;   
+            border-radius: 20px; 
             padding: 5px;
-            margin-top:420px;
-            ">2000s</h3>
+            /* font-weight: bold; */
+            padding: 5px; 
+            margin-top:3%;">2000s</h3>
             <audio id="audioHeyYa">
                 <source src="HeyYa.mp3" type="audio/mpeg">
               </audio>
@@ -427,9 +441,13 @@
                 <div style="display: table-row; height: 100px;">
                     <div style="width: 50%; display: table-cell;">
                         <div id=soundwave-static3></div>
-                        <svg width="150" height="330" transform="translate(360,-360)">
+                        <p>While the songs of the 2000s decade had an average higher in energy than the previous decades, the best performing songs of all time and of the decade had generally moderate levels of each category, with Hey Ya skewing more towards danceability and Since U Been Gone skewing to acousticness</p>
+                       
+                        <svg width="150" height="300" transform="translate(360,-435)">
                             <rect id="highlight3" rx="12" ry="12" x="0" y="0" width="30" height="1000" fill="grey" opacity="0.5"/>
                             </svg>
+
+                            
                     </div>
                     <div style="display: table-cell;"> 
                         <div id="chart-2000"></div>
@@ -440,10 +458,10 @@
                     </div>
                 </div>
             </div>
-            
-    
-            
             </div>
+            
+
+            
         </section>
         </center>
         <a class="prevAll" onclick="plusSlidesAll(-1)">&#10094;</a>
@@ -455,15 +473,16 @@
         <div class="numbertext" style="position: absolute; top:5%; left:0%;">6 / 7</div>
     
         <section>
-            <h4 style="width: 700px; margin-top: 70px; color: white;
+            <h4 style="width: 80%; margin-top: 2%; color: white;
             background: #F17E67;
             box-shadow: 0px 0px 15px #F17E67; 
             display: block;
-            font-size: 1.5em;   
-            border-radius: 20px;
+            font-size: 2.8rem;   
+            border-radius: 20px; 
             padding: 5px;
+            /* font-weight: bold; */
             padding: 5px; 
-            margin-top:220px;">Comparing them all together</h4>
+            margin-top:3%;">Comparing them all together</h4>
             <h3> The Top 4 Best Performing Songs</h3>
 
 
@@ -482,15 +501,15 @@
                 <div style="display: table-row; height: 60px;">
                     <div style="width: 23.33%; display: table-cell;">
                         <div class="radar1"></div> 
-                        <p>The best performing song has relatively higher acousticness and medium danceability. The Twist in the 1960s, however has very high energy</p>
+                        <p style="background-color: #F17E67; font-size: 13px; border-radius: 5px; padding: 3px; margin: 12px;">The best performing song has relatively higher acousticness and medium danceability. The Twist in the 1960s, however has very high energy</p>
                     </div>
                     <div style="display: table-cell;"> 
                         <div class="radar2"></div> 
-                        <p>Both songs were high performing in both decades, on the charts for 33 weeks. Both have extremely similar characteristics</p>
+                        <p style="background-color: #F17E67; font-size: 13px; border-radius: 5px; padding: 3px; margin: 12px;">Both songs were high performing in both decades, on the charts for 33 weeks. Both have extremely similar characteristics</p>
                     </div>
                     <div style="display: table-cell;"> 
                         <div class="radar3"></div> 
-                        <p>In general in the top 4 performing songs, they skew more towards higher levels of danceability and energy</p>
+                        <p style="background-color: #F17E67; font-size: 13px; border-radius: 5px; padding: 3px; margin: 12px;">In general in the top 4 performing songs, they skew more towards higher levels of danceability and energy</p>
                     </div>
                 </div>
                 <audio id="audioSinceU">
@@ -505,7 +524,7 @@
 
             <script>
                 var margin = {top: 20, right: 150, bottom: 3, left: 100},
-				width = Math.min(400, window.innerWidth - 10) - margin.left - margin.right,
+				width = Math.min(800, window.innerWidth - 10) - margin.left - margin.right,
                 height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
                 
                          
@@ -591,7 +610,7 @@
 			  roundStrokes: false,
 				color: d3.scaleOrdinal().range(["#2a2fd4", "#09FBD3"]),
                 format: '.0f',
-                legend: { title: 'Top 2 Best Performing Songs', translateX: 100, translateY: 40 }
+                legend: { title: 'Top 2 Best Performing Songs', translateX: 170, translateY: 40 }
             };
             
             var radarChartOptions2 = {
@@ -602,7 +621,7 @@
 			  roundStrokes: false,
 				color: d3.scaleOrdinal().range([ "#F5D300", "#FE53BB"]),
                 format: '.0f',
-                legend: { title: 'Next Top 2 Best Performing Songs', translateX: 100, translateY: 40 }
+                legend: { title: 'Next Top 2 Best Performing Songs', translateX: 170, translateY: 40 }
             };
             
             var radarChartOptions3 = {
@@ -613,7 +632,7 @@
 			  roundStrokes: false,
                 color: d3.scaleOrdinal().range(["#2a2fd4", "#09FBD3", "#F5D300", "#FE53BB"]),
                 format: '.0f',
-                legend: { title: 'Top 4 Best Performing Songs', translateX: 100, translateY: 40 }
+                legend: { title: 'Top 4 Best Performing Songs', translateX: 170, translateY: 30 }
 			};
 
 			// Draw the chart, get a reference the created svg element :
