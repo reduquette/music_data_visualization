@@ -66,7 +66,7 @@
             <br>
             We examine data on the Top 500 songs of all time according to Rolling Stone magazine. 
         </subheading>
-        <img src="wave3.gif" alt="soundwavesgif" style="padding-top: 90px; width:100%;height:400px;" >
+        <img src="wave3.gif" alt="soundwavesgif" style="padding-top: 6%; width:100%;height:400px;" >
         </div>
     </section>
 </center>
@@ -159,7 +159,7 @@
     <div class="numbertext" style="position: absolute; top:5%; left:0%;">3 / 7</div>
 
     <section class = "panel histo" >
-    <h3 style="width: 700px; margin-top: 30px; color: white;
+    <h3 style="width: 80%; margin-top: 2%; color: white;
     background: #F17E67;
     box-shadow: 0px 0px 15px #F17E67; 
     display: block;
@@ -168,21 +168,20 @@
     padding: 5px;
     /* font-weight: bold; */
     padding: 5px; 
-    margin-top:50px;" data-aos="zoom-in">What years are the most songs in the Top 500 from?</h3>
+    margin-top:3%;" data-aos="zoom-in">What years are the most songs in the Top 500 from?</h3>
     
     <div style="padding-left: 5%; padding-right: 5%;" data-aos="zoom-in">
         
-        <p style="width: 1100px; margin-bottom: 0px;">
-            The graph below shows how many of the <span style="font-weight: bold;">Top 500</span> songs were made in different year intervals. By changing the interval, you can see how many songs were created every year, 2 years, 5 years, etc. Once you hover over a bar, you are shown a list of the songs made during that time period.  
+        <p style="width: 100%; margin-bottom: 0px;">
+            The graph below shows how many of the <span style="font-weight: bold;">Top 500</span> songs were made in different year intervals. Hover over a bar to see a list of the songs made during that time period.  
         </p>
-        <p style="width: 1100px; margin-bottom: 0px;">
+        <p style="width: 100%; margin-bottom: 0px;">
             The color scale below reflects the amount of songs. The more songs in a certain time period, the darker the <span style="color:lightblue; font-weight: bold;">blue</span>   becomes. 
         </p>
     </div>
-        <p>
-            <div style="width:250px; height:50px;">
+            <div style="width:300px; height:50px;">
             <label style="float:left; margin-top:5px;">Year Intervals</label>
-            <select style="width:130px; float:right" type="number" id="nBin" >
+            <select style="width:140px; float:right" type="number" id="nBin" >
                 <option value="61">Every year</option>
                 <option value="40">Every 2</option>
                 <option value="10">Every 5 </option>
@@ -190,17 +189,17 @@
 
             </select>
         </div>
-          </p>
+
         
-            
-            <div id="histogram" data-aos="zoom-in"></div>
+
+            <div id="histogram" data-aos="zoom-in" style="position: relative; left:25%"></div>
             <div id="legend1"></div> 
             <!-- style="float: left" -->
             <div id="histogramText" class = "hist" style=" cursor: grab;
             overflow: auto; font-size: 13px; height: 500px; width: 300px; overflow: scroll; float:right; position: absolute;top:391px; left:75%"></div>
             <!-- float: left; -->
             
-            <div style="height:200px;">
+            <div style="height:20%">
             <h5>
                  No matter what size time periods you look at, the 60s and early 70s hold the highest counts of the Top 500 songs. Songs from the 90s and 2000s combined barely make up 10% of the Top 500 songs. 
             </h5>
@@ -220,14 +219,16 @@
 <section class = "panel pie" >
     <div id="piechart_container" style = "color: white" data-aos="zoom-in">
         
-        <h3 style="width: 700px; color: white;
+        <h3 style="width: 80%; margin-top: 2%; color: white;
         background: #F17E67;
         box-shadow: 0px 0px 15px #F17E67; 
         display: block;
-        border-radius: 20px;
+        font-size: 2.8rem;   
+        border-radius: 20px; 
         padding: 5px;
         /* font-weight: bold; */
-        padding: 5px; ">Who produces hit songs?</h3>
+        padding: 5px; 
+        margin-top:3%;"">Who produces hit songs?</h3>
      
         <h4 style='margin-bottom:10px'>Percentage of songs by producer</h4>
         <!-- <label for="decade">Decade:</label> -->
@@ -263,15 +264,16 @@
 <section class = "panel sound" >
 <center>
     <div id="soundwaves" style="height:512px" >
-        <h3 style="width: 700px; margin-top: 70px; color: white;
+        <h3 style="width: 80%; margin-top: 2%; color: white;
         background: #F17E67;
         box-shadow: 0px 0px 15px #F17E67; 
         display: block;
-        /* font-family: 'Nunito sans',sans-serif; */
-        border-radius: 20px;
+        font-size: 2.8rem;   
+        border-radius: 20px; 
         padding: 5px;
-       margin-top:25px;
-         "> How have songs changed in acousticness, danceability, and energy since 1948?</h3>
+        /* font-weight: bold; */
+        padding: 5px; 
+        margin-top:3%;"> How have songs changed in acousticness, danceability, and energy since 1948?</h3>
 
     </div>
 </center>
@@ -283,9 +285,9 @@
 
     <center>
 
-<p style="width: 1100px; padding: 1px; margin: 0px">The <span style="color:#4AE7E3; font-weight: bold;">blue</span> line represents the acousticness of songs. The confidence measure from 0 to 1 of whether the track is acoustic, 1 being the high and 0 the low. The amount of acousticness in songs had a low dip in 1960 and then went to its max in 1970 before dropping to almost zero. </p>
-<p style="width: 1100px; padding: 1px; margin: 0px">The <span style="color:#E4E808; font-weight: bold;">yellow</span> line represents the energy of songs. Energy is measure from 0 to 1 and represents a perceptual measure of intensity and activity. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy. There was a major dip close to zero in 1970 and from there steadily increases with only a small dip in 1990.</p>
-<p style="width: 1100px; padding: 1px; margin: 0px">The <span style="color: #E805F6; font-weight: bold;">pink</span> line represents the danceability of songs. Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. The danceability has remained fairly steady with only a dips in 1970 and a peak in 1990.</p>
+<p style="width: 1100px; padding: 1px; margin: 0px">The <span style="color:#4AE7E3; font-weight: bold;">blue</span> line represents the acousticness of songs. As you can see, the amount of acousticness in songs decreases to almost zero. </p>
+<p style="width: 1100px; padding: 1px; margin: 0px">The <span style="color:#E4E808; font-weight: bold;">yellow</span> line represents the energy of songs. Perceptual features include dynamic range, perceived loudness, timbre, onset rate, and general entropy. </p>
+<p style="width: 1100px; padding: 1px; margin: 0px">The <span style="color: #E805F6; font-weight: bold;">pink</span> line represents the danceability of songs which is how suitable a track is for dancing based on a combination of elements including tempo, rhythm stability, beat strength, and overall regularity. </p>
 
         </center>
             </div>
@@ -311,14 +313,16 @@
     
     
     <section>
-        <h3 style="width: 700px; margin-top: 220px; color: white;
+        <h3 style="width: 80%; margin-top: 2%; color: white;
         background: #F17E67;
         box-shadow: 0px 0px 15px #F17E67; 
         display: block;
-        border-radius: 20px;
+        font-size: 2.8rem;   
+        border-radius: 20px; 
         padding: 5px;
-        margin-top:420px;
-        ">1960s</h3>
+        /* font-weight: bold; */
+        padding: 5px; 
+        margin-top:3%;">1960s</h3>
         <img src="./The-Twist.png" class="img-rotate" alt="Twist" style="width:300px;height:300px;" >
 
         
@@ -358,14 +362,16 @@
     
     <section>
         
-        <h3 style="width: 700px; margin-top: 310px; color: white;
+        <h3 style="width: 80%; margin-top: 2%; color: white;
         background: #F17E67;
         box-shadow: 0px 0px 15px #F17E67; 
         display: block;
-        border-radius: 20px;
+        font-size: 2.8rem;   
+        border-radius: 20px; 
         padding: 5px;
-        margin-top:530px;
-        ">1970s</h3>
+        /* font-weight: bold; */
+        padding: 5px; 
+        margin-top:3%;">1970s</h3>
 
         
         <img src="./how-deep.gif" class="img-rotate" alt="Deep" style="width:300px;height:300px;" >
@@ -411,14 +417,16 @@
         <div class="numbertext" style="position: absolute; top:5%; left:0%;">6 / 7</div>
     
         <section>
-            <h3 style="width: 700px; margin-top: 220px; color: white;
+            <h3 style="width: 80%; margin-top: 2%; color: white;
             background: #F17E67;
             box-shadow: 0px 0px 15px #F17E67; 
             display: block;
-            border-radius: 20px;
+            font-size: 2.8rem;   
+            border-radius: 20px; 
             padding: 5px;
-            margin-top:420px;
-            ">2000s</h3>
+            /* font-weight: bold; */
+            padding: 5px; 
+            margin-top:3%;">2000s</h3>
             <audio id="audioHeyYa">
                 <source src="HeyYa.mp3" type="audio/mpeg">
               </audio>
@@ -461,15 +469,16 @@
         <div class="numbertext" style="position: absolute; top:5%; left:0%;">6 / 7</div>
     
         <section>
-            <h4 style="width: 700px; margin-top: 70px; color: white;
+            <h4 style="width: 80%; margin-top: 2%; color: white;
             background: #F17E67;
             box-shadow: 0px 0px 15px #F17E67; 
             display: block;
-            font-size: 1.5em;   
-            border-radius: 20px;
+            font-size: 2.8rem;   
+            border-radius: 20px; 
             padding: 5px;
+            /* font-weight: bold; */
             padding: 5px; 
-            margin-top:220px;">Comparing them all together</h4>
+            margin-top:3%;">Comparing them all together</h4>
             <h3> The Top 4 Best Performing Songs</h3>
 
 
