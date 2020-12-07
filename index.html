@@ -326,7 +326,8 @@
             <div style="display: table-row; height: 100px;">
                 <div style="width: 50%; display: table-cell;">
                     <div id=soundwave-static></div>
-                    <svg width="150" height="325" transform="translate(-80,-360)">
+                    <p>In the 60s, the Twist was one of the best performing songs. This had the highest amounts of energy and into the 70s, energy levels of songs that were in the top charts increased.</p>
+                    <svg width="150" height="320" transform="translate(28,-435)">
                         <rect id="highlight1" rx="12" ry="12" x="0" y="0" width="30" height="1000" fill="grey" opacity="0.5"/>
                         </svg>          
                 </div>
@@ -375,7 +376,8 @@
             <div style="display: table-row; height: 100px;">
                 <div style="width: 50%; display: table-cell;">
                     <div id=soundwave-static2></div>
-                    <svg width="150" height="330" transform="translate(28,-360)">
+                    <p>Compared to the Twist, in the 70s How Deep is your love had similar attributes, skewing higher towards energy and danceability </p>
+                    <svg width="150" height="300" transform="translate(28,-435)">
                         <rect id="highlight2" rx="12" ry="12" x="0" y="0" width="30" height="1000" fill="grey" opacity="0.5"/>
                         </svg>            
                 </div>
@@ -427,9 +429,13 @@
                 <div style="display: table-row; height: 100px;">
                     <div style="width: 50%; display: table-cell;">
                         <div id=soundwave-static3></div>
-                        <svg width="150" height="330" transform="translate(360,-360)">
+                        <p>While the songs of the 2000s decade had an average higher in energy than the previous decades, the best performing songs of all time and of the decade had generally moderate levels of each category, with Hey Ya skewing more towards danceability and Since U Been Gone skewing to acousticness</p>
+                       
+                        <svg width="150" height="300" transform="translate(360,-435)">
                             <rect id="highlight3" rx="12" ry="12" x="0" y="0" width="30" height="1000" fill="grey" opacity="0.5"/>
                             </svg>
+
+                            
                     </div>
                     <div style="display: table-cell;"> 
                         <div id="chart-2000"></div>
@@ -440,10 +446,10 @@
                     </div>
                 </div>
             </div>
-            
-    
-            
             </div>
+            
+
+            
         </section>
         </center>
         <a class="prevAll" onclick="plusSlidesAll(-1)">&#10094;</a>
@@ -482,15 +488,15 @@
                 <div style="display: table-row; height: 60px;">
                     <div style="width: 23.33%; display: table-cell;">
                         <div class="radar1"></div> 
-                        <p>The best performing song has relatively higher acousticness and medium danceability. The Twist in the 1960s, however has very high energy</p>
+                        <p style="background-color: #F17E67; font-size: 13px; border-radius: 5px; padding: 3px; margin: 12px;">The best performing song has relatively higher acousticness and medium danceability. The Twist in the 1960s, however has very high energy</p>
                     </div>
                     <div style="display: table-cell;"> 
                         <div class="radar2"></div> 
-                        <p>Both songs were high performing in both decades, on the charts for 33 weeks. Both have extremely similar characteristics</p>
+                        <p style="background-color: #F17E67; font-size: 13px; border-radius: 5px; padding: 3px; margin: 12px;">Both songs were high performing in both decades, on the charts for 33 weeks. Both have extremely similar characteristics</p>
                     </div>
                     <div style="display: table-cell;"> 
                         <div class="radar3"></div> 
-                        <p>In general in the top 4 performing songs, they skew more towards higher levels of danceability and energy</p>
+                        <p style="background-color: #F17E67; font-size: 13px; border-radius: 5px; padding: 3px; margin: 12px;">In general in the top 4 performing songs, they skew more towards higher levels of danceability and energy</p>
                     </div>
                 </div>
                 <audio id="audioSinceU">
@@ -505,7 +511,7 @@
 
             <script>
                 var margin = {top: 20, right: 150, bottom: 3, left: 100},
-				width = Math.min(400, window.innerWidth - 10) - margin.left - margin.right,
+				width = Math.min(800, window.innerWidth - 10) - margin.left - margin.right,
                 height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
                 
                          
@@ -591,7 +597,7 @@
 			  roundStrokes: false,
 				color: d3.scaleOrdinal().range(["#2a2fd4", "#09FBD3"]),
                 format: '.0f',
-                legend: { title: 'Top 2 Best Performing Songs', translateX: 100, translateY: 40 }
+                legend: { title: 'Top 2 Best Performing Songs', translateX: 170, translateY: 40 }
             };
             
             var radarChartOptions2 = {
@@ -602,7 +608,7 @@
 			  roundStrokes: false,
 				color: d3.scaleOrdinal().range([ "#F5D300", "#FE53BB"]),
                 format: '.0f',
-                legend: { title: 'Next Top 2 Best Performing Songs', translateX: 100, translateY: 40 }
+                legend: { title: 'Next Top 2 Best Performing Songs', translateX: 170, translateY: 40 }
             };
             
             var radarChartOptions3 = {
@@ -613,7 +619,7 @@
 			  roundStrokes: false,
                 color: d3.scaleOrdinal().range(["#2a2fd4", "#09FBD3", "#F5D300", "#FE53BB"]),
                 format: '.0f',
-                legend: { title: 'Top 4 Best Performing Songs', translateX: 100, translateY: 40 }
+                legend: { title: 'Top 4 Best Performing Songs', translateX: 170, translateY: 30 }
 			};
 
 			// Draw the chart, get a reference the created svg element :
