@@ -47,6 +47,7 @@ label{
 select{
   color:white; 
   background-color:black;
+  border:white;
 }
 
 option{
