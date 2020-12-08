@@ -4,12 +4,12 @@ let vlSpec = {
     "$schema": "https://vega.github.io/schema/vega/v5.json",
     "description": "A radar chart example, showing multiple dimensions in a radial layout.",
     "width": 500,
-    "height": 400,
+    "height": 350,
     "padding": 100,
     "autosize": {"type": "none", "contains": "padding"},
   
     "signals": [
-      {"name": "radius", "update": "width / 2"}
+      {"name": "radius", "update": "width / 2.5"}
     ],
   
     "data": [
