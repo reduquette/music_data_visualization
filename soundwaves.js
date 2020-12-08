@@ -180,7 +180,7 @@ path1
 
 
 
-    var tooltip2 = d3.select("#soundwaves .tooltip2")
+    var tooltip2 = d3.select(".tooltip2")
     .append("div")
     .attr("class", "tooltip-text")
     .style("background-color", "blue")
@@ -192,7 +192,7 @@ path1
     .style("border-radius", "5px")
     .style("padding", "10px")
     .style('position', 'absolute')
-    .style('display', 'none')
+    .style('display', 'none');
     // .style('left', 500)
 
       // A function that change this tooltip when the user hover a point.
@@ -205,11 +205,11 @@ path1
 
     // A function that change this tooltip when the leaves a point: just need to set opacity to 0 again
     var mouseleave = function(d) {
-    tooltip2
-      .transition()
-      .duration(200)
-      .style("display", 'none')
-    }
+      tooltip2
+        .transition()
+        .duration(200)
+        .style("display", 'none')
+    };
 
         
     // Add the points
@@ -230,7 +230,11 @@ path1
         .attr("r", 5)
         .attr("stroke", "white")
         // .on("mouseover", mouseover )
-        .on("mouseover", (event, d) => {
+        .on("mouseenter", (event, d) => {
+          console.log(
+            'mouse enter'
+          );
+          console.log(event.clientY, event.clientX);
           tooltip2
             .html("Level: " + (d.value) + "<br>Decade: " + d.decade)
             // .style("left", 90 + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
