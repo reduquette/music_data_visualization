@@ -4,7 +4,7 @@ var COUNTER3 = 0;
 function soundwaveStatic3(){
   var margin = {top: 10, right: 100, bottom: 35, left: 120},
     width = 800 - margin.left - margin.right,
-    height = 340 - margin.top - margin.bottom;
+    height = 320 - margin.top - margin.bottom;
   console.log("HERE")
   if (COUNTER3 == 0){
     console.log("HII")
@@ -196,6 +196,7 @@ d3.csv("averages.csv",d3.autoType).then(data => {
 
        d3.select("#highlight3")
        .attr("height", 0)
+       .attr('y', 30)
       .transition()
       .delay(1000)
       .duration(2000)
