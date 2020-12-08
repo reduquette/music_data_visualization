@@ -182,31 +182,42 @@ path1
 
     var tooltip2 = d3.select("#soundwaves .tooltip2")
     .append("div")
-    .style("opacity", 0)
     .attr("class", "tooltip-text")
     .style("background-color", "blue")
     .style("filter", "url(#glow)")
     .style("border", "solid")
+<<<<<<< HEAD
+    // .style("width", "100px")
+    // .style("height", "40px")
+    .style("border-width", "1px")
+    .style("border-radius", "5px")
+    .style("padding", "10px")
+    .style('position', 'absolute')
+    .style('display', 'none')
+    // .style('left', 500)
+=======
     .style("width", "200px")
     .style("height", "50px")
     .style("border-width", "1px")
     .style("border-radius", "5px")
     .style("padding", "10px")
     .style('display', 'block')
+>>>>>>> 812d7d9ef87aca0c8ff88eb7c0c574683df8cf62
 
       // A function that change this tooltip when the user hover a point.
 // Its opacity is set to 1: we can now see it. Plus it set the text and position of tooltip depending on the datapoint (d)
-    var mouseover = function(d) {
-    tooltip2
-      .style("opacity", 1)
-    }
+    // var mouseover = function(d) {
+    // tooltip2
+    //   .style("opacity", 1)
+
+    // }
 
     // A function that change this tooltip when the leaves a point: just need to set opacity to 0 again
     var mouseleave = function(d) {
     tooltip2
       .transition()
       .duration(200)
-      .style("opacity", 0)
+      .style("display", 'none')
     }
 
         
@@ -227,12 +238,21 @@ path1
         .attr("cy", function(d) { return y(d.value) } )
         .attr("r", 5)
         .attr("stroke", "white")
-        .on("mouseover", mouseover )
-        .on("mousemove", (event, d) => {
+        // .on("mouseover", mouseover )
+        .on("mouseover", (event, d) => {
           tooltip2
             .html("Level: " + (d.value) + "<br>Decade: " + d.decade)
+<<<<<<< HEAD
+            // .style("left", 90 + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
+            // .style("top", 90 + "px")
+            .style('top', event.clientY + "px")
+            .style('left', event.clientX + "px")
+            .style('display', 'block')
+
+=======
             .style("left", 90 + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
             .style("top", 90 + "px")
+>>>>>>> 812d7d9ef87aca0c8ff88eb7c0c574683df8cf62
           })
         .on("mouseleave", mouseleave )
 
