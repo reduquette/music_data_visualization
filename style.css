@@ -271,6 +271,11 @@ polygon.area {
   fill-opacity:.4;
 }
 
+.static {
+  padding: 0px !important
+  
+}
+
 .tooltip{
     position:fixed;
     display:none;
