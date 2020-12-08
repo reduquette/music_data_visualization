@@ -1,6 +1,6 @@
+
 // let vlSpec = {
 //   "$schema": "https://vega.github.io/schema/vega/v5.json",
-//   "description": "A radar chart example, showing multiple dimensions in a radial layout.",
 //   "width": 300,
 //   "height": 300,
 //   "padding": 10,
@@ -230,30 +230,29 @@ const RadarChart = function RadarChart(parent_selector, data, options) {
 	}//wrap
 
 	const cfg = {
-	 w: 600,				//Width of the circle
-	 h: 600,				//Height of the circle
-	 margin: {top: 20, right: 20, bottom: 20, left: 20}, //The margins of the SVG
-	 levels: 3,				//How many levels or inner circles should there be drawn
-	 maxValue: 0, 			//What is the value that the biggest circle will represent
-	 labelFactor: 1.25, 	//How much farther than the radius of the outer circle should the labels be placed
-	 wrapWidth: 60, 		//The number of pixels after which a label needs to be given a new line
-	 opacityArea: 0.35, 	//The opacity of the area of the blob
-	 dotRadius: 4, 			//The size of the colored circles of each blog
-	 opacityCircles: 0.1, 	//The opacity of the circles of each blob
-	 strokeWidth: 2, 		//The width of the stroke around each blob
-	 roundStrokes: false,	//If true the area and stroke will follow a round path (cardinal-closed)
-	 color: d3.scaleOrdinal(d3.interpolatePlasma),	//Color function,
+	 w: 600,				
+	 h: 600,				
+	 margin: {top: 20, right: 20, bottom: 20, left: 20}, 
+	 levels: 3,			
+	 maxValue: 0, 			
+	 labelFactor: 1.25, 	
+	 wrapWidth: 60, 		
+	 opacityArea: 0.35, 	
+	 dotRadius: 4, 			
+	 opacityCircles: 0.1, 
+	 strokeWidth: 2, 		
+	 roundStrokes: false,
+	 color: d3.scaleOrdinal(d3.interpolatePlasma),	
 	 format: '.2%',
 	 unit: '',
 	 legend: false
 	};
 
-	//Put all of the options into a variable called cfg
 	if('undefined' !== typeof options){
 	  for(var i in options){
 		if('undefined' !== typeof options[i]){ cfg[i] = options[i]; }
-	  }//for i
-	}//if
+	  }
+	}
 
 
 	let maxValue = 0;
@@ -267,11 +266,11 @@ const RadarChart = function RadarChart(parent_selector, data, options) {
 	}
 	maxValue = max(cfg.maxValue, maxValue);
 
-	const allAxis = data[0].axes.map((i, j) => i.axis),	//Names of each axis
-		total = allAxis.length,					//The number of different axes
-		radius = Math.min(cfg.w/2, cfg.h/2), 	//Radius of the outermost circle
-		Format = d3.format(cfg.format),			 	//Formatting
-		angleSlice = Math.PI * 2 / total;		//The width in radians of each "slice"
+	const allAxis = data[0].axes.map((i, j) => i.axis),	
+		total = allAxis.length,					
+		radius = Math.min(cfg.w/2, cfg.h/2), 	
+		Format = d3.format(cfg.format),			 
+		angleSlice = Math.PI * 2 / total;	
 
 	//Scale for the radius
 	const rScale = d3.scaleLinear()
@@ -317,11 +316,6 @@ const RadarChart = function RadarChart(parent_selector, data, options) {
 		.style("fill-opacity", cfg.opacityCircles)
 		.style("filter" , "url(#glowRadar)");
 
-
-	/////////////////////////////////////////////////////////
-	//////////////////// Draw the axes //////////////////////
-	/////////////////////////////////////////////////////////
-
 	//Create the straight lines radiating outward from the center
 	var axis = axisGrid.selectAll(".axis")
 		.data(allAxis)
@@ -348,10 +342,6 @@ const RadarChart = function RadarChart(parent_selector, data, options) {
 		.attr("y", (d,i) => rScale(maxValue * cfg.labelFactor) * sin(angleSlice * i - HALF_PI))
 		.text(d => d)
 		.call(wrap, cfg.wrapWidth);
-
-	/////////////////////////////////////////////////////////
-	///////////// Draw the radar chart blobs ////////////////
-	/////////////////////////////////////////////////////////
 
 	//The radial line function
 	const radarLine = d3.radialLine()
@@ -402,7 +392,6 @@ const RadarChart = function RadarChart(parent_selector, data, options) {
 		.style("fill", "none")
 		.style("filter" , "url(#glowRadar)");
 
-	//Append the circles
 	blobWrapper.selectAll(".radarCircle")
 		.data(d => d.axes)
 		.enter()
@@ -414,14 +403,11 @@ const RadarChart = function RadarChart(parent_selector, data, options) {
 		.style("fill", (d) => cfg.color(d.id))
 		.style("fill-opacity", 0.8);
 
-
-	//Wrapper for the invisible circles on top
 	const blobCircleWrapper = g.selectAll(".radarCircleWrapper")
 		.data(data)
 		.enter().append("g")
 		.attr("class", "radarCircleWrapper");
 
-	//Append a set of invisible circles on top for the mouseover pop-up
 	blobCircleWrapper.selectAll(".radarInvisibleCircle")
 		.data(d => d.axes)
 		.enter().append("circle")
