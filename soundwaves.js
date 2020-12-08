@@ -50,7 +50,7 @@ d3.csv("averages.csv",d3.autoType).then(data => {
     svg.append("g")
       .attr("transform", "translate(0," + height + ")")
       .attr("stroke", "white")
-      .call(d3.axisBottom(x));
+      .call(d3.axisBottom(x).tickFormat(d3.format("d")));
 
     // Add Y axis
     var y = d3.scaleLinear()
@@ -179,12 +179,14 @@ path1
     .attr("stroke-dashoffset", 0); 
 
 
-    var tooltip2 = d3.select("#soundwaves")
+
+    var tooltip2 = d3.select("#soundwaves .tooltip2")
     .append("div")
     .attr("class", "tooltip-text")
     .style("background-color", "blue")
     .style("filter", "url(#glow)")
     .style("border", "solid")
+<<<<<<< HEAD
     // .style("width", "100px")
     // .style("height", "40px")
     .style("border-width", "1px")
@@ -193,6 +195,14 @@ path1
     .style('position', 'absolute')
     .style('display', 'none')
     // .style('left', 500)
+=======
+    .style("width", "200px")
+    .style("height", "50px")
+    .style("border-width", "1px")
+    .style("border-radius", "5px")
+    .style("padding", "10px")
+    .style('display', 'block')
+>>>>>>> 812d7d9ef87aca0c8ff88eb7c0c574683df8cf62
 
       // A function that change this tooltip when the user hover a point.
 // Its opacity is set to 1: we can now see it. Plus it set the text and position of tooltip depending on the datapoint (d)
@@ -232,12 +242,17 @@ path1
         .on("mouseover", (event, d) => {
           tooltip2
             .html("Level: " + (d.value) + "<br>Decade: " + d.decade)
+<<<<<<< HEAD
             // .style("left", 90 + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
             // .style("top", 90 + "px")
             .style('top', event.clientY + "px")
             .style('left', event.clientX + "px")
             .style('display', 'block')
 
+=======
+            .style("left", 90 + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
+            .style("top", 90 + "px")
+>>>>>>> 812d7d9ef87aca0c8ff88eb7c0c574683df8cf62
           })
         .on("mouseleave", mouseleave )
 

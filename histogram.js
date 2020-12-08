@@ -27,12 +27,15 @@ export function histogram(container){
       var x = d3.scaleLinear()
         .domain([1948, d3.max(_data, function(d) { return +d.release_yr })])
         .range([0, width])
+
   
       var xAxis = svg.append("g")
+      
       .attr("stroke", "white")
       .style("fill", "white")
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(x))
+      
   
         var y = d3.scaleLinear()
         .range([height, 0]);
@@ -47,7 +50,8 @@ export function histogram(container){
       var histogram = d3.histogram()
         .value(function(d) { return d.release_yr; }) 
         .domain(x.domain()) 
-        .thresholds(x.ticks(nBin)); 
+        .thresholds(x.ticks(nBin))
+
   
       var bins = histogram(_data);
   
@@ -56,7 +60,7 @@ export function histogram(container){
           .transition()
           .duration(1000)
           .call(d3.axisBottom(x)
-          .ticks(nBin))
+          .ticks(nBin).tickFormat(d3.format("d")))
           .selectAll("text")
           .style('font-size', 8)
           .attr('y', -4)
