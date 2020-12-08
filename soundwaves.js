@@ -179,20 +179,20 @@ path1
     .attr("stroke-dashoffset", 0); 
 
 
-    var tooltip2 = d3.select("#soundwaves")
+
+    var tooltip2 = d3.select("#soundwaves .tooltip2")
     .append("div")
     .style("opacity", 0)
     .attr("class", "tooltip-text")
     .style("background-color", "blue")
     .style("filter", "url(#glow)")
     .style("border", "solid")
-    .style("width", "100px")
-    .style("height", "40px")
+    .style("width", "200px")
+    .style("height", "50px")
     .style("border-width", "1px")
     .style("border-radius", "5px")
     .style("padding", "10px")
     .style('display', 'block')
-    .style('left', 500)
 
       // A function that change this tooltip when the user hover a point.
 // Its opacity is set to 1: we can now see it. Plus it set the text and position of tooltip depending on the datapoint (d)
@@ -233,7 +233,6 @@ path1
             .html("Level: " + (d.value) + "<br>Decade: " + d.decade)
             .style("left", 90 + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
             .style("top", 90 + "px")
-
           })
         .on("mouseleave", mouseleave )
 
